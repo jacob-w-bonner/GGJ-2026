@@ -14,7 +14,6 @@ config/name="GGJ-2026"
 run/main_scene="uid://fvqhrd1vvxfm"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
-"[autoload]Globals"="*uid://4ed5dimg8fqg"
 
 [autoload]
 
