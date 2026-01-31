@@ -1,24 +1,41 @@
 extends PathFollow2D
 
 
-enum STATE { PATROLLING, WRINGING_OUT }
+@export var speed = 0.2
+@export var wait_time = 1.0
 
-var speed = 0.2
+@onready var target : float = 0.99 
+@onready var guard = $Guard
+@onready var waiting = false
 
-var state
+
 
 func _ready() -> void:
-	state = STATE.PATROLLING
+	pass
 
 func _process(delta: float) -> void:
-	match state: 
-		STATE.PATROLLING:
-			loop_movement(delta)
-		STATE.WRINGING_OUT:
-			# change this to actual player position later
-			var player_pos = Vector2(0,0)		
-			pass
+	match guard.state: 
+		GuardMovement.State.PATROLLING:
+			if (!waiting):
+				loop_movement(delta)
+		# cancel waiting state if another state is active 
+		_:
+			waiting = false
 		
-	
 func loop_movement(delta):
-	progress_ratio += delta * speed
+	var prev_target = target
+
+	if (progress_ratio <= target):
+		target = 0.99
+		progress_ratio += delta * speed;
+	if (progress_ratio >= target): 
+		target = 0.01 
+		progress_ratio += delta * (-speed)
+		
+	if (prev_target != target):
+		waiting = true
+		await get_tree().create_timer(wait_time).timeout
+		waiting = false
+		
+
+	
