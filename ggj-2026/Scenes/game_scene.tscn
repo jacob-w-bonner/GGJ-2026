@@ -1,3 +1,19 @@
-[gd_scene format=3 uid="uid://fvqhrd1vvxfm"]
+[gd_scene format=4 uid="uid://fvqhrd1vvxfm"]
+
+[ext_resource type="TileSet" uid="uid://dej4td71hy5a0" path="res://Assets/new_tile_set.tres" id="1_x87qo"]
 
 [node name="GameScene" type="Node2D" unique_id=342854083]
+
+[node name="TileMap" type="TileMap" parent="." unique_id=1174312158]
+format = 2
+
+[node name="BaseLayerWithColllision" type="TileMapLayer" parent="TileMap" unique_id=1589392860]
+use_parent_material = true
+tile_map_data = PackedByteArray("AAABAAcAAQABAAYAAAACAAcAAQACAAYAAAADAAcAAQACAAYAAAAEAAcAAQACAAYAAAAFAAcAAQACAAYAAAAGAAcAAQACAAYAAAAHAAcAAQACAAYAAAAIAAcAAQACAAYAAAAJAAcAAQACAAYAAAAKAAcAAQACAAYAAAALAAcAAQACAAYAAAAMAAcAAQADAAYAAAANAAYAAQAHAAcAAAAOAAUAAQAHAAcAAAAOAAYAAQAIAAcAAAAPAAQAAQAHAAcAAAAPAAUAAQAIAAcAAAAQAAQAAQAIAAcAAAA=")
+tile_set = ExtResource("1_x87qo")
+
+[node name="BackgroundNoCollision" type="TileMapLayer" parent="TileMap" unique_id=1400593077]
+use_parent_material = true
+tile_map_data = PackedByteArray("AAAFAAYAAQAOAAUAAAAGAAYAAQAQAAUAAAAHAAYAAQAQAAUAAAAIAAYAAQAQAAUAAAAJAAYAAQANAAUAAAA=")
+tile_set = ExtResource("1_x87qo")
+collision_enabled = false
