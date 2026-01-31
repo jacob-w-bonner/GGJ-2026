@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://bbos4y4dwl6dq"]
+
+[ext_resource type="Script" uid="uid://1rvfrye2sahn" path="res://Scripts/colour_cells.gd" id="1_v0iea"]
+
+[node name="Player" type="Node2D" unique_id=1694602107]
+
+[node name="ColourCells" type="Node2D" parent="." unique_id=208764245]
+script = ExtResource("1_v0iea")
