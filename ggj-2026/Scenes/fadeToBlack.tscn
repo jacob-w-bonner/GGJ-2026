@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://cij3kpb0cshxg"]
+
+[ext_resource type="Script" uid="uid://da34nq6metmsq" path="res://Scripts/fadeToBlack.gd" id="1_les0q"]
+[ext_resource type="PackedScene" uid="uid://spbv53f3s62" path="res://Scenes/guard.tscn" id="2_pyvtt"]
+
+[node name="FadeToBlack" type="Node2D" unique_id=2141737803]
+
+[node name="FadeToBlack" type="CanvasModulate" parent="." unique_id=586147305]
+script = ExtResource("1_les0q")
+
+[node name="Node2D" parent="." unique_id=333059284 instance=ExtResource("2_pyvtt")]
