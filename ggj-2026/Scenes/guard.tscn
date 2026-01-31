@@ -1,6 +1,5 @@
-[gd_scene format=3 uid="uid://c3lrf4vyk77rb"]
+[gd_scene format=3 uid="uid://spbv53f3s62"]
 
-[ext_resource type="Texture2D" uid="uid://df76scdn6pb6l" path="res://Assets/square.png" id="1_mk1iy"]
 [ext_resource type="Script" uid="uid://b0110ytvt46vm" path="res://Scripts/path_follow_2d.gd" id="1_smm0d"]
 [ext_resource type="Texture2D" uid="uid://bycdlvhpt3vg" path="res://icon.svg" id="2_cnet1"]
 [ext_resource type="Script" uid="uid://c40ds2rhudp5p" path="res://Scripts/guard.gd" id="2_mk1iy"]
@@ -12,13 +11,6 @@ _data = {
 point_count = 2
 
 [node name="Node2D" type="Node2D" unique_id=333059284]
-
-[node name="Player" type="Node2D" parent="." unique_id=1289206891]
-position = Vector2(444, 203)
-
-[node name="Sprite2D" type="Sprite2D" parent="Player" unique_id=642031417]
-scale = Vector2(0.17, 0.17)
-texture = ExtResource("1_mk1iy")
 
 [node name="Path2D" type="Path2D" parent="." unique_id=1196932220]
 curve = SubResource("Curve2D_mk1iy")

@@ -1,6 +1,5 @@
 extends PathFollow2D
 
-
 @export var speed = 0.2
 @export var wait_time = 1.0
 
