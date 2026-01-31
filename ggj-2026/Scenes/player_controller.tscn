@@ -1,7 +1,9 @@
-[gd_scene format=3 uid="uid://dt3dx5in287pn"]
+[gd_scene format=3 uid="uid://di36n4rohkn8m"]
 
-[ext_resource type="Script" uid="uid://d05aga1175pty" path="res://scripts/player/player_movement_controller.gd" id="1_5ur5x"]
+[ext_resource type="Script" uid="uid://d05aga1175pty" path="res://Scripts/player/player_movement_controller.gd" id="1_5ur5x"]
 [ext_resource type="Texture2D" uid="uid://bycdlvhpt3vg" path="res://icon.svg" id="1_v0iea"]
+[ext_resource type="AudioStream" uid="uid://dlaa5fuqhliej" path="res://Assets/wind02.mp3" id="3_bnokr"]
+[ext_resource type="Script" uid="uid://bvfsiivly25vm" path="res://Scripts/player/player_wind_player.gd" id="4_1esxm"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_cvnsp"]
 friction = 0.0
@@ -15,9 +17,12 @@ gravity_scale = 0.0
 lock_rotation = true
 script = ExtResource("1_5ur5x")
 gravity = 2500
-groundMovementForce = 2000
-groundDragForce = 3000
+groundMovementForce = 800
+groundDragForce = 1600
+sidewaysAirMovementForce = 800
+downwardAirMovementForce = 1500
 jumpStrength = 1000
+coyotetime = 0.33
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1656781718]
 shape = SubResource("RectangleShape2D_cvnsp")
@@ -33,3 +38,11 @@ target_position = Vector2(0, 38)
 [node name="Left-RayCast2D" type="RayCast2D" parent="." unique_id=1103071425]
 position = Vector2(-10, -15)
 target_position = Vector2(0, 38)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1432901843 node_paths=PackedStringArray("playerNode")]
+stream = ExtResource("3_bnokr")
+autoplay = true
+script = ExtResource("4_1esxm")
+playerNode = NodePath("..")
+maxVolumeMultiple = 10
+maxVolumeChange = 100
