@@ -14,6 +14,7 @@ extends RigidBody2D
 
 @onready var right_ray_cast: RayCast2D = $"Right-RayCast2D"
 @onready var left_ray_cast: RayCast2D = $"Left-RayCast2D"
+@onready var collision_shape: CollisionShape2D = $CollisionShape2D
 
 var inputVector:Vector2
 var grounded = false
@@ -33,6 +34,9 @@ func _process(delta: float) -> void:
 	if Input.is_action_pressed("move_up"):
 		inputVector.y -= 1
 	inputVector = inputVector.normalized()
+	
+	var dropDown:bool = (inputVector.y != 1)
+	self.set_collision_mask_value(2, dropDown)
 
 
 func _integrate_forces(state: PhysicsDirectBodyState2D):
