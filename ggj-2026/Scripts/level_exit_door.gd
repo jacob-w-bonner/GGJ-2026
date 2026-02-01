@@ -27,11 +27,11 @@ func _process(delta: float) -> void:
 func go_to_next_level() -> void:
 	# Based on current scene, move to the next scene
 	if get_tree().current_scene.name == "Level 1":
-		print("Go to Level 2!")
+		get_tree().change_scene_to_file("res://Scenes/Level 2.tscn")
 		
 	if get_tree().current_scene.name == "Level 2":
-		print("Go to Level 3!")
-		
+		get_tree().change_scene_to_file("res://Scenes/Level 3.tscn")
+
 	if get_tree().current_scene.name == "Level 3": 
-		print("You  beat the game!")
+		get_tree().change_scene_to_file("res://Scenes/You Win.tscn")
 		

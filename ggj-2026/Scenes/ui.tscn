@@ -85,4 +85,3 @@ ignore_texture_size = true
 script = ExtResource("2_q7pk6")
 
 [connection signal="fade_done" from="Control/CanvasModulate" to="Control/RestartButton" method="_on_fade_done"]
-[connection signal="fade_out" from="Control/RestartButton" to="Control/CanvasModulate" method="_on_fade_out"]
