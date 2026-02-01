@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://h241ok045h11"]
+
+[ext_resource type="Script" path="res://Scripts/raycast_color_getter.gd" id="1_560ee"]
+
+[node name="RaycastColorGetter" type="Node2D" unique_id=191282805]
+
+[node name="RayCast3D" type="RayCast3D" parent="." unique_id=305882779]
+target_position = Vector3(0, 0, 1)
+script = ExtResource("1_560ee")

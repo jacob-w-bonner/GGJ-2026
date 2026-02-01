@@ -22,6 +22,6 @@ func _ready():
 func _process(delta):
 	var playerSpeed:float = playerNode.linear_velocity.length()
 	var lerpValue = clamp(playerSpeed/maxVolumeVelocity, 0, 1)
-	print("playerSpeed:" + str(playerSpeed))
+	#print("playerSpeed:" + str(playerSpeed))
 	var newVolume = lerp(minVolumeMultiple, maxVolumeMultiple, lerpValue)
 	volume_db = move_toward(volume_db, newVolume, maxVolumeChange * delta)

@@ -2,7 +2,20 @@
 
 [ext_resource type="PackedScene" uid="uid://di36n4rohkn8m" path="res://Scenes/player_controller.tscn" id="1_fb21i"]
 [ext_resource type="PackedScene" uid="uid://d04vgeejpx83f" path="res://Scenes/drop_down_platform.tscn" id="2_4ms67"]
+<<<<<<< Updated upstream
 [ext_resource type="Texture2D" uid="uid://bycdlvhpt3vg" path="res://icon.svg" id="2_vvrti"]
+=======
+[ext_resource type="Script" uid="uid://ctvc7ri5o5ju3" path="res://Scripts/player/test.gd" id="2_t3rh7"]
+[ext_resource type="Texture2D" uid="uid://bycdlvhpt3vg" path="res://icon.svg" id="2_vvrti"]
+[ext_resource type="PackedScene" path="res://Scenes/Stool.tscn" id="4_4ms67"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4ms67"]
+size = Vector2(90, 80)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_t3rh7"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_07kso"]
+>>>>>>> Stashed changes
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r3mym"]
 size = Vector2(128, 128)
@@ -12,8 +25,29 @@ size = Vector2(130, 128)
 
 [node name="PlayerControllerGym" type="Node2D" unique_id=1129709678]
 
+[node name="Area2D" type="Area2D" parent="." unique_id=1292773252]
+position = Vector2(747, 538)
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D" unique_id=736916395]
+shape = SubResource("RectangleShape2D_4ms67")
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D" unique_id=2128941234]
+material = SubResource("ShaderMaterial_t3rh7")
+texture = ExtResource("2_vvrti")
+
 [node name="player_controller" parent="." unique_id=193364027 instance=ExtResource("1_fb21i")]
 position = Vector2(404, 295)
+
+[node name="CollisionShape2D2" type="Area2D" parent="player_controller" unique_id=449598038]
+position = Vector2(48, 0)
+script = ExtResource("2_t3rh7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="player_controller/CollisionShape2D2" unique_id=1400667141]
+shape = SubResource("CircleShape2D_07kso")
+
+[node name="Sprite2D" type="Sprite2D" parent="player_controller/CollisionShape2D2" unique_id=1617093035]
+scale = Vector2(0.12026714, 0.16874483)
+texture = ExtResource("2_vvrti")
 
 [node name="DropDownPlatform" parent="." unique_id=426801064 instance=ExtResource("2_4ms67")]
 position = Vector2(805, 511)
