@@ -45,7 +45,6 @@ func TrueIfArgumentColourIsWithinToleranceOfDesired(argumentColour:Color) -> boo
 	var hueDifference_normal = ourHue - argumentHue
 	var hueDifference_downShifted = (argumentHue - 1) - ourHue
 	var realHueDifference:float = min(min(abs(hueDifference_upShifted), abs(hueDifference_normal)), abs(hueDifference_downShifted))
-	
 	return (realHueDifference <= Globals.HUEDIFFERENCETOLERANCE)
 
 func SplatOn(argumentColour:Color) -> void:
