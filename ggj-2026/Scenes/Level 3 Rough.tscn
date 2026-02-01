@@ -18,7 +18,7 @@
 [ext_resource type="PackedScene" uid="uid://ee3226mli0nv" path="res://Scenes/absorbable_colour_autumn_red.tscn" id="12_k7q2e"]
 [ext_resource type="PackedScene" uid="uid://ls2hwlllykuk" path="res://Scenes/absorbable_colour_autumn_cyan.tscn" id="13_anpic"]
 [ext_resource type="PackedScene" uid="uid://ds1t4btdud884" path="res://Scenes/absorbable_colour_autumn_green.tscn" id="14_8usqw"]
-[ext_resource type="PackedScene" path="res://Scenes/absorbable_colour_clear.tscn" id="16_tm0fi"]
+[ext_resource type="PackedScene" uid="uid://culjsn2xps7cm" path="res://Scenes/absorbable_colour_clear.tscn" id="16_tm0fi"]
 [ext_resource type="Texture2D" uid="uid://bd3hai0llnuyq" path="res://Assets/Environment/Wall.png" id="17_grufy"]
 [ext_resource type="Texture2D" uid="uid://dt8hb6wr6h4l2" path="res://Assets/Floor.png" id="18_2dtiq"]
 [ext_resource type="PackedScene" path="res://Scenes/level_exit_door.tscn" id="18_t7xt4"]
@@ -36,6 +36,7 @@ position = Vector2(2, 562)
 
 [node name="PlayerCamera" type="Camera2D" parent="." unique_id=655621015 node_paths=PackedStringArray("player")]
 position = Vector2(573, 318)
+zoom = Vector2(1.5, 1.5)
 script = ExtResource("2_0gqrk")
 player = NodePath("../Player")
 
