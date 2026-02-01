@@ -19,12 +19,12 @@ gravity_scale = 0.0
 can_sleep = false
 lock_rotation = true
 script = ExtResource("1_5ur5x")
-gravity = 2500
+gravity = 2000
 groundMovementForce = 800
-groundDragForce = 1600
+groundDragForce = 8000
 sidewaysAirMovementForce = 800
 downwardAirMovementForce = 1500
-jumpStrength = 1000
+jumpStrength = 500
 coyotetime = 0.33
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1656781718]
