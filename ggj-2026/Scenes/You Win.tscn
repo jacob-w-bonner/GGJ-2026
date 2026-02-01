@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://dhlgrmjhqv3cj"]
+
+[ext_resource type="Texture2D" uid="uid://bhrn3a00ouq2o" path="res://Assets/youWin.png" id="1_rasc0"]
+
+[node name="YouWin" type="Node2D" unique_id=853555207]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=925784456]
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer" unique_id=1944123321]
+offset_right = 1937.0
+offset_bottom = 1087.0
+texture = ExtResource("1_rasc0")
