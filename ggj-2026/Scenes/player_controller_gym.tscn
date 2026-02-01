@@ -1,0 +1,57 @@
+[gd_scene format=3 uid="uid://bk4aof4mh3bsd"]
+
+[ext_resource type="PackedScene" uid="uid://di36n4rohkn8m" path="res://Scenes/player_controller.tscn" id="1_fb21i"]
+[ext_resource type="PackedScene" uid="uid://hkcm0qaks4et" path="res://Scenes/drop_down_platform.tscn" id="2_4ms67"]
+[ext_resource type="Texture2D" uid="uid://bycdlvhpt3vg" path="res://icon.svg" id="2_vvrti"]
+[ext_resource type="PackedScene" uid="uid://dlb1vl8xplpsi" path="res://Scenes/Stool.tscn" id="4_4ms67"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r3mym"]
+size = Vector2(128, 128)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rxhil"]
+size = Vector2(130, 128)
+
+[node name="PlayerControllerGym" type="Node2D" unique_id=1129709678]
+
+[node name="player_controller" parent="." unique_id=193364027 instance=ExtResource("1_fb21i")]
+position = Vector2(404, 295)
+gravity = 2000
+groundDragForce = 8000
+jumpStrength = 500
+
+[node name="DropDownPlatform" parent="." unique_id=426801064 instance=ExtResource("2_4ms67")]
+position = Vector2(345, 444)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1986248079]
+position = Vector2(527, 643)
+scale = Vector2(10.599999, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=915870049]
+texture = ExtResource("2_vvrti")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1377600318]
+shape = SubResource("RectangleShape2D_r3mym")
+
+[node name="RigidBody2D" type="RigidBody2D" parent="." unique_id=322867098]
+position = Vector2(-65, 290)
+
+[node name="Sprite2D" type="Sprite2D" parent="RigidBody2D" unique_id=2073573285]
+texture = ExtResource("2_vvrti")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D" unique_id=214252193]
+shape = SubResource("RectangleShape2D_rxhil")
+
+[node name="DropDownPlatform2" parent="." unique_id=52317613 instance=ExtResource("2_4ms67")]
+position = Vector2(877, 444)
+
+[node name="DropDownPlatform3" parent="." unique_id=1955152185 instance=ExtResource("4_4ms67")]
+position = Vector2(939, 556)
+
+[node name="DropDownPlatform4" parent="." unique_id=1882438240 instance=ExtResource("4_4ms67")]
+position = Vector2(1043, 554)
+
+[node name="DropDownPlatform5" parent="." unique_id=1502951546 instance=ExtResource("4_4ms67")]
+position = Vector2(993, 524)
+
+[node name="DropDownPlatform6" parent="." unique_id=1732500005 instance=ExtResource("4_4ms67")]
+position = Vector2(597, 555)
