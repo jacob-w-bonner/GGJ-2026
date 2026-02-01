@@ -1,17 +1,18 @@
 [gd_scene format=3 uid="uid://cjb3sm2btdv6v"]
 
-[ext_resource type="PackedScene" uid="uid://bbos4y4dwl6dq" path="res://Scenes/player.tscn" id="1_7a54r"]
-[ext_resource type="Texture2D" uid="uid://bycdlvhpt3vg" path="res://icon.svg" id="3_htomu"]
+[ext_resource type="PackedScene" uid="uid://bbos4y4dwl6dq" path="res://Scenes/player.tscn" id="1_jxi4p"]
 [ext_resource type="PackedScene" uid="uid://dlb1vl8xplpsi" path="res://Scenes/Stool.tscn" id="4_4he20"]
 [ext_resource type="PackedScene" uid="uid://dbohlvldq1gmi" path="res://Scenes/absorbable_colour_red.tscn" id="4_htomu"]
-[ext_resource type="PackedScene" uid="uid://dqwdji1dib54q" path="res://Scenes/absorbable_colour_green.tscn" id="5_4he20"]
+[ext_resource type="PackedScene" uid="uid://c10s8ssfdf2kn" path="res://Scenes/absorbable_colour_green.tscn" id="5_4he20"]
 [ext_resource type="Script" uid="uid://da8mcsv5ayli0" path="res://Scenes/player_camera.gd" id="5_aksks"]
-[ext_resource type="PackedScene" uid="uid://ca3erfbuk0kh3" path="res://Scenes/absorbable_colour_white.tscn" id="5_hirra"]
+[ext_resource type="PackedScene" uid="uid://dwqtrhxe5oiob" path="res://Scenes/absorbable_colour_white.tscn" id="5_hirra"]
+[ext_resource type="Texture2D" uid="uid://bd3hai0llnuyq" path="res://Assets/Environment/Wall.png" id="7_bobo7"]
+[ext_resource type="Texture2D" uid="uid://dt8hb6wr6h4l2" path="res://Assets/Floor.png" id="7_jxi4p"]
 [ext_resource type="Texture2D" uid="uid://h7qsl2nskq04" path="res://Assets/Bucket.png" id="8_7a54r"]
 [ext_resource type="PackedScene" uid="uid://duh7wknhj5uc4" path="res://Scenes/level_exit_door.tscn" id="8_hirra"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r3mym"]
-size = Vector2(128, 128)
+size = Vector2(128, 128.1)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rxhil"]
 size = Vector2(11, 128)
@@ -21,7 +22,8 @@ size = Vector2(112, 13)
 
 [node name="Level 1" type="Node2D" unique_id=1129709678]
 
-[node name="Player" parent="." unique_id=522882859 instance=ExtResource("1_7a54r")]
+[node name="Player" parent="." unique_id=522882859 instance=ExtResource("1_jxi4p")]
+position = Vector2(181, 48.999996)
 
 [node name="PlayerCamera" type="Camera2D" parent="." unique_id=655621015 node_paths=PackedStringArray("player")]
 position = Vector2(573, 318)
@@ -81,7 +83,9 @@ position = Vector2(-568, 396)
 scale = Vector2(6, 20)
 
 [node name="Sprite2D" type="Sprite2D" parent="Bounds/LeftWall" unique_id=533191513]
-texture = ExtResource("3_htomu")
+position = Vector2(0.83332586, -22.324999)
+scale = Vector2(0.06363933, 0.112618096)
+texture = ExtResource("7_bobo7")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Bounds/LeftWall" unique_id=1074665853]
 shape = SubResource("RectangleShape2D_r3mym")
@@ -91,19 +95,25 @@ position = Vector2(2880.0002, 1249)
 scale = Vector2(60, 10)
 
 [node name="Sprite2D" type="Sprite2D" parent="Bounds/Floor" unique_id=915870049]
-texture = ExtResource("3_htomu")
+position = Vector2(0.125, 0.49999654)
+scale = Vector2(0.06265462, 0.17489874)
+texture = ExtResource("7_jxi4p")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Bounds/Floor" unique_id=1377600318]
+position = Vector2(0, -0.05000305)
 shape = SubResource("RectangleShape2D_r3mym")
 
 [node name="Ceiling" type="StaticBody2D" parent="Bounds" unique_id=1351640373]
-position = Vector2(1743, -261)
-scale = Vector2(30, 4)
+position = Vector2(1727.0001, -608)
+scale = Vector2(30, 10)
 
 [node name="Sprite2D" type="Sprite2D" parent="Bounds/Ceiling" unique_id=431356315]
-texture = ExtResource("3_htomu")
+position = Vector2(-0.5333309, -6.375007)
+scale = Vector2(0.06341147, 0.17780027)
+texture = ExtResource("7_bobo7")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Bounds/Ceiling" unique_id=1255616068]
+position = Vector2(0.20000076, -7)
 shape = SubResource("RectangleShape2D_r3mym")
 
 [node name="HallwayWall" type="StaticBody2D" parent="Bounds" unique_id=1481582349]
@@ -111,8 +121,9 @@ position = Vector2(1175, 188)
 scale = Vector2(0.5, 1.75)
 
 [node name="Sprite2D" type="Sprite2D" parent="Bounds/HallwayWall" unique_id=359074412]
-scale = Vector2(0.5, 1.75)
-texture = ExtResource("3_htomu")
+position = Vector2(1.9999475, 0.2856846)
+scale = Vector2(0.033203118, 0.30460757)
+texture = ExtResource("7_bobo7")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Bounds/HallwayWall" unique_id=128163495]
 scale = Vector2(0.5, 1.75)
@@ -123,8 +134,9 @@ position = Vector2(2598, 190)
 scale = Vector2(0.5, 1.75)
 
 [node name="Sprite2D" type="Sprite2D" parent="Bounds/HallwayWall2" unique_id=1054512818]
-scale = Vector2(0.5, 1.75)
-texture = ExtResource("3_htomu")
+position = Vector2(-1.9999657, -0.57144165)
+scale = Vector2(0.03124997, 0.30846345)
+texture = ExtResource("7_bobo7")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Bounds/HallwayWall2" unique_id=1450615891]
 scale = Vector2(0.5, 1.75)
@@ -132,12 +144,14 @@ shape = SubResource("RectangleShape2D_r3mym")
 
 [node name="Ramp" type="StaticBody2D" parent="Bounds" unique_id=1703469897]
 z_index = -1
-position = Vector2(5066.9995, 693.9997)
+position = Vector2(4970, 679.99994)
 rotation = -0.5235988
 scale = Vector2(12, 8)
 
 [node name="Sprite2D" type="Sprite2D" parent="Bounds/Ramp" unique_id=99621517]
-texture = ExtResource("3_htomu")
+position = Vector2(-18.767994, -13.276061)
+scale = Vector2(0.081671886, 0.13583283)
+texture = ExtResource("7_jxi4p")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Bounds/Ramp" unique_id=76412600]
 shape = SubResource("RectangleShape2D_r3mym")
@@ -147,7 +161,9 @@ position = Vector2(6321, 366)
 scale = Vector2(15, 8)
 
 [node name="Sprite2D" type="Sprite2D" parent="Bounds/Floor2" unique_id=348586998]
-texture = ExtResource("3_htomu")
+position = Vector2(-0.43333375, 2.187499)
+scale = Vector2(0.061946616, 0.17830633)
+texture = ExtResource("7_jxi4p")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Bounds/Floor2" unique_id=1849883090]
 shape = SubResource("RectangleShape2D_r3mym")
@@ -157,19 +173,11 @@ position = Vector2(6929, -226.99997)
 scale = Vector2(6, 20)
 
 [node name="Sprite2D" type="Sprite2D" parent="Bounds/RightWall" unique_id=297126794]
-texture = ExtResource("3_htomu")
+position = Vector2(0.08333397, 12.949996)
+scale = Vector2(0.062581405, 0.13495275)
+texture = ExtResource("7_bobo7")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Bounds/RightWall" unique_id=251259528]
-shape = SubResource("RectangleShape2D_r3mym")
-
-[node name="Ceiling2" type="StaticBody2D" parent="Bounds" unique_id=829945070]
-position = Vector2(1767.0001, -780)
-scale = Vector2(30, 4)
-
-[node name="Sprite2D" type="Sprite2D" parent="Bounds/Ceiling2" unique_id=1054477668]
-texture = ExtResource("3_htomu")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Bounds/Ceiling2" unique_id=1053304309]
 shape = SubResource("RectangleShape2D_r3mym")
 
 [node name="Ceiling3" type="StaticBody2D" parent="Bounds" unique_id=346246371]
@@ -177,7 +185,9 @@ position = Vector2(4989, -1286)
 scale = Vector2(30, 4)
 
 [node name="Sprite2D" type="Sprite2D" parent="Bounds/Ceiling3" unique_id=296771911]
-texture = ExtResource("3_htomu")
+position = Vector2(-0.23333502, 1.4999883)
+scale = Vector2(0.06266277, 0.17543864)
+texture = ExtResource("7_bobo7")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Bounds/Ceiling3" unique_id=1677530011]
 shape = SubResource("RectangleShape2D_r3mym")
@@ -268,4 +278,4 @@ scale = Vector2(0.5, 0.5)
 
 [node name="LevelExitDoor" parent="." unique_id=860006878 node_paths=PackedStringArray("player_root") instance=ExtResource("8_hirra")]
 position = Vector2(6190, -210)
-player_root = NodePath("../Player")
+player_root = NodePath("")
