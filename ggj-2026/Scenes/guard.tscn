@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://spbv53f3s62"]
 
-[ext_resource type="Script" uid="uid://b0110ytvt46vm" path="res://Scripts/path_follow_2d.gd" id="1_smm0d"]
+[ext_resource type="Script" path="res://Scripts/path_follow_2d.gd" id="1_smm0d"]
 [ext_resource type="Texture2D" uid="uid://bycdlvhpt3vg" path="res://icon.svg" id="2_cnet1"]
-[ext_resource type="Script" uid="uid://c40ds2rhudp5p" path="res://Scripts/guard.gd" id="2_mk1iy"]
+[ext_resource type="Script" path="res://Scripts/guard.gd" id="2_mk1iy"]
 
 [sub_resource type="Curve2D" id="Curve2D_mk1iy"]
 _data = {
