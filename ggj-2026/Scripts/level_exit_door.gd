@@ -5,13 +5,6 @@ extends Area2D
 
 var can_pass = false
 
-
-@export var puzzle1: Node2D
-@export var puzzle2: Node2D
-@export var puzzle3: Node2D
-@export var puzzle4: Node2D
-@export var puzzle5: Node2D
-
 @onready var key1 = $Sprite2D/Puzzle1
 @onready var key2 = $Sprite2D/Puzzle2
 @onready var key3 = $Sprite2D/Puzzle3
@@ -23,23 +16,12 @@ var puzzles = 0
 var completedPuzzles = 0
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	if (puzzle1 == null):
-		key1.visible = false
-		puzzles += 1
-	if (puzzle2 == null):
-		key2.visible = false
-		puzzles +=1
-	if (puzzle3 == null):
-		key3.visible = false
-		puzzles +=1 
-	if (puzzle4 == null):
-		key4.visible = false
-		puzzles +=1
-	if (puzzle5 == null):
-		key5.visible = false 
-		puzzles +=1
-	
-	
+	key1.visible = false
+	key2.visible = false
+	key3.visible = false
+	key4.visible = false
+	key5.visible = false
+
 	pass # Replace with function body.
 
 func pass_level():
@@ -47,8 +29,6 @@ func pass_level():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	#print("Pos:" + player_root.get_controller_pos())
-
 	if get_tree().current_scene.name == "Level 1":
 		if Globals.CHECKERS:
 			can_pass = true
@@ -85,6 +65,19 @@ func open_door():
 	if (puzzles <= completedPuzzles):
 		return true
 	return false
+	
+func _on_im_a_puzzle():
+	puzzles+=1
+	if (puzzles == 1):
+		key1.visible = true
+	elif (puzzles == 2):
+		key2.visible = true
+	elif (puzzles == 3):
+		key3.visible = true
+	elif (puzzles == 4):
+		key4.visible = true
+	elif (puzzles == 5):
+		key5.visible = true
 
 func _on_completed_puzzle():
 	completedPuzzles+=1
