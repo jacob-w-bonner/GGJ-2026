@@ -26,7 +26,11 @@ var inputVector:Vector2
 var grounded = false
 var timeSinceLastTouchedGround = 0;
 
-
+func _ready() -> void:
+	bodyAnimator.play("standing")
+	faceSprite.play("neutral")
+	
+	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	##this block gets the WASD player input and converts it into a Vector2 
@@ -47,17 +51,15 @@ func _process(delta: float) -> void:
 
 
 func handleAnimation():
-	var movementInputs = ["move_left", "move_right", "move_up", "move_down"]
-	for mi in movementInputs:
-		if Input.is_action_pressed(mi): 
-			bodyAnimator.play("walking")
+	if Input.is_action_pressed("move_left") || Input.is_action_pressed("move_right") || Input.is_action_pressed("move_up") || Input.is_action_pressed("move_down"):
+		bodyAnimator.play("walking")
+	else: 
+		bodyAnimator.play("standing")
 	if Input.is_action_pressed("move_left"):
 		faceSprite.flip_h = 1
 	if Input.is_action_pressed("move_right"):
 		faceSprite.flip_h = 0
 	
-	
-
 func _integrate_forces(state: PhysicsDirectBodyState2D):
 	
 	##GroundCheck############################
