@@ -5,9 +5,12 @@ extends Node2D
 @onready var freedom: Node2D = get_parent().get_parent().get_parent()
 
 @export var speed = 200
+@export var player: Node2D
+@export var detection_zone: int = 20
 
 
-var player_pos = Vector2(444,203)
+signal game_over 
+
 
 func _ready() -> void:
 	pass
@@ -15,13 +18,18 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	match state:
 		GuardMovement.State.WRINGING_OUT: 
-			global_position  =  global_position.move_toward(player_pos, delta*speed)
+			game_over.emit()
+			global_position  =  global_position.move_toward(player.global_position, delta*speed)
+			if abs(player.global_position.x - self.global_position.x) > 20:# || abs(player.global_position.y - self.global_position.y) > 20:
+				state = GuardMovement.State.RETURNING_TO_PATH
 		GuardMovement.State.RETURNING_TO_PATH: 
 			global_position = global_position.move_toward(path.global_position, delta * speed)
 			if (global_position == path.global_position): 
 				reattach_to_path(path)
-		_:
-			pass
+		GuardMovement.State.PATROLLING:
+			# y comparison to make sure we're on the same vertical level
+			if (!player.hidden && abs(player.global_position.x - self.global_position.x) <= 20 && abs(player.global_position.y - self.global_position.y) <= 5):
+					state = GuardMovement.State.WRINGING_OUT
 	
 
 #temporary state control until player is detectable 
@@ -34,7 +42,7 @@ func _unhandled_input(event):
 			GuardMovement.State.WRINGING_OUT:
 				state = GuardMovement.State.RETURNING_TO_PATH
 			# guard was returning to path, but spotted player again
-			GuardMovement.State.RETURNING_TO_PATH:
+			GuardMovement.State.RETURNING_TO_PATH: 
 				state = GuardMovement.State.WRINGING_OUT
 	
 func reattach_to_path(path_follow: PathFollow2D):

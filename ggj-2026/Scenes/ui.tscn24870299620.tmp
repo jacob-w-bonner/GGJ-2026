@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://eyy5iq1g1yfp"]
+
+[ext_resource type="Script" uid="uid://da34nq6metmsq" path="res://Scripts/fadeToBlack.gd" id="1_nf4gj"]
+[ext_resource type="Texture2D" uid="uid://c5mkipv5jxts4" path="res://Assets/undo.png" id="2_2246s"]
+[ext_resource type="Script" uid="uid://dp56dub7qo4if" path="res://Scripts/resetLevel.gd" id="3_q7pk6"]
+
+[node name="UI" type="CanvasLayer" unique_id=1806736499]
+follow_viewport_enabled = true
+
+[node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=909553094]
+script = ExtResource("1_nf4gj")
+
+[node name="Label" type="Label" parent="CanvasModulate" unique_id=1983610114]
+offset_left = 327.0
+offset_top = 181.0
+offset_right = 901.0
+offset_bottom = 318.0
+theme_override_colors/font_color = Color(0.96862745, 0.19215687, 0.078431375, 1)
+theme_override_colors/font_shadow_color = Color(0, 0.87058824, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 100
+text = "GAME OVER"
+
+[node name="Control" type="Control" parent="." unique_id=148914519]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 0
+
+[node name="TextureButton" type="TextureButton" parent="Control" unique_id=1724219079]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0730001
+anchor_bottom = 1.0
+offset_left = 1077.0
+offset_top = 10.0
+offset_right = -100.09607
+offset_bottom = -579.0
+texture_normal = ExtResource("2_2246s")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("3_q7pk6")
+
+[connection signal="fade_done" from="CanvasModulate" to="Control/TextureButton" method="_on_fade_done"]
+[connection signal="fade_out" from="Control/TextureButton" to="CanvasModulate" method="_on_fade_out"]
