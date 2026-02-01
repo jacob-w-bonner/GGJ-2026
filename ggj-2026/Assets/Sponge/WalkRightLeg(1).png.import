@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b0t5hj8jcwidl"
-path="res://.godot/imported/angry.png-a9d7f6058d0c752557a7c6d59c825783.ctex"
+uid="uid://cluo618ctwpg6"
+path="res://.godot/imported/WalkRightLeg(1).png-9212dc9fb87ad13b4aad3f046f4ca230.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/SpongeWalking/angry.png"
-dest_files=["res://.godot/imported/angry.png-a9d7f6058d0c752557a7c6d59c825783.ctex"]
+source_file="res://Assets/Sponge/WalkRightLeg(1).png"
+dest_files=["res://.godot/imported/WalkRightLeg(1).png-9212dc9fb87ad13b4aad3f046f4ca230.ctex"]
 
 [params]
 

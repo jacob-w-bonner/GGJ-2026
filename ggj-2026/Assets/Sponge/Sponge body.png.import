@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c4xmln1b1agp3"
-path="res://.godot/imported/Walkingleftleg.png-2419b85b29f9e045264651615d684b1e.ctex"
+uid="uid://dk3q6ufind3gq"
+path="res://.godot/imported/Sponge body.png-9a614abc8213f5e26b986afd70b89069.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/SpongeWalking/Walkingleftleg.png"
-dest_files=["res://.godot/imported/Walkingleftleg.png-2419b85b29f9e045264651615d684b1e.ctex"]
+source_file="res://Assets/Sponge/Sponge body.png"
+dest_files=["res://.godot/imported/Sponge body.png-9a614abc8213f5e26b986afd70b89069.ctex"]
 
 [params]
 

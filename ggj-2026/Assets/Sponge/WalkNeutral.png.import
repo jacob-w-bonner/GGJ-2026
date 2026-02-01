@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://47i2ktudsd26"
-path="res://.godot/imported/happy.png-4ee90142610faeca2fb5bbdd81e9ef8f.ctex"
+uid="uid://efc4806mir5y"
+path="res://.godot/imported/WalkNeutral.png-107892546cf4185b35b24624b6e9042f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/SpongeWalking/happy.png"
-dest_files=["res://.godot/imported/happy.png-4ee90142610faeca2fb5bbdd81e9ef8f.ctex"]
+source_file="res://Assets/Sponge/WalkNeutral.png"
+dest_files=["res://.godot/imported/WalkNeutral.png-107892546cf4185b35b24624b6e9042f.ctex"]
 
 [params]
 

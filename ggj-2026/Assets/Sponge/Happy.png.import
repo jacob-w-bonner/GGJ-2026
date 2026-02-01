@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bfjvt7mfmcrcx"
-path="res://.godot/imported/WalkingRightleg.png-8ab4c8abd798d24749ff0c394e7b473e.ctex"
+uid="uid://dtcxpnuqmn8h4"
+path="res://.godot/imported/Happy.png-01ec769c00085362710a1dd010333930.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/SpongeWalking/WalkingRightleg.png"
-dest_files=["res://.godot/imported/WalkingRightleg.png-8ab4c8abd798d24749ff0c394e7b473e.ctex"]
+source_file="res://Assets/Sponge/Happy.png"
+dest_files=["res://.godot/imported/Happy.png-01ec769c00085362710a1dd010333930.ctex"]
 
 [params]
 

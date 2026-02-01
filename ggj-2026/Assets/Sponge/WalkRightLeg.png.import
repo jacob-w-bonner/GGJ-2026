@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bawa75876k2bl"
-path="res://.godot/imported/Background2.png-273e8f5bea55f9f3593e66f5bb2dce7f.ctex"
+uid="uid://blcse54ys6dub"
+path="res://.godot/imported/WalkRightLeg.png-b8aaf42f91ef5de257b397b941a7ad76.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/SpongeWalking/Background2.png"
-dest_files=["res://.godot/imported/Background2.png-273e8f5bea55f9f3593e66f5bb2dce7f.ctex"]
+source_file="res://Assets/Sponge/WalkRightLeg.png"
+dest_files=["res://.godot/imported/WalkRightLeg.png-b8aaf42f91ef5de257b397b941a7ad76.ctex"]
 
 [params]
 
