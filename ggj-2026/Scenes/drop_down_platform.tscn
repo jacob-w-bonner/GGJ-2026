@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://hkcm0qaks4et"]
 
 [ext_resource type="Texture2D" uid="uid://bycdlvhpt3vg" path="res://icon.svg" id="1_msqaa"]
+[ext_resource type="Texture2D" uid="uid://s4yub1371qb6" path="res://Assets/Environment/Shelf.png" id="2_ae8vg"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_fb21i"]
 a = Vector2(-129, -7)
@@ -19,3 +20,9 @@ one_way_collision_margin = 0.0
 modulate = Color(1, 0.5294118, 0, 1)
 scale = Vector2(2, 0.1)
 texture = ExtResource("1_msqaa")
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=620316371]
+modulate = Color(1, 0.5294118, 0, 1)
+position = Vector2(-1.5497208e-06, -0.5000002)
+scale = Vector2(0.14772728, 0.04814815)
+texture = ExtResource("2_ae8vg")
