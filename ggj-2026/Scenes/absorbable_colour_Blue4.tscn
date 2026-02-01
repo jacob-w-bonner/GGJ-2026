@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dxgbawtxno1lo"]
 
-[ext_resource type="Script" path="res://Scripts/absorbable_colour.gd" id="1_fqk0e"]
-[ext_resource type="Texture2D" uid="uid://d0laynwhbpy27" path="res://Assets/WhiteSquare.png" id="2_tnb75"]
+[ext_resource type="Script" uid="uid://dfilyxsh47xqq" path="res://Scripts/absorbable_colour.gd" id="1_fqk0e"]
+[ext_resource type="Texture2D" uid="uid://dfy2bpn3s86dw" path="res://Assets/WhiteSquare.png" id="2_tnb75"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5xigm"]
 size = Vector2(128, 128)

@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://dw8h6vykcfwj2" path="res://Scenes/absorbable_colour_Blue2.tscn" id="5_n3ytq"]
 [ext_resource type="PackedScene" uid="uid://bbd07nly0r4ix" path="res://Scenes/absorbable_colour_Blue3.tscn" id="6_ut81y"]
 [ext_resource type="PackedScene" uid="uid://col47l7aoiclr" path="res://Scenes/absorbable_colour_black.tscn" id="8_iad6u"]
+[ext_resource type="PackedScene" uid="uid://culjsn2xps7cm" path="res://Scenes/absorbable_colour_clear.tscn" id="8_srilc"]
 [ext_resource type="PackedScene" uid="uid://t0pyjrb4skuh" path="res://Scenes/absorbable_colour_Blue5.tscn" id="8_ut81y"]
 
 [sub_resource type="Theme" id="Theme_7qgix"]
@@ -66,6 +67,12 @@ scale = Vector2(0.5, 0.5)
 position = Vector2(434, 75)
 scale = Vector2(0.5, 0.5)
 
+[node name="AbsorbableColour" parent="Paintings/BlueGradiant" unique_id=531389145 instance=ExtResource("8_srilc")]
+position = Vector2(370, 75)
+scale = Vector2(0.5, 0.5)
+desiresToChangeColor = true
+desiredColor = Color(0.003921569, 0.23921569, 0.9764706, 1)
+
 [node name="StickMan" type="Node2D" parent="Paintings" unique_id=1146930384]
 position = Vector2(1931, 294)
 
@@ -101,6 +108,20 @@ offset_bottom = 19.0
 theme = SubResource("Theme_7qgix")
 text = "Cant Hang The Man"
 metadata/_edit_use_anchors_ = true
+
+[node name="AbsorbableColour" parent="Paintings/StickMan" unique_id=1922155904 instance=ExtResource("8_srilc")]
+position = Vector2(94, 134)
+scale = Vector2(0.1, 0.5)
+desiresToChangeColor = true
+desiredColor = Color(0, 0, 0, 1)
+desiredNumberOfSplats = 32
+
+[node name="AbsorbableColour2" parent="Paintings/StickMan" unique_id=138177452 instance=ExtResource("8_srilc")]
+position = Vector2(94, 200)
+scale = Vector2(0.1, 0.5)
+desiresToChangeColor = true
+desiredColor = Color(0, 0, 0, 1)
+desiredNumberOfSplats = 32
 
 [node name="AddsUp" type="Node2D" parent="Paintings" unique_id=599572794]
 position = Vector2(3223, 391)
@@ -231,27 +252,6 @@ position = Vector2(0, 35)
 rotation = 1.5707964
 scale = Vector2(0.05, 0.5)
 
-[node name="Box7" type="Node2D" parent="Paintings/AddsUp" unique_id=386036966]
-position = Vector2(471, 136)
-
-[node name="LeftLine" parent="Paintings/AddsUp/Box7" unique_id=1108672229 instance=ExtResource("8_iad6u")]
-position = Vector2(-35, 0)
-scale = Vector2(0.05, 0.5)
-
-[node name="RightLine" parent="Paintings/AddsUp/Box7" unique_id=1944505241 instance=ExtResource("8_iad6u")]
-position = Vector2(35, 0)
-scale = Vector2(0.05, 0.5)
-
-[node name="TopLine" parent="Paintings/AddsUp/Box7" unique_id=544397269 instance=ExtResource("8_iad6u")]
-position = Vector2(0, -35)
-rotation = 1.5707964
-scale = Vector2(0.05, 0.5)
-
-[node name="BottomLine" parent="Paintings/AddsUp/Box7" unique_id=1466161084 instance=ExtResource("8_iad6u")]
-position = Vector2(0, 35)
-rotation = 1.5707964
-scale = Vector2(0.05, 0.5)
-
 [node name="PaintingTitle" type="RichTextLabel" parent="Paintings/AddsUp" unique_id=1195021809]
 self_modulate = Color(0.4509804, 0.4509804, 0.4509804, 1)
 offset_left = -24.0
@@ -269,8 +269,22 @@ offset_top = 81.0
 offset_right = 590.0
 offset_bottom = 181.0
 theme = SubResource("Theme_iad6u")
-text = "       — 5  =      6"
+text = "       — 5  =  6"
 metadata/_edit_use_anchors_ = true
+
+[node name="AbsorbableColour" parent="Paintings/AddsUp" unique_id=1756057558 instance=ExtResource("8_srilc")]
+position = Vector2(81, 135)
+scale = Vector2(0.1, 0.5)
+desiresToChangeColor = true
+desiredColor = Color(0, 0, 0, 1)
+desiredNumberOfSplats = 32
+
+[node name="AbsorbableColour2" parent="Paintings/AddsUp" unique_id=990111805 instance=ExtResource("8_srilc")]
+position = Vector2(4, 134)
+scale = Vector2(0.1, 0.5)
+desiresToChangeColor = true
+desiredColor = Color(0, 0, 0, 1)
+desiredNumberOfSplats = 32
 
 [node name="Bounds" type="Node2D" parent="." unique_id=2108724136]
 z_index = -2
@@ -365,9 +379,6 @@ position = Vector2(2111, 592)
 
 [node name="Stool8" parent="Placeables" unique_id=1222755856 instance=ExtResource("4_xelyp")]
 position = Vector2(2025, 568)
-
-[node name="Stool9" parent="Placeables" unique_id=1229287285 instance=ExtResource("4_xelyp")]
-position = Vector2(3714, 592)
 
 [node name="Background" type="Node2D" parent="." unique_id=1395399606]
 z_index = -3

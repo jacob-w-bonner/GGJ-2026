@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://culjsn2xps7cm"]
+
+[ext_resource type="Script" uid="uid://dfilyxsh47xqq" path="res://Scripts/absorbable_colour.gd" id="1_iqos4"]
+[ext_resource type="Texture2D" uid="uid://dfy2bpn3s86dw" path="res://Assets/WhiteSquare.png" id="2_6dvns"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5xigm"]
+size = Vector2(128, 128)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_82gkg"]
+
+[node name="AbsorbableColour" type="Area2D" unique_id=1021615895]
+script = ExtResource("1_iqos4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1113822803]
+shape = SubResource("RectangleShape2D_5xigm")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=227688569]
+self_modulate = Color(0, 0, 0, 0)
+material = SubResource("ShaderMaterial_82gkg")
+texture = ExtResource("2_6dvns")
