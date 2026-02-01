@@ -3,8 +3,11 @@ class_name AbsorbableColor
 
 @onready var sprite_2d: Sprite2D = $Sprite2D
 
-var desiresToChangeColor:bool = false
-var desiredColor:Color = Color.DEEP_PINK
+@export var desiresToChangeColor:bool = false#controls if this AbsorbableColor will track how much its been splat on
+@export var desiredColor:Color = Color.DEEP_PINK
+@export var desiredNumberOfSplats:int = 64
+var numberOfSplatsReceived:int
+
 
 #testing the TrueIfArgumentColourIsWithinTolerance() function
 #func _ready() -> void:
@@ -32,3 +35,20 @@ func TrueIfArgumentColourIsWithinTolerance(argumentColour:Color) -> bool:
 	var realHueDifference:float = min(min(abs(hueDifference_upShifted), abs(hueDifference_normal)), abs(hueDifference_downShifted))
 	
 	return (realHueDifference <= Globals.HUEDIFFERENCETOLERANCE)
+
+func SplatOn(argumentColour:Color) -> void:
+	if (desiresToChangeColor == false):
+		return
+	
+	var argumentColourIsWithinTolerance:bool = TrueIfArgumentColourIsWithinTolerance(argumentColour)
+	
+	if(argumentColourIsWithinTolerance == true):
+		numberOfSplatsReceived += 1
+		
+		if(IsSatisfied() == true):
+			print("Painting-Is-Complete!!!")
+			sprite_2d.self_modulate = desiredColor
+	
+
+func IsSatisfied() -> bool:
+	return (numberOfSplatsReceived >= desiredNumberOfSplats)
