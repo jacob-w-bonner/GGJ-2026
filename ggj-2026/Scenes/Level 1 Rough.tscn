@@ -1,9 +1,10 @@
 [gd_scene format=3 uid="uid://cjb3sm2btdv6v"]
 
-[ext_resource type="PackedScene" uid="uid://di36n4rohkn8m" path="res://Scenes/player_controller.tscn" id="1_dcevk"]
+[ext_resource type="PackedScene" uid="uid://bjywweo23o85j" path="res://Scenes/player_controller.tscn" id="1_dcevk"]
 [ext_resource type="Texture2D" uid="uid://bycdlvhpt3vg" path="res://icon.svg" id="3_htomu"]
 [ext_resource type="PackedScene" uid="uid://dlb1vl8xplpsi" path="res://Scenes/Stool.tscn" id="4_4he20"]
 [ext_resource type="Script" uid="uid://da8mcsv5ayli0" path="res://Scenes/player_camera.gd" id="5_aksks"]
+[ext_resource type="PackedScene" uid="uid://duh7wknhj5uc4" path="res://Scenes/level_exit_door.tscn" id="5_htomu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r3mym"]
 size = Vector2(128, 128)
@@ -15,6 +16,10 @@ size = Vector2(11, 128)
 size = Vector2(112, 13)
 
 [node name="Level 1" type="Node2D" unique_id=1129709678]
+
+[node name="LevelExitDoor" parent="." unique_id=860006878 node_paths=PackedStringArray("player") instance=ExtResource("5_htomu")]
+position = Vector2(6149, -210)
+player = NodePath("../player")
 
 [node name="player" parent="." unique_id=193364027 instance=ExtResource("1_dcevk")]
 position = Vector2(186, 150)

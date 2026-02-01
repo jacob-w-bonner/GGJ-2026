@@ -1,10 +1,11 @@
 [gd_scene format=3 uid="uid://dc3mm7bu26bsr"]
 
-[ext_resource type="PackedScene" uid="uid://di36n4rohkn8m" path="res://Scenes/player_controller.tscn" id="1_5odgg"]
+[ext_resource type="PackedScene" uid="uid://bjywweo23o85j" path="res://Scenes/player_controller.tscn" id="1_5odgg"]
 [ext_resource type="Script" uid="uid://da8mcsv5ayli0" path="res://Scenes/player_camera.gd" id="2_0gqrk"]
 [ext_resource type="Texture2D" uid="uid://bycdlvhpt3vg" path="res://icon.svg" id="3_3pcwb"]
 [ext_resource type="PackedScene" uid="uid://dlb1vl8xplpsi" path="res://Scenes/Stool.tscn" id="4_58yg4"]
 [ext_resource type="PackedScene" uid="uid://hkcm0qaks4et" path="res://Scenes/drop_down_platform.tscn" id="5_0gqrk"]
+[ext_resource type="PackedScene" uid="uid://duh7wknhj5uc4" path="res://Scenes/level_exit_door.tscn" id="6_3pcwb"]
 
 [sub_resource type="Theme" id="Theme_5odgg"]
 default_font_size = 36
@@ -13,6 +14,10 @@ default_font_size = 36
 size = Vector2(128, 128)
 
 [node name="Level 3" type="Node2D" unique_id=1129709678]
+
+[node name="LevelExitDoor" parent="." unique_id=860006878 node_paths=PackedStringArray("player") instance=ExtResource("6_3pcwb")]
+position = Vector2(4923, 544)
+player = NodePath("../player")
 
 [node name="player" parent="." unique_id=193364027 instance=ExtResource("1_5odgg")]
 position = Vector2(68, 576)
