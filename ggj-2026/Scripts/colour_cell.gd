@@ -131,6 +131,8 @@ func splat() -> void:
 func _on_area_entered(area: Area2D):
 	# Getting the colour to absorb
 	_last_absorbable_colour_entered = area as AbsorbableColor
+	if _last_absorbable_colour_entered.desiresToChangeColor:
+		return
 	#TODO: add check for if _last_absorbable_colour_entered is not cast as a "AbsorbableColor" object
 	_absorb 						= _last_absorbable_colour_entered.GetColor()
 
