@@ -20,15 +20,8 @@ func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("splat"):
 
 		# Checking if the cells should splat
-		var should_splat = false
 		for cell in _colour_cells:
 			if cell.get_colour() != Globals.DEFAULT_COL:
-				should_splat = true
-				break
-
-		# Splatting if there is at least some paint
-		if should_splat:
-			for cell in _colour_cells:
 				cell.splat()
 
 # This function creates colour cells

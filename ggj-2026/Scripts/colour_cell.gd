@@ -7,6 +7,8 @@ var _collision: CollisionShape2D
 var _absorb: Color
 var _last_absorbable_colour_entered:AbsorbableColor = null
 
+var is_colliding = false
+
 @onready var splat_scene = preload("res://Scenes/absorbable_colour.tscn")
 
 # Setting up the cell
@@ -28,8 +30,8 @@ func _ready() -> void:
 	self.add_child(_collision)
 
 	# Making a collision shape for the area
-	var rect		 = RectangleShape2D.new()
-	rect.size		 = Vector2(0.9, 0.9)
+	var rect		 = CircleShape2D.new()
+	rect.radius		 = 0.45
 
 	# Adding it as a child of the Area2D
 	_collision.shape = rect
@@ -43,7 +45,7 @@ func _process(delta: float) -> void:
 	if Input.is_action_pressed("absorb"):
 
 		# Changing colours
-		_colour.color = _absorb
+		_colour.color 				 = _absorb
 		#print(_colour.color)
 
 # Getter for the colour

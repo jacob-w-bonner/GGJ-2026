@@ -19,10 +19,6 @@ config/icon="res://icon.svg"
 
 Globals="*uid://4ed5dimg8fqg"
 
-[autoload]
-
-Globals="*uid://4ed5dimg8fqg"
-
 [display]
 
 window/size/viewport_width=1920
