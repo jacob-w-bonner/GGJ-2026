@@ -1,11 +1,12 @@
-[gd_scene format=3 uid="uid://cjb3sm2btdv6v"]
+[gd_scene format=3 uid="uid://b5p04yyx8ncem"]
 
 [ext_resource type="Texture2D" uid="uid://bycdlvhpt3vg" path="res://icon.svg" id="3_htomu"]
-[ext_resource type="PackedScene" uid="uid://dlb1vl8xplpsi" path="res://Scenes/Stool.tscn" id="4_4he20"]
+[ext_resource type="PackedScene" path="res://Scenes/Stool.tscn" id="4_4he20"]
 [ext_resource type="PackedScene" uid="uid://bbos4y4dwl6dq" path="res://Scenes/player.tscn" id="4_dcevk"]
-[ext_resource type="PackedScene" uid="uid://dbohlvldq1gmi" path="res://Scenes/absorbable_colour_red.tscn" id="4_htomu"]
-[ext_resource type="PackedScene" path="res://Scenes/absorbable_colour_green.tscn" id="5_4he20"]
+[ext_resource type="PackedScene" path="res://Scenes/absorbable_colour_red.tscn" id="4_htomu"]
+[ext_resource type="PackedScene" uid="uid://cqk3b6081x0p0" path="res://Scenes/absorbable_colour_green.tscn" id="5_4he20"]
 [ext_resource type="Script" uid="uid://da8mcsv5ayli0" path="res://Scenes/player_camera.gd" id="5_aksks"]
+[ext_resource type="PackedScene" uid="uid://ca3erfbuk0kh3" path="res://Scenes/absorbable_colour_white.tscn" id="5_hirra"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r3mym"]
 size = Vector2(128, 128)
@@ -63,6 +64,12 @@ scale = Vector2(0.5, 0.5)
 [node name="AbsorbableColourGreen4" parent="Paintings/GreenRedCheckered" unique_id=1704189929 instance=ExtResource("5_4he20")]
 position = Vector2(35, 95)
 scale = Vector2(0.5, 0.5)
+
+[node name="AbsorbableColourWhite" parent="Paintings/GreenRedCheckered" unique_id=2106750485 instance=ExtResource("5_hirra")]
+position = Vector2(35, 159)
+scale = Vector2(0.5, 0.5)
+desiresToChangeColor = true
+desiredColor = Color(1, 0, 0, 1)
 
 [node name="Bounds" type="Node2D" parent="." unique_id=2108724136]
 z_index = -2
