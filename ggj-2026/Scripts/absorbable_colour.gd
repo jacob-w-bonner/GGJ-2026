@@ -9,6 +9,15 @@ class_name AbsorbableColor
 var numberOfSplatsReceived:int
 
 
+var has_already_emitted = false
+var im_complete = false
+
+func _process(delta): 
+	if (desiresToChangeColor && !has_already_emitted):
+		im_a_puzzle.emit() 
+		has_already_emitted = true
+		
+		
 #testing the TrueIfArgumentColourIsWithinTolerance() function
 #func _ready() -> void:
 	#var c1:Color = Color.from_hsv(0.66,1,1,1)
