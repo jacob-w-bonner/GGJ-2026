@@ -192,7 +192,7 @@ texture = ExtResource("7_bobo7")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Bounds/Ceiling3" unique_id=1677530011]
 shape = SubResource("RectangleShape2D_r3mym")
 
-[node name="Sprite2D" type="Sprite2D" parent="Bounds" unique_id=1513718320]
+[node name="BackWall" type="Sprite2D" parent="Bounds" unique_id=1513718320]
 z_index = -20
 position = Vector2(3211.0002, 139.50012)
 scale = Vector2(4.0898438, 4.986505)
