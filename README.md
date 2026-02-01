@@ -8,5 +8,5 @@ Contributors:
 * William Graham
 * Paige Noualy
 * Allie Stefanakis
-* Chloe Lastname
+* Chloe Yu
 * Mason McLeod
