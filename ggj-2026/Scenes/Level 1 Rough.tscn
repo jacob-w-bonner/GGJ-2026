@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cjb3sm2btdv6v"]
 
 [ext_resource type="PackedScene" uid="uid://bbos4y4dwl6dq" path="res://Scenes/player.tscn" id="1_jxi4p"]
-[ext_resource type="PackedScene" uid="uid://eyy5iq1g1yfp" path="res://Scenes/ui.tscn" id="3_jxi4p"]
+[ext_resource type="PackedScene" uid="uid://eyy5iq1g1yfp" path="res://Scenes/ui.tscn" id="3_lkmsg"]
 [ext_resource type="PackedScene" uid="uid://dlb1vl8xplpsi" path="res://Scenes/Stool.tscn" id="4_4he20"]
 [ext_resource type="PackedScene" uid="uid://dbohlvldq1gmi" path="res://Scenes/absorbable_colour_red.tscn" id="4_htomu"]
 [ext_resource type="PackedScene" uid="uid://c10s8ssfdf2kn" path="res://Scenes/absorbable_colour_green.tscn" id="5_4he20"]
@@ -10,7 +10,8 @@
 [ext_resource type="Texture2D" uid="uid://bd3hai0llnuyq" path="res://Assets/Environment/Wall.png" id="7_bobo7"]
 [ext_resource type="Texture2D" uid="uid://dt8hb6wr6h4l2" path="res://Assets/Floor.png" id="7_jxi4p"]
 [ext_resource type="Texture2D" uid="uid://h7qsl2nskq04" path="res://Assets/Bucket.png" id="8_7a54r"]
-[ext_resource type="PackedScene" uid="uid://duoxqfas7x38t" path="res://Scenes/level_exit_door.tscn" id="8_hirra"]
+[ext_resource type="PackedScene" uid="uid://duh7wknhj5uc4" path="res://Scenes/level_exit_door.tscn" id="8_hirra"]
+[ext_resource type="PackedScene" uid="uid://hkcm0qaks4et" path="res://Scenes/drop_down_platform.tscn" id="10_jxi4p"]
 
 [sub_resource type="Theme" id="Theme_bobo7"]
 default_font_size = 32
@@ -24,6 +25,9 @@ size = Vector2(11, 128)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_aksks"]
 size = Vector2(112, 13)
 
+[sub_resource type="Theme" id="Theme_jxi4p"]
+default_font_size = 38
+
 [node name="Level 1" type="Node2D" unique_id=1129709678]
 
 [node name="Player" parent="." unique_id=522882859 instance=ExtResource("1_jxi4p")]
@@ -35,9 +39,7 @@ zoom = Vector2(1.5, 1.5)
 script = ExtResource("5_aksks")
 player = NodePath("../Player")
 
-[node name="UI" parent="PlayerCamera" unique_id=1806736499 instance=ExtResource("3_jxi4p")]
-scale = Vector2(0.995, 0.995)
-transform = Transform2D(0.995, 0, 0, 0.995, 0, 0)
+[node name="UI" parent="PlayerCamera" unique_id=1806736499 instance=ExtResource("3_lkmsg")]
 follow_viewport_enabled = false
 
 [node name="Paintings" type="Node2D" parent="." unique_id=86936898]
@@ -78,7 +80,7 @@ scale = Vector2(0.5, 0.5)
 position = Vector2(35, 95)
 scale = Vector2(0.5, 0.5)
 
-[node name="AbsorbableColourWhite" parent="Paintings/GreenRedCheckered" unique_id=2106750485 instance=ExtResource("5_hirra")]
+[node name="checkers" parent="Paintings/GreenRedCheckered" unique_id=2106750485 instance=ExtResource("5_hirra")]
 position = Vector2(35, 159)
 scale = Vector2(0.5, 0.5)
 desiresToChangeColor = true
@@ -246,6 +248,27 @@ shape = SubResource("RectangleShape2D_aksks")
 [node name="Stool2" parent="Placeables" unique_id=426801064 instance=ExtResource("4_4he20")]
 position = Vector2(3197, 594)
 
+[node name="DropDownPlatform2" parent="Placeables" unique_id=1335324078 instance=ExtResource("10_jxi4p")]
+position = Vector2(1002, 535)
+
+[node name="DropDownPlatform3" parent="Placeables" unique_id=482977104 instance=ExtResource("10_jxi4p")]
+position = Vector2(1000, 438)
+
+[node name="DropDownPlatform4" parent="Placeables" unique_id=1430041235 instance=ExtResource("10_jxi4p")]
+position = Vector2(998, 349)
+
+[node name="DropDownPlatform5" parent="Placeables" unique_id=1061875796 instance=ExtResource("10_jxi4p")]
+position = Vector2(996, 233)
+
+[node name="DropDownPlatform6" parent="Placeables" unique_id=518285757 instance=ExtResource("10_jxi4p")]
+position = Vector2(718, 233)
+
+[node name="DropDownPlatform7" parent="Placeables" unique_id=1862219202 instance=ExtResource("10_jxi4p")]
+position = Vector2(433, 233)
+
+[node name="DropDownPlatform8" parent="Placeables" unique_id=1921850122 instance=ExtResource("10_jxi4p")]
+position = Vector2(-35, 231)
+
 [node name="Background" type="Node2D" parent="." unique_id=1395399606]
 z_index = -3
 
@@ -300,7 +323,24 @@ scale = Vector2(0.5, 0.5)
 position = Vector2(752, 28)
 scale = Vector2(0.5, 0.5)
 
-[node name="LevelExitDoor" parent="." unique_id=860006878 node_paths=PackedStringArray("player_root", "puzzle1") instance=ExtResource("8_hirra")]
+[node name="RichTextLabel" type="RichTextLabel" parent="Background" unique_id=1250871719]
+self_modulate = Color(0.5823756, 0.5823756, 0.5823756, 1)
+offset_left = -165.0
+offset_top = 2.0
+offset_right = 961.0
+offset_bottom = 586.0
+theme = SubResource("Theme_jxi4p")
+text = "Welcome to Color Sponge! 
+As a recently animated sponge, you desire to correct every piece of nonsense modern art in this pretentious museum. If a piece of art looks incomplete, finish it yourself!
+
+wasd + Space - Movement
+J - hold down to absorb the color behind you - k mix the colors you have inside of you
+L - Splat your current color on the wall behind you
+
+Happy Hunting!
+"
+
+[node name="LevelExitDoor" parent="." unique_id=860006878 node_paths=PackedStringArray("player_root") instance=ExtResource("8_hirra")]
 position = Vector2(6190, -210)
 player_root = NodePath("../Player")
 puzzle1 = NodePath("../Paintings/GreenRedCheckered/AbsorbableColourWhite")

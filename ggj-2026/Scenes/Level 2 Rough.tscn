@@ -74,7 +74,7 @@ scale = Vector2(0.5, 0.5)
 position = Vector2(434, 75)
 scale = Vector2(0.5, 0.5)
 
-[node name="AbsorbableColour" parent="Paintings/BlueGradiant" unique_id=531389145 instance=ExtResource("8_srilc")]
+[node name="gradient" parent="Paintings/BlueGradiant" unique_id=531389145 instance=ExtResource("8_srilc")]
 position = Vector2(370, 75)
 scale = Vector2(0.5, 0.5)
 desiresToChangeColor = true
@@ -117,14 +117,14 @@ theme = SubResource("Theme_7qgix")
 text = "Cant Hang The Man"
 metadata/_edit_use_anchors_ = true
 
-[node name="AbsorbableColour" parent="Paintings/StickMan" unique_id=1922155904 instance=ExtResource("8_srilc")]
+[node name="neck" parent="Paintings/StickMan" unique_id=1922155904 instance=ExtResource("8_srilc")]
 position = Vector2(94, 134)
 scale = Vector2(0.1, 0.5)
 desiresToChangeColor = true
 desiredColor = Color(0, 0, 0, 1)
 desiredNumberOfSplats = 32
 
-[node name="AbsorbableColour2" parent="Paintings/StickMan" unique_id=138177452 instance=ExtResource("8_srilc")]
+[node name="body" parent="Paintings/StickMan" unique_id=138177452 instance=ExtResource("8_srilc")]
 position = Vector2(94, 200)
 scale = Vector2(0.1, 0.5)
 desiresToChangeColor = true
@@ -280,14 +280,14 @@ theme = SubResource("Theme_iad6u")
 text = "       — 5  =  6"
 metadata/_edit_use_anchors_ = true
 
-[node name="AbsorbableColour" parent="Paintings/AddsUp" unique_id=1756057558 instance=ExtResource("8_srilc")]
+[node name="addsone" parent="Paintings/AddsUp" unique_id=1756057558 instance=ExtResource("8_srilc")]
 position = Vector2(81, 135)
 scale = Vector2(0.1, 0.5)
 desiresToChangeColor = true
 desiredColor = Color(0, 0, 0, 1)
 desiredNumberOfSplats = 32
 
-[node name="AbsorbableColour2" parent="Paintings/AddsUp" unique_id=990111805 instance=ExtResource("8_srilc")]
+[node name="addstwo" parent="Paintings/AddsUp" unique_id=990111805 instance=ExtResource("8_srilc")]
 position = Vector2(4, 134)
 scale = Vector2(0.1, 0.5)
 desiresToChangeColor = true

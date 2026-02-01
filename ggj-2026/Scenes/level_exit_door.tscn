@@ -1,51 +1,7 @@
-[gd_scene format=3 uid="uid://duoxqfas7x38t"]
+[gd_scene format=3 uid="uid://duh7wknhj5uc4"]
 
 [ext_resource type="Script" uid="uid://bkjolj1q6t76s" path="res://Scripts/level_exit_door.gd" id="1_gdu0d"]
 [ext_resource type="Texture2D" uid="uid://c3nwxf1ge710l" path="res://Assets/door.png" id="2_gdu0d"]
-[ext_resource type="Texture2D" uid="uid://bghwe0bsc1bdu" path="res://Assets/Completedkey.png" id="3_igpg3"]
-[ext_resource type="Texture2D" uid="uid://7qxird6snjij" path="res://Assets/Empty key.png" id="4_dov53"]
-[ext_resource type="Script" uid="uid://cvl44877wffw7" path="res://Scripts/key.gd" id="5_b81lc"]
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_x5hh2"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("3_igpg3")
-}],
-"loop": true,
-"name": &"solved",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("4_dov53")
-}],
-"loop": true,
-"name": &"unsolved",
-"speed": 5.0
-}]
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_ogy48"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("3_igpg3")
-}],
-"loop": true,
-"name": &"solved",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("4_dov53")
-}],
-"loop": true,
-"name": &"unsolved",
-"speed": 5.0
-}]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_gdu0d"]
-size = Vector2(130, 128)
 
 [node name="LevelExitDoor" type="Area2D" unique_id=860006878]
 script = ExtResource("1_gdu0d")
@@ -54,43 +10,5 @@ script = ExtResource("1_gdu0d")
 position = Vector2(0, -16)
 scale = Vector2(0.14, 0.14)
 texture = ExtResource("2_gdu0d")
-
-[node name="Puzzle2" type="AnimatedSprite2D" parent="Sprite2D" unique_id=1161311510]
-position = Vector2(364.2857, 0)
-scale = Vector2(0.10390781, 0.10390781)
-sprite_frames = SubResource("SpriteFrames_x5hh2")
-animation = &"unsolved"
-script = ExtResource("5_b81lc")
-
-[node name="Puzzle1" type="AnimatedSprite2D" parent="Sprite2D" unique_id=599538112]
-position = Vector2(364.2857, -157.14287)
-scale = Vector2(0.107725516, 0.107725516)
-sprite_frames = SubResource("SpriteFrames_ogy48")
-animation = &"unsolved"
-script = ExtResource("5_b81lc")
-
-[node name="Puzzle3" type="AnimatedSprite2D" parent="Sprite2D" unique_id=2073557823]
-position = Vector2(364.28568, 150)
-scale = Vector2(0.10390781, 0.10390781)
-sprite_frames = SubResource("SpriteFrames_x5hh2")
-animation = &"unsolved"
-script = ExtResource("5_b81lc")
-
-[node name="Puzzle4" type="AnimatedSprite2D" parent="Sprite2D" unique_id=1755893344]
-position = Vector2(364.2857, 300)
-scale = Vector2(0.10390781, 0.10390781)
-sprite_frames = SubResource("SpriteFrames_x5hh2")
-animation = &"unsolved"
-script = ExtResource("5_b81lc")
-
-[node name="Puzzle5" type="AnimatedSprite2D" parent="Sprite2D" unique_id=415942937]
-position = Vector2(364.28568, 450)
-scale = Vector2(0.10390781, 0.10390781)
-sprite_frames = SubResource("SpriteFrames_x5hh2")
-animation = &"unsolved"
-script = ExtResource("5_b81lc")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=379137697]
-shape = SubResource("RectangleShape2D_gdu0d")
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]

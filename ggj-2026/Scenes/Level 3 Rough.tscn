@@ -172,7 +172,7 @@ scale = Vector2(0.5, 0.5)
 position = Vector2(2431, 579)
 scale = Vector2(0.5, 0.5)
 
-[node name="AbsorbableColourClear" parent="Paintings/Tetris" unique_id=43001491 instance=ExtResource("16_tm0fi")]
+[node name="tetris" parent="Paintings/Tetris" unique_id=43001491 instance=ExtResource("16_tm0fi")]
 position = Vector2(2236, 581)
 scale = Vector2(0.5, 0.5)
 desiresToChangeColor = true
@@ -257,13 +257,13 @@ scale = Vector2(0.6, 1.1)
 position = Vector2(3325.0002, 297.00003)
 scale = Vector2(0.4, 0.9)
 
-[node name="AbsorbableColourClear" parent="Paintings/AutumnDay" unique_id=1599726914 instance=ExtResource("16_tm0fi")]
+[node name="eye" parent="Paintings/AutumnDay" unique_id=1599726914 instance=ExtResource("16_tm0fi")]
 position = Vector2(3415, 291)
 scale = Vector2(0.4, 0.4)
 desiresToChangeColor = true
 desiredColor = Color(0.48235294, 0.24313726, 0.03137255, 1)
 
-[node name="AbsorbableColourClear2" parent="Paintings/AutumnDay" unique_id=1151993887 instance=ExtResource("16_tm0fi")]
+[node name="sun" parent="Paintings/AutumnDay" unique_id=1151993887 instance=ExtResource("16_tm0fi")]
 position = Vector2(3340, 118.00001)
 scale = Vector2(0.7, 0.7)
 desiresToChangeColor = true
@@ -308,7 +308,7 @@ scale = Vector2(0.5, 0.5)
 position = Vector2(704, 543)
 scale = Vector2(0.75, 0.5)
 
-[node name="AbsorbableColour2" parent="Paintings/MixToMatch" unique_id=508391768 instance=ExtResource("16_tm0fi")]
+[node name="mix" parent="Paintings/MixToMatch" unique_id=508391768 instance=ExtResource("16_tm0fi")]
 position = Vector2(656, 543)
 scale = Vector2(0.5, 0.5)
 desiresToChangeColor = true
