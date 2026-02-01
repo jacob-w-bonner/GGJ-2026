@@ -64,6 +64,7 @@ func _process(delta: float) -> void:
 
 # Absorbing a colour
 func absorb_colour(delta: float) -> void:
+
 	# Getting the distance between the colours
 	var dist  	  = sqrt(pow(_colour.color.r - _absorb.r, 2) + pow(_colour.color.g - _absorb.g, 2) + pow(_colour.color.b - _absorb.b, 2))
 
