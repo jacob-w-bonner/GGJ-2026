@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://dqwdji1dib54q" path="res://Scenes/absorbable_colour_green.tscn" id="5_4he20"]
 [ext_resource type="Script" uid="uid://da8mcsv5ayli0" path="res://Scenes/player_camera.gd" id="5_aksks"]
 [ext_resource type="PackedScene" uid="uid://ca3erfbuk0kh3" path="res://Scenes/absorbable_colour_white.tscn" id="5_hirra"]
-[ext_resource type="PackedScene" path="res://Scenes/level_exit_door.tscn" id="8_hirra"]
+[ext_resource type="PackedScene" uid="uid://duh7wknhj5uc4" path="res://Scenes/level_exit_door.tscn" id="8_hirra"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r3mym"]
 size = Vector2(128, 128)
@@ -264,5 +264,6 @@ scale = Vector2(0.5, 0.5)
 position = Vector2(752, 28)
 scale = Vector2(0.5, 0.5)
 
-[node name="LevelExitDoor" parent="." unique_id=860006878 instance=ExtResource("8_hirra")]
+[node name="LevelExitDoor" parent="." unique_id=860006878 node_paths=PackedStringArray("player_root") instance=ExtResource("8_hirra")]
 position = Vector2(6190, -210)
+player_root = NodePath("../Player")
