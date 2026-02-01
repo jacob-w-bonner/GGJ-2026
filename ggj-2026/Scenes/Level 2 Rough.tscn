@@ -1,0 +1,151 @@
+[gd_scene format=3 uid="uid://dk2boiuytgpo7"]
+
+[ext_resource type="PackedScene" uid="uid://di36n4rohkn8m" path="res://Scenes/player_controller.tscn" id="1_7qgix"]
+[ext_resource type="Script" uid="uid://da8mcsv5ayli0" path="res://Scenes/player_camera.gd" id="2_3qduy"]
+[ext_resource type="Texture2D" uid="uid://bycdlvhpt3vg" path="res://icon.svg" id="3_08xsl"]
+[ext_resource type="PackedScene" uid="uid://dlb1vl8xplpsi" path="res://Scenes/Stool.tscn" id="4_xelyp"]
+
+[sub_resource type="Theme" id="Theme_7qgix"]
+default_font_size = 48
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r3mym"]
+size = Vector2(128, 128)
+
+[node name="Level 2" type="Node2D" unique_id=1129709678]
+
+[node name="player" parent="." unique_id=193364027 instance=ExtResource("1_7qgix")]
+position = Vector2(68, 576)
+gravity = 2000
+groundDragForce = 8000
+jumpStrength = 500
+
+[node name="PlayerCamera" type="Camera2D" parent="." unique_id=655621015 node_paths=PackedStringArray("player")]
+position = Vector2(573, 318)
+script = ExtResource("2_3qduy")
+player = NodePath("../player")
+
+[node name="Paintings" type="Node2D" parent="." unique_id=86936898]
+z_index = -1
+
+[node name="SitckMan" type="Sprite2D" parent="Paintings" unique_id=1442314297]
+position = Vector2(2026.0002, 413)
+scale = Vector2(1.5, 3)
+texture = ExtResource("3_08xsl")
+
+[node name="AddsUp" type="Sprite2D" parent="Paintings" unique_id=699471382]
+position = Vector2(3427.0002, 477)
+scale = Vector2(3.5, 1.5)
+texture = ExtResource("3_08xsl")
+
+[node name="BlueGradiant" type="Node2D" parent="Paintings" unique_id=229470259]
+position = Vector2(155, 5)
+
+[node name="BlueGradiant" type="Sprite2D" parent="Paintings/BlueGradiant" unique_id=1946327416]
+position = Vector2(668, 570)
+scale = Vector2(2.5, 0.5)
+texture = ExtResource("3_08xsl")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Paintings/BlueGradiant" unique_id=2056380473]
+offset_left = 511.0
+offset_top = 468.0
+offset_right = 829.0
+offset_bottom = 540.0
+theme = SubResource("Theme_7qgix")
+text = "Loading.........."
+metadata/_edit_use_anchors_ = true
+
+[node name="Bounds" type="Node2D" parent="." unique_id=2108724136]
+z_index = -2
+
+[node name="LeftWall" type="StaticBody2D" parent="Bounds" unique_id=1710939033]
+position = Vector2(-568, 396)
+scale = Vector2(6, 20)
+
+[node name="Sprite2D" type="Sprite2D" parent="Bounds/LeftWall" unique_id=533191513]
+texture = ExtResource("3_08xsl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bounds/LeftWall" unique_id=1074665853]
+shape = SubResource("RectangleShape2D_r3mym")
+
+[node name="Floor" type="StaticBody2D" parent="Bounds" unique_id=1986248079]
+position = Vector2(2880.0002, 1249)
+scale = Vector2(60, 10)
+
+[node name="Sprite2D" type="Sprite2D" parent="Bounds/Floor" unique_id=915870049]
+texture = ExtResource("3_08xsl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bounds/Floor" unique_id=1377600318]
+shape = SubResource("RectangleShape2D_r3mym")
+
+[node name="Ceiling" type="StaticBody2D" parent="Bounds" unique_id=1351640373]
+position = Vector2(2547, -253)
+scale = Vector2(45, 4)
+
+[node name="Sprite2D" type="Sprite2D" parent="Bounds/Ceiling" unique_id=431356315]
+texture = ExtResource("3_08xsl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bounds/Ceiling" unique_id=1255616068]
+shape = SubResource("RectangleShape2D_r3mym")
+
+[node name="HallwayWall" type="StaticBody2D" parent="Bounds" unique_id=1481582349]
+position = Vector2(1558, 196)
+scale = Vector2(0.5, 1.75)
+
+[node name="Sprite2D" type="Sprite2D" parent="Bounds/HallwayWall" unique_id=359074412]
+scale = Vector2(0.5, 1.75)
+texture = ExtResource("3_08xsl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bounds/HallwayWall" unique_id=128163495]
+scale = Vector2(0.5, 1.75)
+shape = SubResource("RectangleShape2D_r3mym")
+
+[node name="HallwayWall2" type="StaticBody2D" parent="Bounds" unique_id=579948321]
+position = Vector2(4077, 188.00002)
+scale = Vector2(0.5, 1.75)
+
+[node name="Sprite2D" type="Sprite2D" parent="Bounds/HallwayWall2" unique_id=1054512818]
+scale = Vector2(0.5, 1.75)
+texture = ExtResource("3_08xsl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bounds/HallwayWall2" unique_id=1450615891]
+scale = Vector2(0.5, 1.75)
+shape = SubResource("RectangleShape2D_r3mym")
+
+[node name="RightWall" type="StaticBody2D" parent="Bounds" unique_id=1728228341]
+position = Vector2(5789, 554.0001)
+scale = Vector2(6, 20)
+
+[node name="Sprite2D" type="Sprite2D" parent="Bounds/RightWall" unique_id=297126794]
+texture = ExtResource("3_08xsl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bounds/RightWall" unique_id=251259528]
+shape = SubResource("RectangleShape2D_r3mym")
+
+[node name="Placeables" type="Node2D" parent="." unique_id=2075081505]
+z_index = 1
+
+[node name="Stool" parent="Placeables" unique_id=1732500005 instance=ExtResource("4_xelyp")]
+position = Vector2(2026, 584)
+
+[node name="Stool2" parent="Placeables" unique_id=426801064 instance=ExtResource("4_xelyp")]
+position = Vector2(3234, 592)
+
+[node name="Stool3" parent="Placeables" unique_id=1769469845 instance=ExtResource("4_xelyp")]
+position = Vector2(3331, 592)
+
+[node name="Stool4" parent="Placeables" unique_id=730054187 instance=ExtResource("4_xelyp")]
+position = Vector2(3427, 592)
+
+[node name="Stool5" parent="Placeables" unique_id=2025759319 instance=ExtResource("4_xelyp")]
+position = Vector2(3523, 592)
+
+[node name="Stool6" parent="Placeables" unique_id=590452409 instance=ExtResource("4_xelyp")]
+position = Vector2(3618, 592)
+
+[node name="Background" type="Node2D" parent="." unique_id=1395399606]
+z_index = -3
+
+[node name="Gain" type="Sprite2D" parent="Background" unique_id=1073948558]
+position = Vector2(2666, 356)
+scale = Vector2(4, 4)
+texture = ExtResource("3_08xsl")
