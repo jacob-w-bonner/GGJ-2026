@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://col47l7aoiclr"]
 
 [ext_resource type="Script" uid="uid://dfilyxsh47xqq" path="res://Scripts/absorbable_colour.gd" id="1_y6e4c"]
-[ext_resource type="Texture2D" uid="uid://dwpk37obhkx1i" path="res://Assets/tilesheet_complete.png" id="2_8f2qj"]
+[ext_resource type="Texture2D" uid="uid://dfy2bpn3s86dw" path="res://Assets/WhiteSquare.png" id="2_y6e4c"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5xigm"]
 size = Vector2(128, 128)
@@ -17,4 +17,4 @@ shape = SubResource("RectangleShape2D_5xigm")
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=227688569]
 self_modulate = Color(0, 0, 0, 1)
 material = SubResource("ShaderMaterial_82gkg")
-texture = ExtResource("2_8f2qj")
+texture = ExtResource("2_y6e4c")
