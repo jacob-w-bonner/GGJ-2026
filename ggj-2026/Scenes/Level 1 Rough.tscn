@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cjb3sm2btdv6v"]
 
 [ext_resource type="PackedScene" uid="uid://bbos4y4dwl6dq" path="res://Scenes/player.tscn" id="1_jxi4p"]
+[ext_resource type="PackedScene" uid="uid://eyy5iq1g1yfp" path="res://Scenes/ui.tscn" id="3_lkmsg"]
 [ext_resource type="PackedScene" uid="uid://dlb1vl8xplpsi" path="res://Scenes/Stool.tscn" id="4_4he20"]
 [ext_resource type="PackedScene" uid="uid://dbohlvldq1gmi" path="res://Scenes/absorbable_colour_red.tscn" id="4_htomu"]
 [ext_resource type="PackedScene" uid="uid://c10s8ssfdf2kn" path="res://Scenes/absorbable_colour_green.tscn" id="5_4he20"]
@@ -37,6 +38,9 @@ position = Vector2(573, 318)
 zoom = Vector2(1.5, 1.5)
 script = ExtResource("5_aksks")
 player = NodePath("../Player")
+
+[node name="UI" parent="PlayerCamera" unique_id=1806736499 instance=ExtResource("3_lkmsg")]
+follow_viewport_enabled = false
 
 [node name="Paintings" type="Node2D" parent="." unique_id=86936898]
 z_index = -1

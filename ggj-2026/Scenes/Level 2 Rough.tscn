@@ -2,13 +2,14 @@
 
 [ext_resource type="PackedScene" uid="uid://bbos4y4dwl6dq" path="res://Scenes/player.tscn" id="1_7qgix"]
 [ext_resource type="Script" uid="uid://da8mcsv5ayli0" path="res://Scenes/player_camera.gd" id="2_3qduy"]
+[ext_resource type="PackedScene" uid="uid://eyy5iq1g1yfp" path="res://Scenes/ui.tscn" id="3_oiix8"]
 [ext_resource type="PackedScene" uid="uid://bt7qfkrj2se5c" path="res://Scenes/absorbable_colour_Blue1.tscn" id="4_3qduy"]
 [ext_resource type="PackedScene" uid="uid://dlb1vl8xplpsi" path="res://Scenes/Stool.tscn" id="4_xelyp"]
 [ext_resource type="PackedScene" uid="uid://dw8h6vykcfwj2" path="res://Scenes/absorbable_colour_Blue2.tscn" id="5_n3ytq"]
-[ext_resource type="PackedScene" path="res://Scenes/absorbable_colour_Blue3.tscn" id="6_ut81y"]
-[ext_resource type="PackedScene" uid="uid://col47l7aoiclr" path="res://Scenes/absorbable_colour_black.tscn" id="8_iad6u"]
+[ext_resource type="PackedScene" uid="uid://bbd07nly0r4ix" path="res://Scenes/absorbable_colour_Blue3.tscn" id="6_ut81y"]
+[ext_resource type="PackedScene" uid="uid://04paepqokxy" path="res://Scenes/absorbable_colour_black.tscn" id="8_iad6u"]
 [ext_resource type="PackedScene" path="res://Scenes/absorbable_colour_clear.tscn" id="8_srilc"]
-[ext_resource type="PackedScene" path="res://Scenes/absorbable_colour_Blue5.tscn" id="8_ut81y"]
+[ext_resource type="PackedScene" uid="uid://t0pyjrb4skuh" path="res://Scenes/absorbable_colour_Blue5.tscn" id="8_ut81y"]
 [ext_resource type="PackedScene" uid="uid://duh7wknhj5uc4" path="res://Scenes/level_exit_door.tscn" id="10_iad6u"]
 [ext_resource type="Texture2D" uid="uid://bd3hai0llnuyq" path="res://Assets/Environment/Wall.png" id="10_oiix8"]
 [ext_resource type="Texture2D" uid="uid://dt8hb6wr6h4l2" path="res://Assets/Floor.png" id="10_twopq"]
@@ -37,6 +38,9 @@ position = Vector2(69, 574)
 position = Vector2(573, 318)
 script = ExtResource("2_3qduy")
 player = NodePath("../Player")
+
+[node name="UI" parent="PlayerCamera" unique_id=1806736499 instance=ExtResource("3_oiix8")]
+follow_viewport_enabled = false
 
 [node name="Paintings" type="Node2D" parent="." unique_id=86936898]
 z_index = -1

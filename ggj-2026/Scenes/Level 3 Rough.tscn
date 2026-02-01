@@ -3,20 +3,21 @@
 [ext_resource type="PackedScene" uid="uid://bbos4y4dwl6dq" path="res://Scenes/player.tscn" id="1_0gqrk"]
 [ext_resource type="Script" uid="uid://da8mcsv5ayli0" path="res://Scenes/player_camera.gd" id="2_0gqrk"]
 [ext_resource type="Texture2D" uid="uid://bycdlvhpt3vg" path="res://icon.svg" id="3_3pcwb"]
+[ext_resource type="PackedScene" uid="uid://eyy5iq1g1yfp" path="res://Scenes/ui.tscn" id="3_4c3hw"]
 [ext_resource type="PackedScene" uid="uid://dlb1vl8xplpsi" path="res://Scenes/Stool.tscn" id="4_58yg4"]
-[ext_resource type="PackedScene" path="res://Scenes/absorbable_colour_Blue5.tscn" id="4_b22bo"]
-[ext_resource type="PackedScene" path="res://Scenes/absorbable_colour_red.tscn" id="4_mfg4v"]
+[ext_resource type="PackedScene" uid="uid://t0pyjrb4skuh" path="res://Scenes/absorbable_colour_Blue5.tscn" id="4_b22bo"]
+[ext_resource type="PackedScene" uid="uid://dbohlvldq1gmi" path="res://Scenes/absorbable_colour_red.tscn" id="4_mfg4v"]
 [ext_resource type="PackedScene" uid="uid://hkcm0qaks4et" path="res://Scenes/drop_down_platform.tscn" id="5_0gqrk"]
-[ext_resource type="PackedScene" path="res://Scenes/absorbable_colour_yellow.tscn" id="5_b22bo"]
-[ext_resource type="PackedScene" path="res://Scenes/absorbable_colour_purple.tscn" id="6_3f2vy"]
-[ext_resource type="PackedScene" uid="uid://v1kx4tycqxwg" path="res://Scenes/absorbable_colour_orange.tscn" id="6_i1fq5"]
+[ext_resource type="PackedScene" uid="uid://b35jvsyh15duu" path="res://Scenes/absorbable_colour_yellow.tscn" id="5_b22bo"]
+[ext_resource type="PackedScene" uid="uid://c2uc6lcuwffab" path="res://Scenes/absorbable_colour_purple.tscn" id="6_3f2vy"]
+[ext_resource type="PackedScene" uid="uid://4jvyagxruf2r" path="res://Scenes/absorbable_colour_orange.tscn" id="6_i1fq5"]
 [ext_resource type="PackedScene" uid="uid://bsgqi5naogaf6" path="res://Scenes/absorbable_colour.tscn" id="8_3f2vy"]
-[ext_resource type="PackedScene" path="res://Scenes/absorbable_colour_cyan.tscn" id="9_vdwwb"]
+[ext_resource type="PackedScene" uid="uid://bgo2k8mpayb81" path="res://Scenes/absorbable_colour_cyan.tscn" id="9_vdwwb"]
 [ext_resource type="Texture2D" uid="uid://b3fngj1whhfkc" path="res://Assets/autumnday.png" id="10_ykunq"]
-[ext_resource type="PackedScene" path="res://Scenes/absorbable_colour_autumn_blue.tscn" id="11_dt7ti"]
-[ext_resource type="PackedScene" path="res://Scenes/absorbable_colour_autumn_red.tscn" id="12_k7q2e"]
-[ext_resource type="PackedScene" path="res://Scenes/absorbable_colour_autumn_cyan.tscn" id="13_anpic"]
-[ext_resource type="PackedScene" path="res://Scenes/absorbable_colour_autumn_green.tscn" id="14_8usqw"]
+[ext_resource type="PackedScene" uid="uid://ctfye2ocqjegm" path="res://Scenes/absorbable_colour_autumn_blue.tscn" id="11_dt7ti"]
+[ext_resource type="PackedScene" uid="uid://ee3226mli0nv" path="res://Scenes/absorbable_colour_autumn_red.tscn" id="12_k7q2e"]
+[ext_resource type="PackedScene" uid="uid://ls2hwlllykuk" path="res://Scenes/absorbable_colour_autumn_cyan.tscn" id="13_anpic"]
+[ext_resource type="PackedScene" uid="uid://ds1t4btdud884" path="res://Scenes/absorbable_colour_autumn_green.tscn" id="14_8usqw"]
 [ext_resource type="PackedScene" path="res://Scenes/absorbable_colour_clear.tscn" id="16_tm0fi"]
 [ext_resource type="Texture2D" uid="uid://bd3hai0llnuyq" path="res://Assets/Environment/Wall.png" id="17_grufy"]
 [ext_resource type="Texture2D" uid="uid://dt8hb6wr6h4l2" path="res://Assets/Floor.png" id="18_2dtiq"]
@@ -37,6 +38,9 @@ position = Vector2(2, 562)
 position = Vector2(573, 318)
 script = ExtResource("2_0gqrk")
 player = NodePath("../Player")
+
+[node name="UI" parent="PlayerCamera" unique_id=1806736499 instance=ExtResource("3_4c3hw")]
+follow_viewport_enabled = false
 
 [node name="Paintings" type="Node2D" parent="." unique_id=86936898]
 z_index = -1
