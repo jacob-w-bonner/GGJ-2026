@@ -8,10 +8,7 @@
 [node name="UI" type="CanvasLayer" unique_id=1806736499]
 follow_viewport_enabled = true
 
-[node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=909553094]
-script = ExtResource("1_nf4gj")
-
-[node name="Game_over_restart" type="Control" parent="CanvasModulate" unique_id=208687727]
+[node name="Control" type="Control" parent="." unique_id=148914519]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -20,7 +17,39 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 0
 
-[node name="Label" type="Label" parent="CanvasModulate/Game_over_restart" unique_id=1983610114]
+[node name="CanvasModulate" type="CanvasModulate" parent="Control" unique_id=909553094]
+script = ExtResource("1_nf4gj")
+
+[node name="RestartButton" type="TextureButton" parent="Control" unique_id=1724219079]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0730001
+anchor_bottom = 1.0
+offset_left = 1794.0
+offset_top = 25.0
+offset_right = -80.09607
+offset_bottom = -885.0
+scale = Vector2(0.5292553, 0.5292553)
+texture_normal = ExtResource("2_2246s")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("3_q7pk6")
+
+[node name="Game_over_restart" type="Control" parent="Control" unique_id=208687727]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -110.0
+offset_top = -48.999985
+offset_right = -110.0
+offset_bottom = -49.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.7600012, 1.7600012)
+size_flags_horizontal = 0
+
+[node name="Label" type="Label" parent="Control/Game_over_restart" unique_id=1983610114]
 layout_mode = 0
 offset_left = 327.0
 offset_top = 181.0
@@ -32,7 +61,7 @@ theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 100
 text = "GAME OVER"
 
-[node name="Restart Label" type="Label" parent="CanvasModulate/Game_over_restart" unique_id=1322308536]
+[node name="Restart Label" type="Label" parent="Control/Game_over_restart" unique_id=1322308536]
 layout_mode = 0
 offset_left = 538.0
 offset_top = 439.0
@@ -44,39 +73,16 @@ theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 30
 text = "Try again"
 
-[node name="TextureButton" type="TextureButton" parent="CanvasModulate/Game_over_restart" unique_id=1990355793]
+[node name="TextureButton" type="TextureButton" parent="Control/Game_over_restart" unique_id=1990355793]
 layout_mode = 0
 offset_left = 570.0
 offset_top = 335.00003
-offset_right = 610.0
-offset_bottom = 375.00003
+offset_right = 5212.092
+offset_bottom = 5250.912
 scale = Vector2(0.017845504, 0.017845504)
 texture_normal = ExtResource("2_2246s")
 ignore_texture_size = true
 script = ExtResource("2_q7pk6")
 
-[node name="Control" type="Control" parent="." unique_id=148914519]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-size_flags_horizontal = 0
-
-[node name="TextureButton" type="TextureButton" parent="Control" unique_id=1724219079]
-layout_mode = 1
-anchors_preset = -1
-anchor_right = 1.0730001
-anchor_bottom = 1.0
-offset_left = 1077.0
-offset_top = 10.0
-offset_right = -100.09607
-offset_bottom = -579.0
-texture_normal = ExtResource("2_2246s")
-ignore_texture_size = true
-stretch_mode = 0
-script = ExtResource("3_q7pk6")
-
-[connection signal="fade_done" from="CanvasModulate" to="Control/TextureButton" method="_on_fade_done"]
-[connection signal="fade_out" from="Control/TextureButton" to="CanvasModulate" method="_on_fade_out"]
+[connection signal="fade_done" from="Control/CanvasModulate" to="Control/RestartButton" method="_on_fade_done"]
+[connection signal="fade_out" from="Control/RestartButton" to="Control/CanvasModulate" method="_on_fade_out"]
