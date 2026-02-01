@@ -5,6 +5,7 @@ class_name ColorCell
 var _colour: ColorRect
 var _collision: CollisionShape2D
 var _absorb: Color
+var _last_absorbable_colour_entered:AbsorbableColor = null
 
 # Setting up the cell
 func _ready() -> void:
@@ -45,10 +46,10 @@ func _process(delta: float) -> void:
 
 # Detecting entering another area
 func _on_area_entered(area: Area2D):
-
 	# Getting the colour to absorb
-	var absorbable_colour:AbsorbableColor = area as AbsorbableColor
-	_absorb 						  	  = absorbable_colour.GetColor()
+	_last_absorbable_colour_entered = area as AbsorbableColor
+	#TODO: add check for if _last_absorbable_colour_entered is not cast as a "AbsorbableColor" object
+	_absorb 						  	  = _last_absorbable_colour_entered.GetColor()
 
 # Detecting leaving another area
 func _on_area_exited(area: Area2D):
