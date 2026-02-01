@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://dlb1vl8xplpsi" path="res://Scenes/Stool.tscn" id="4_xelyp"]
 [ext_resource type="PackedScene" uid="uid://dw8h6vykcfwj2" path="res://Scenes/absorbable_colour_Blue2.tscn" id="5_n3ytq"]
 [ext_resource type="PackedScene" uid="uid://bbd07nly0r4ix" path="res://Scenes/absorbable_colour_Blue3.tscn" id="6_ut81y"]
-[ext_resource type="PackedScene" uid="uid://04paepqokxy" path="res://Scenes/absorbable_colour_black.tscn" id="8_iad6u"]
+[ext_resource type="PackedScene" uid="uid://djdngf3q4wmjg" path="res://Scenes/absorbable_colour_black.tscn" id="8_iad6u"]
 [ext_resource type="PackedScene" uid="uid://culjsn2xps7cm" path="res://Scenes/absorbable_colour_clear.tscn" id="8_srilc"]
 [ext_resource type="PackedScene" uid="uid://t0pyjrb4skuh" path="res://Scenes/absorbable_colour_Blue5.tscn" id="8_ut81y"]
 [ext_resource type="PackedScene" uid="uid://duh7wknhj5uc4" path="res://Scenes/level_exit_door.tscn" id="10_iad6u"]
@@ -437,5 +437,6 @@ text = "Gain____
 ------------"
 metadata/_edit_use_anchors_ = true
 
-[node name="LevelExitDoor" parent="." unique_id=860006878 instance=ExtResource("10_iad6u")]
+[node name="LevelExitDoor" parent="." unique_id=860006878 node_paths=PackedStringArray("player_root") instance=ExtResource("10_iad6u")]
 position = Vector2(5221, 545)
+player_root = NodePath("../Player")

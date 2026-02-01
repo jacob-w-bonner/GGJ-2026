@@ -9,7 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://hkcm0qaks4et" path="res://Scenes/drop_down_platform.tscn" id="5_0gqrk"]
 [ext_resource type="PackedScene" uid="uid://b35jvsyh15duu" path="res://Scenes/absorbable_colour_yellow.tscn" id="5_b22bo"]
 [ext_resource type="PackedScene" uid="uid://c2uc6lcuwffab" path="res://Scenes/absorbable_colour_purple.tscn" id="6_3f2vy"]
-[ext_resource type="PackedScene" uid="uid://4jvyagxruf2r" path="res://Scenes/absorbable_colour_orange.tscn" id="6_i1fq5"]
+[ext_resource type="PackedScene" uid="uid://v1kx4tycqxwg" path="res://Scenes/absorbable_colour_orange.tscn" id="6_i1fq5"]
 [ext_resource type="PackedScene" uid="uid://bsgqi5naogaf6" path="res://Scenes/absorbable_colour.tscn" id="8_3f2vy"]
 [ext_resource type="PackedScene" uid="uid://bgo2k8mpayb81" path="res://Scenes/absorbable_colour_cyan.tscn" id="9_vdwwb"]
 [ext_resource type="Texture2D" uid="uid://b3fngj1whhfkc" path="res://Assets/autumnday.png" id="10_ykunq"]
@@ -439,5 +439,6 @@ The other forever incomplete
 "
 horizontal_alignment = 1
 
-[node name="LevelExitDoor" parent="." unique_id=860006878 instance=ExtResource("18_t7xt4")]
+[node name="LevelExitDoor" parent="." unique_id=860006878 node_paths=PackedStringArray("player_root") instance=ExtResource("18_t7xt4")]
 position = Vector2(5017, 545)
+player_root = NodePath("../Player")
