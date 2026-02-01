@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d0laynwhbpy27"
-path="res://.godot/imported/WhiteSquare.png-c6fb60646915a383c5367af897236989.ctex"
+uid="uid://blcse54ys6dub"
+path="res://.godot/imported/WalkRightLeg.png-b8aaf42f91ef5de257b397b941a7ad76.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/WhiteSquare.png"
-dest_files=["res://.godot/imported/WhiteSquare.png-c6fb60646915a383c5367af897236989.ctex"]
+source_file="res://Assets/Sponge/WalkRightLeg.png"
+dest_files=["res://.godot/imported/WalkRightLeg.png-b8aaf42f91ef5de257b397b941a7ad76.ctex"]
 
 [params]
 
