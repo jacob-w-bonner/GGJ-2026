@@ -2,17 +2,31 @@ extends Area2D
 class_name AbsorbableColor
 
 @onready var sprite_2d: Sprite2D = $Sprite2D
+@onready var door = $"../../../LevelExitDoor"
 
 @export var desiresToChangeColor:bool = false#controls if this AbsorbableColor will track how much its been splat on
 @export var desiredColor:Color = Color.DEEP_PINK
 @export var desiredNumberOfSplats:int = 64
 var numberOfSplatsReceived:int
 
+signal completed_puzzle
+signal im_a_puzzle 
 
+var has_already_emitted = false
+var im_complete = false
+
+func _process(delta): 
+	if (!has_already_emitted):
+		im_a_puzzle.emit() 
+		has_already_emitted = true
+		
+		
 #testing the TrueIfArgumentColourIsWithinTolerance() function
-#func _ready() -> void:
+func _ready() -> void:
+	if (desiresToChangeColor):
+		self.connect("completed_puzzle", door._on_completed_puzzle)
+		self.connect("im_a_puzzle", door._on_im_a_puzzle)
 	#var c1:Color = Color.from_hsv(0.66,1,1,1)
-	#var a:bool = TrueIfArgumentColourIsWithinTolerance(c1)
 	#print("a:" + str(a))
 
 func GetColor() -> Color:
@@ -37,6 +51,9 @@ func TrueIfArgumentColourIsWithinTolerance(argumentColour:Color) -> bool:
 	return (realHueDifference <= Globals.HUEDIFFERENCETOLERANCE)
 	
 func TrueIfArgumentColourIsWithinToleranceOfDesired(argumentColour:Color) -> bool:
+	if (im_complete):
+		return true 
+	
 	var ourHue:float = desiredColor.h
 	var argumentHue:float = argumentColour.h
 	
@@ -68,6 +85,8 @@ func TrueIfArgumentColourIsWithinToleranceOfDesired(argumentColour:Color) -> boo
 			Globals.MIX = true
 		if self.name == "tetris":
 			Globals.TETRIS = true
+		im_complete = true
+		completed_puzzle.emit()
 	
 	return result
 

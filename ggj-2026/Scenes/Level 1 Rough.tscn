@@ -10,7 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://bd3hai0llnuyq" path="res://Assets/Environment/Wall.png" id="7_bobo7"]
 [ext_resource type="Texture2D" uid="uid://dt8hb6wr6h4l2" path="res://Assets/Floor.png" id="7_jxi4p"]
 [ext_resource type="Texture2D" uid="uid://h7qsl2nskq04" path="res://Assets/Bucket.png" id="8_7a54r"]
-[ext_resource type="PackedScene" uid="uid://duh7wknhj5uc4" path="res://Scenes/level_exit_door.tscn" id="8_hirra"]
+[ext_resource type="PackedScene" uid="uid://duoxqfas7x38t" path="res://Scenes/level_exit_door.tscn" id="8_hirra"]
 [ext_resource type="PackedScene" uid="uid://hkcm0qaks4et" path="res://Scenes/drop_down_platform.tscn" id="10_jxi4p"]
 
 [sub_resource type="Theme" id="Theme_bobo7"]
