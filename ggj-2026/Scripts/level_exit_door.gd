@@ -19,7 +19,6 @@ func _process(delta: float) -> void:
 	#print(get_tree().current_scene.name)
 	if(player_root != null):
 		var distanceToPlayer:float = player_root.get_controller_pos().distance_to(self.position)
-		print("distanceToPlayer:" + str(distanceToPlayer))
 		if(distanceToPlayer < 80):
 			go_to_next_level()
 

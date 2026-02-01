@@ -28,7 +28,7 @@ func _process(delta: float) -> void:
 func create_colour_cells() -> void:
 
 	# Calculating a starting position
-	var start_pos = Vector2(-Globals.PLAYER_X / 2.0, -Globals.PLAYER_Y / 2.0)
+	var start_pos = Vector2(-Globals.PLAYER_X / 2.0, -(Globals.PLAYER_Y+2) / 2.0)
 
 	# Creating a series of ColorRects that are the colour cells of the sponge
 	for y in range(int(Globals.PLAYER_Y)):
