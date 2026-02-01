@@ -1,21 +1,22 @@
 [gd_scene format=3 uid="uid://dc3mm7bu26bsr"]
 
+[ext_resource type="PackedScene" uid="uid://bbos4y4dwl6dq" path="res://Scenes/player.tscn" id="1_0gqrk"]
 [ext_resource type="Script" uid="uid://da8mcsv5ayli0" path="res://Scenes/player_camera.gd" id="2_0gqrk"]
 [ext_resource type="Texture2D" uid="uid://bycdlvhpt3vg" path="res://icon.svg" id="3_3pcwb"]
 [ext_resource type="PackedScene" uid="uid://dlb1vl8xplpsi" path="res://Scenes/Stool.tscn" id="4_58yg4"]
 [ext_resource type="PackedScene" path="res://Scenes/absorbable_colour_Blue5.tscn" id="4_b22bo"]
 [ext_resource type="PackedScene" path="res://Scenes/absorbable_colour_red.tscn" id="4_mfg4v"]
 [ext_resource type="PackedScene" uid="uid://hkcm0qaks4et" path="res://Scenes/drop_down_platform.tscn" id="5_0gqrk"]
-[ext_resource type="PackedScene" uid="uid://7iiumdnxppak" path="res://Scenes/absorbable_colour_yellow.tscn" id="5_b22bo"]
-[ext_resource type="PackedScene" uid="uid://br05s530dlbr2" path="res://Scenes/absorbable_colour_purple.tscn" id="6_3f2vy"]
+[ext_resource type="PackedScene" path="res://Scenes/absorbable_colour_yellow.tscn" id="5_b22bo"]
+[ext_resource type="PackedScene" path="res://Scenes/absorbable_colour_purple.tscn" id="6_3f2vy"]
 [ext_resource type="PackedScene" uid="uid://v1kx4tycqxwg" path="res://Scenes/absorbable_colour_orange.tscn" id="6_i1fq5"]
 [ext_resource type="PackedScene" uid="uid://bsgqi5naogaf6" path="res://Scenes/absorbable_colour.tscn" id="8_3f2vy"]
-[ext_resource type="PackedScene" uid="uid://chbg6sv6cp0j8" path="res://Scenes/absorbable_colour_cyan.tscn" id="9_vdwwb"]
+[ext_resource type="PackedScene" path="res://Scenes/absorbable_colour_cyan.tscn" id="9_vdwwb"]
 [ext_resource type="Texture2D" uid="uid://b3fngj1whhfkc" path="res://Assets/autumnday.png" id="10_ykunq"]
-[ext_resource type="PackedScene" uid="uid://uhbmvlw264nb" path="res://Scenes/absorbable_colour_autumn_blue.tscn" id="11_dt7ti"]
-[ext_resource type="PackedScene" uid="uid://bn6q3i5a2xivy" path="res://Scenes/absorbable_colour_autumn_red.tscn" id="12_k7q2e"]
-[ext_resource type="PackedScene" uid="uid://jkc11wt4qo7v" path="res://Scenes/absorbable_colour_autumn_cyan.tscn" id="13_anpic"]
-[ext_resource type="PackedScene" uid="uid://cg0qprn7hdlqw" path="res://Scenes/absorbable_colour_autumn_green.tscn" id="14_8usqw"]
+[ext_resource type="PackedScene" path="res://Scenes/absorbable_colour_autumn_blue.tscn" id="11_dt7ti"]
+[ext_resource type="PackedScene" path="res://Scenes/absorbable_colour_autumn_red.tscn" id="12_k7q2e"]
+[ext_resource type="PackedScene" path="res://Scenes/absorbable_colour_autumn_cyan.tscn" id="13_anpic"]
+[ext_resource type="PackedScene" path="res://Scenes/absorbable_colour_autumn_green.tscn" id="14_8usqw"]
 
 [sub_resource type="Theme" id="Theme_5odgg"]
 default_font_size = 36
@@ -25,10 +26,12 @@ size = Vector2(128, 128)
 
 [node name="Level 3" type="Node2D" unique_id=1129709678]
 
+[node name="Player" parent="." unique_id=809752752 instance=ExtResource("1_0gqrk")]
+
 [node name="PlayerCamera" type="Camera2D" parent="." unique_id=655621015 node_paths=PackedStringArray("player")]
 position = Vector2(573, 318)
 script = ExtResource("2_0gqrk")
-player = NodePath("")
+player = NodePath("../Player")
 
 [node name="Paintings" type="Node2D" parent="." unique_id=86936898]
 z_index = -1
