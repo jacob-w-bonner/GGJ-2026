@@ -112,7 +112,12 @@ func splat() -> void:
 	
 	# Creating a new absorbable
 	var new_splat 	  = splat_scene.instantiate()
-	get_tree().root.get_child(0).add_child(new_splat)
+	for i in get_tree().get_root().get_children():
+		print(i.get_name())
+	#print(get_tree().get_root().get_child(0).get_name())
+	get_tree().get_root().get_child(1).add_child(new_splat)
+	#	get_parent().get_tree().root
+	new_splat.set_name("splat")
 
 	# Setting the properties of the new splat
 	var col			  = _colour.get_color()
