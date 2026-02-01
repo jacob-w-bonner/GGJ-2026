@@ -6,4 +6,5 @@ Contributors:
 - William Graham
 - Paige Noualy
 - Allie Stefanakis
--ADD YOUR GUYS NAMES :)
+- Chloe Lastname
+- Mason McLastname
