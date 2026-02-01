@@ -1,18 +1,19 @@
-[gd_scene format=3 uid="uid://dqwdji1dib54q"]
+[gd_scene format=3 uid="uid://c10s8ssfdf2kn"]
 
 [ext_resource type="Script" uid="uid://dfilyxsh47xqq" path="res://Scripts/absorbable_colour.gd" id="1_4sjl3"]
-[ext_resource type="Texture2D" uid="uid://d0laynwhbpy27" path="res://Assets/WhiteSquare.png" id="2_ex5qn"]
+[ext_resource type="Texture2D" uid="uid://dfy2bpn3s86dw" path="res://Assets/WhiteSquare.png" id="2_ex5qn"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_5xigm"]
-size = Vector2(128, 128)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4sjl3"]
+size = Vector2(113, 113)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_82gkg"]
 
 [node name="AbsorbableColourGreen" type="Area2D" unique_id=1021615895]
 script = ExtResource("1_4sjl3")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1113822803]
-shape = SubResource("RectangleShape2D_5xigm")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=399553038]
+shape = SubResource("RectangleShape2D_4sjl3")
+debug_color = Color(0.77225417, 0.40390572, 0.49424326, 0.41960785)
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=227688569]
 self_modulate = Color(0.13333334, 0.5294118, 0, 1)
