@@ -16,7 +16,7 @@ var has_already_emitted = false
 var im_complete = false
 
 func _process(delta): 
-	if (!has_already_emitted):
+	if (desiresToChangeColor && !has_already_emitted):
 		im_a_puzzle.emit() 
 		has_already_emitted = true
 		
