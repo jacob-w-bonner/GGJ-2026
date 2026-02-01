@@ -35,12 +35,24 @@ func TrueIfArgumentColourIsWithinTolerance(argumentColour:Color) -> bool:
 	var realHueDifference:float = min(min(abs(hueDifference_upShifted), abs(hueDifference_normal)), abs(hueDifference_downShifted))
 	
 	return (realHueDifference <= Globals.HUEDIFFERENCETOLERANCE)
+	
+func TrueIfArgumentColourIsWithinToleranceOfDesired(argumentColour:Color) -> bool:
+	var ourHue:float = desiredColor.h
+	var argumentHue:float = argumentColour.h
+	
+	#We need to do all this shit because the hues are circular, but like numbers arent.... you know what I mean?
+	var hueDifference_upShifted = (argumentHue + 1) - ourHue
+	var hueDifference_normal = ourHue - argumentHue
+	var hueDifference_downShifted = (argumentHue - 1) - ourHue
+	var realHueDifference:float = min(min(abs(hueDifference_upShifted), abs(hueDifference_normal)), abs(hueDifference_downShifted))
+	
+	return (realHueDifference <= Globals.HUEDIFFERENCETOLERANCE)
 
 func SplatOn(argumentColour:Color) -> void:
 	if (desiresToChangeColor == false):
 		return
 	
-	var argumentColourIsWithinTolerance:bool = TrueIfArgumentColourIsWithinTolerance(argumentColour)
+	var argumentColourIsWithinTolerance:bool = TrueIfArgumentColourIsWithinToleranceOfDesired(argumentColour)
 	
 	if(argumentColourIsWithinTolerance == true):
 		numberOfSplatsReceived += 1
