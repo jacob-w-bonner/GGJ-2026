@@ -21,7 +21,7 @@
 [ext_resource type="PackedScene" uid="uid://culjsn2xps7cm" path="res://Scenes/absorbable_colour_clear.tscn" id="16_tm0fi"]
 [ext_resource type="Texture2D" uid="uid://bd3hai0llnuyq" path="res://Assets/Environment/Wall.png" id="17_grufy"]
 [ext_resource type="Texture2D" uid="uid://dt8hb6wr6h4l2" path="res://Assets/Floor.png" id="18_2dtiq"]
-[ext_resource type="PackedScene" uid="uid://duh7wknhj5uc4" path="res://Scenes/level_exit_door.tscn" id="18_t7xt4"]
+[ext_resource type="PackedScene" path="res://Scenes/level_exit_door.tscn" id="18_t7xt4"]
 
 [sub_resource type="Theme" id="Theme_5odgg"]
 default_font_size = 36

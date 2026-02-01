@@ -10,7 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://04paepqokxy" path="res://Scenes/absorbable_colour_black.tscn" id="8_iad6u"]
 [ext_resource type="PackedScene" uid="uid://culjsn2xps7cm" path="res://Scenes/absorbable_colour_clear.tscn" id="8_srilc"]
 [ext_resource type="PackedScene" uid="uid://t0pyjrb4skuh" path="res://Scenes/absorbable_colour_Blue5.tscn" id="8_ut81y"]
-[ext_resource type="PackedScene" uid="uid://duh7wknhj5uc4" path="res://Scenes/level_exit_door.tscn" id="10_iad6u"]
+[ext_resource type="PackedScene" uid="uid://duoxqfas7x38t" path="res://Scenes/level_exit_door.tscn" id="10_iad6u"]
 [ext_resource type="Texture2D" uid="uid://bd3hai0llnuyq" path="res://Assets/Environment/Wall.png" id="10_oiix8"]
 [ext_resource type="Texture2D" uid="uid://dt8hb6wr6h4l2" path="res://Assets/Floor.png" id="10_twopq"]
 
@@ -451,6 +451,10 @@ text = "Gain____
 ------------"
 metadata/_edit_use_anchors_ = true
 
-[node name="LevelExitDoor" parent="." unique_id=860006878 node_paths=PackedStringArray("player_root") instance=ExtResource("10_iad6u")]
+[node name="LevelExitDoor" parent="." unique_id=860006878 node_paths=PackedStringArray("player_root", "puzzle1") instance=ExtResource("10_iad6u")]
 position = Vector2(5221, 545)
 player_root = NodePath("../Player")
+puzzle1 = NodePath("../Paintings/BlueGradiant/gradient")
+
+[connection signal="completed_puzzle" from="Paintings/BlueGradiant/gradient" to="LevelExitDoor" method="_on_gradient_completed_puzzle"]
+[connection signal="completed_puzzle" from="Paintings/StickMan/body" to="LevelExitDoor" method="_on_completed_puzzle"]
