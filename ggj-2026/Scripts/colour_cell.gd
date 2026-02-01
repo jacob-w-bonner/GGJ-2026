@@ -104,7 +104,11 @@ func set_colour(new_col: Color) -> void:
 
 # Called to eject paint colour as a new absorbable and reset the cell
 func splat() -> void:
-
+	
+	if(_colour.color != Globals.DEFAULT_COL):
+		if(_last_absorbable_colour_entered != null):
+			_last_absorbable_colour_entered.SplatOn(_colour.get_color())
+	
 	# Creating a new absorbable
 	var new_splat 	  = splat_scene.instantiate()
 	get_tree().root.get_child(0).add_child(new_splat)
@@ -119,6 +123,8 @@ func splat() -> void:
 	# Resetting the cell colour
 	_colour.color 	  = Globals.DEFAULT_COL
 	elapsed_time	  = 0.0
+	
+
 
 # Detecting entering another area
 func _on_area_entered(area: Area2D):
