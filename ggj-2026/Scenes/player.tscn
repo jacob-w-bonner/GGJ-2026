@@ -1,8 +1,11 @@
-[gd_scene format=3 uid="uid://bbos4y4dwl6dq"]
+[gd_scene format=3 uid="uid://dyd3vsxsvvhcv"]
 
-[ext_resource type="Script" uid="uid://1rvfrye2sahn" path="res://Scripts/colour_cells.gd" id="1_v0iea"]
+[ext_resource type="PackedScene" uid="uid://bjywweo23o85j" path="res://Scenes/player_controller.tscn" id="1_v0iea"]
+[ext_resource type="PackedScene" uid="uid://bbos4y4dwl6dq" path="res://Scenes/player_cells.tscn" id="2_cvnsp"]
 
-[node name="Player" type="Node2D" unique_id=1694602107]
+[node name="Player" type="Node2D" unique_id=809752752]
+z_index = 100
 
-[node name="ColourCells" type="Node2D" parent="." unique_id=208764245]
-script = ExtResource("1_v0iea")
+[node name="player_controller" parent="." unique_id=193364027 instance=ExtResource("1_v0iea")]
+
+[node name="PlayerCells" parent="player_controller" unique_id=1694602107 instance=ExtResource("2_cvnsp")]

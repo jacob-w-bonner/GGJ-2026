@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://dhsx2dp6flcao"]
+
+[ext_resource type="Texture2D" uid="uid://bycdlvhpt3vg" path="res://icon.svg" id="1_c43f6"]
+[ext_resource type="PackedScene" uid="uid://bsgqi5naogaf6" path="res://Scenes/absorbable_colour.tscn" id="2_jpum5"]
+[ext_resource type="PackedScene" uid="uid://dqwdji1dib54q" path="res://Scenes/absorbable_colour_green.tscn" id="4_c6quj"]
+[ext_resource type="PackedScene" uid="uid://v1kx4tycqxwg" path="res://Scenes/absorbable_colour_orange.tscn" id="5_6y5xu"]
+[ext_resource type="PackedScene" uid="uid://ca3erfbuk0kh3" path="res://Scenes/absorbable_colour_white.tscn" id="6_pp77q"]
+[ext_resource type="PackedScene" uid="uid://dyd3vsxsvvhcv" path="res://Scenes/player.tscn" id="7_c6quj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jpum5"]
+size = Vector2(127.44679, 126)
+
+[node name="ColourGym" type="Node2D" unique_id=1276185337]
+
+[node name="Player" parent="." unique_id=809752752 instance=ExtResource("7_c6quj")]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=195393685]
+position = Vector2(566, 669)
+scale = Vector2(9.400002, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=1348173301]
+texture = ExtResource("1_c43f6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1105394605]
+shape = SubResource("RectangleShape2D_jpum5")
+
+[node name="AbsorbableColour" parent="." unique_id=1021615895 instance=ExtResource("2_jpum5")]
+position = Vector2(61, 458.99997)
+scale = Vector2(1.3599994, 2.24)
+
+[node name="AbsorbableColour2" parent="." unique_id=926340897 instance=ExtResource("2_jpum5")]
+position = Vector2(491.00006, 464.99997)
+scale = Vector2(1.3599994, 2.24)
+
+[node name="AbsorbableColourGreen" parent="." unique_id=1090801995 instance=ExtResource("4_c6quj")]
+position = Vector2(651, 333)
+
+[node name="AbsorbableColourOrange" parent="." unique_id=820897617 instance=ExtResource("5_6y5xu")]
+position = Vector2(768.99994, 514)
+scale = Vector2(2.9629552, 1.7012769)
+
+[node name="AbsorbableColourWhite" parent="." unique_id=629061453 instance=ExtResource("6_pp77q")]
+position = Vector2(337, 545)
+
+[node name="AbsorbableColourGreen2" parent="." unique_id=2008721689 instance=ExtResource("4_c6quj")]
+position = Vector2(1024, 548)
+
+[node name="AbsorbableColour3" parent="." unique_id=1037682245 instance=ExtResource("2_jpum5")]
+position = Vector2(1153, 552)
