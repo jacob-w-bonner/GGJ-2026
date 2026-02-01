@@ -32,3 +32,12 @@ func create_colour_cells() -> void:
 
 			# Adding to list
 			_colour_cells.append(new_cell)
+
+#Returns the ratio of how many cells count as hidden
+func GetHiddenRatio() -> float:
+	var numberOfHiddenCells:float = 0
+	for cell in _colour_cells:
+		if(cell.IsHidden() == true):
+			numberOfHiddenCells += 1
+	
+	return (numberOfHiddenCells / _colour_cells.size())

@@ -54,3 +54,12 @@ func _on_area_entered(area: Area2D):
 # Detecting leaving another area
 func _on_area_exited(area: Area2D):
 	print("exited")
+
+func IsHidden() -> bool:
+	if _last_absorbable_colour_entered == null:
+		return false
+	
+	#TODO: rework once color is nolonger stored in a ColorRect
+	var hidden:bool = _last_absorbable_colour_entered.TrueIfArgumentColourIsWithinTolerance(Color.DEEP_PINK)
+	
+	return hidden
