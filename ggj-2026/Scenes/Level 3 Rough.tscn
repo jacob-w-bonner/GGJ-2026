@@ -274,6 +274,7 @@ scale = Vector2(1.5, 1)
 texture = ExtResource("3_3pcwb")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Paintings/MixToMatch" unique_id=1431413645]
+self_modulate = Color(0.7469797, 0.74697965, 0.74697965, 1)
 offset_left = 554.0
 offset_top = 212.0
 offset_right = 882.0
@@ -442,6 +443,7 @@ position = Vector2(3092, 305)
 z_index = -3
 
 [node name="TimeSpaceDesc" type="RichTextLabel" parent="Background" unique_id=1665838910]
+self_modulate = Color(0.67481464, 0.67481464, 0.6748146, 1)
 offset_left = 2475.0
 offset_top = 206.0
 offset_right = 3195.0
