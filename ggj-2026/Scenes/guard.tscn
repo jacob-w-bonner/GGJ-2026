@@ -1,14 +1,62 @@
 [gd_scene format=3 uid="uid://spbv53f3s62"]
 
 [ext_resource type="Script" uid="uid://b0110ytvt46vm" path="res://Scripts/path_follow_2d.gd" id="1_smm0d"]
-[ext_resource type="Texture2D" uid="uid://bycdlvhpt3vg" path="res://icon.svg" id="2_cnet1"]
 [ext_resource type="Script" uid="uid://c40ds2rhudp5p" path="res://Scripts/guard.gd" id="2_mk1iy"]
+[ext_resource type="Texture2D" uid="uid://dxx8omkkqendr" path="res://Assets/Guard/Guardwalkneutral.png" id="3_1rcvf"]
+[ext_resource type="Texture2D" uid="uid://bn72p6r02e4d1" path="res://Assets/Guard/Angry guard.png" id="3_mk1iy"]
+[ext_resource type="Texture2D" uid="uid://co6rep62g800t" path="res://Assets/Guard/Guardfaceneutral.png" id="4_dmkvq"]
+[ext_resource type="Texture2D" uid="uid://booyjsusctic4" path="res://Assets/Guard/Guardwalkleft.png" id="4_tyyvc"]
+[ext_resource type="Texture2D" uid="uid://cwlsfye7m2thy" path="res://Assets/Guard/Guard walk right.png" id="5_mibv0"]
 
 [sub_resource type="Curve2D" id="Curve2D_mk1iy"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 812, 526, 0, 0, 0, 0, 816, 55)
+"points": PackedVector2Array(0, 0, 0, 0, 227, 853, 0, 0, 0, 0, 1722, 854)
 }
 point_count = 2
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_huqfy"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"waiting",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_1rcvf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_tyyvc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_1rcvf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_mibv0")
+}],
+"loop": true,
+"name": &"walking",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_36pg4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_mk1iy")
+}],
+"loop": true,
+"name": &"chasing",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_dmkvq")
+}],
+"loop": true,
+"name": &"neutral",
+"speed": 5.0
+}]
 
 [node name="Node2D" type="Node2D" unique_id=333059284]
 
@@ -16,17 +64,19 @@ point_count = 2
 curve = SubResource("Curve2D_mk1iy")
 
 [node name="PathFollower" type="PathFollow2D" parent="Path2D" unique_id=2146946075]
-position = Vector2(812, 526)
-rotation = -1.562304
+position = Vector2(227, 853)
+rotation = 0.0006688962
 script = ExtResource("1_smm0d")
 speed = 0.5
 
 [node name="Guard" type="Node2D" parent="Path2D/PathFollower" unique_id=866555927]
 position = Vector2(0.45148242, 0.8922899)
-rotation = 2.6731257
 script = ExtResource("2_mk1iy")
 
-[node name="Static Guard Sprite" type="Sprite2D" parent="Path2D/PathFollower/Guard" unique_id=731694753]
-position = Vector2(0, 1)
-rotation = -2.6731257
-texture = ExtResource("2_cnet1")
+[node name="Body" type="AnimatedSprite2D" parent="Path2D/PathFollower/Guard" unique_id=1814573830]
+sprite_frames = SubResource("SpriteFrames_huqfy")
+animation = &"waiting"
+
+[node name="Face" type="AnimatedSprite2D" parent="Path2D/PathFollower/Guard" unique_id=1314273655]
+sprite_frames = SubResource("SpriteFrames_36pg4")
+animation = &"neutral"

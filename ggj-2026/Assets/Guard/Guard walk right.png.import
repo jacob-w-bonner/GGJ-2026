@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dfy2bpn3s86dw"
-path="res://.godot/imported/WhiteSquare.png-c6fb60646915a383c5367af897236989.ctex"
+uid="uid://cwlsfye7m2thy"
+path="res://.godot/imported/Guard walk right.png-1cfcf660aa85846745a1c835a476ebbf.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/WhiteSquare.png"
-dest_files=["res://.godot/imported/WhiteSquare.png-c6fb60646915a383c5367af897236989.ctex"]
+source_file="res://Assets/Guard/Guard walk right.png"
+dest_files=["res://.godot/imported/Guard walk right.png-1cfcf660aa85846745a1c835a476ebbf.ctex"]
 
 [params]
 

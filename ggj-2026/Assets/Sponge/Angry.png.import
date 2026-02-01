@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dfy2bpn3s86dw"
-path="res://.godot/imported/WhiteSquare.png-c6fb60646915a383c5367af897236989.ctex"
+uid="uid://bb5vmis4xdnii"
+path="res://.godot/imported/Angry.png-fa4b3bce4ca2c5cce1fe55f0f94a323c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/WhiteSquare.png"
-dest_files=["res://.godot/imported/WhiteSquare.png-c6fb60646915a383c5367af897236989.ctex"]
+source_file="res://Assets/Sponge/Angry.png"
+dest_files=["res://.godot/imported/Angry.png-fa4b3bce4ca2c5cce1fe55f0f94a323c.ctex"]
 
 [params]
 

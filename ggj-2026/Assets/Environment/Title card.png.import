@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dfy2bpn3s86dw"
-path="res://.godot/imported/WhiteSquare.png-c6fb60646915a383c5367af897236989.ctex"
+uid="uid://b38rtq60g1tfe"
+path="res://.godot/imported/Title card.png-85b7a99f0f57f0a19b588aa2efd9abff.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/WhiteSquare.png"
-dest_files=["res://.godot/imported/WhiteSquare.png-c6fb60646915a383c5367af897236989.ctex"]
+source_file="res://Assets/Environment/Title card.png"
+dest_files=["res://.godot/imported/Title card.png-85b7a99f0f57f0a19b588aa2efd9abff.ctex"]
 
 [params]
 

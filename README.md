@@ -5,4 +5,5 @@ Contributors:
 - Jacob Bonner
 - William Graham
 - Paige Noualy
+- Allie Stefanakis
 -ADD YOUR GUYS NAMES :)
