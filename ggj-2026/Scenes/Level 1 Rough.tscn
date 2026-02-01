@@ -3,9 +3,9 @@
 [ext_resource type="PackedScene" uid="uid://bbos4y4dwl6dq" path="res://Scenes/player.tscn" id="1_jxi4p"]
 [ext_resource type="PackedScene" uid="uid://dlb1vl8xplpsi" path="res://Scenes/Stool.tscn" id="4_4he20"]
 [ext_resource type="PackedScene" uid="uid://dbohlvldq1gmi" path="res://Scenes/absorbable_colour_red.tscn" id="4_htomu"]
-[ext_resource type="PackedScene" uid="uid://cqk3b6081x0p0" path="res://Scenes/absorbable_colour_green.tscn" id="5_4he20"]
+[ext_resource type="PackedScene" uid="uid://c10s8ssfdf2kn" path="res://Scenes/absorbable_colour_green.tscn" id="5_4he20"]
 [ext_resource type="Script" uid="uid://da8mcsv5ayli0" path="res://Scenes/player_camera.gd" id="5_aksks"]
-[ext_resource type="PackedScene" uid="uid://ca3erfbuk0kh3" path="res://Scenes/absorbable_colour_white.tscn" id="5_hirra"]
+[ext_resource type="PackedScene" uid="uid://dwqtrhxe5oiob" path="res://Scenes/absorbable_colour_white.tscn" id="5_hirra"]
 [ext_resource type="Texture2D" uid="uid://bd3hai0llnuyq" path="res://Assets/Environment/Wall.png" id="7_bobo7"]
 [ext_resource type="Texture2D" uid="uid://dt8hb6wr6h4l2" path="res://Assets/Floor.png" id="7_jxi4p"]
 [ext_resource type="Texture2D" uid="uid://h7qsl2nskq04" path="res://Assets/Bucket.png" id="8_7a54r"]
@@ -95,8 +95,8 @@ position = Vector2(2880.0002, 1249)
 scale = Vector2(60, 10)
 
 [node name="Sprite2D" type="Sprite2D" parent="Bounds/Floor" unique_id=915870049]
-position = Vector2(0.125, -1.172253)
-scale = Vector2(0.06265462, 0.17941226)
+position = Vector2(0.125, 0.7499908)
+scale = Vector2(0.06265462, 0.174224)
 texture = ExtResource("7_jxi4p")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Bounds/Floor" unique_id=1377600318]

@@ -9,7 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://hkcm0qaks4et" path="res://Scenes/drop_down_platform.tscn" id="5_0gqrk"]
 [ext_resource type="PackedScene" uid="uid://b35jvsyh15duu" path="res://Scenes/absorbable_colour_yellow.tscn" id="5_b22bo"]
 [ext_resource type="PackedScene" uid="uid://c2uc6lcuwffab" path="res://Scenes/absorbable_colour_purple.tscn" id="6_3f2vy"]
-[ext_resource type="PackedScene" uid="uid://v1kx4tycqxwg" path="res://Scenes/absorbable_colour_orange.tscn" id="6_i1fq5"]
+[ext_resource type="PackedScene" uid="uid://4jvyagxruf2r" path="res://Scenes/absorbable_colour_orange.tscn" id="6_i1fq5"]
 [ext_resource type="PackedScene" uid="uid://bsgqi5naogaf6" path="res://Scenes/absorbable_colour.tscn" id="8_3f2vy"]
 [ext_resource type="PackedScene" uid="uid://bgo2k8mpayb81" path="res://Scenes/absorbable_colour_cyan.tscn" id="9_vdwwb"]
 [ext_resource type="Texture2D" uid="uid://b3fngj1whhfkc" path="res://Assets/autumnday.png" id="10_ykunq"]
@@ -18,6 +18,8 @@
 [ext_resource type="PackedScene" uid="uid://ls2hwlllykuk" path="res://Scenes/absorbable_colour_autumn_cyan.tscn" id="13_anpic"]
 [ext_resource type="PackedScene" uid="uid://ds1t4btdud884" path="res://Scenes/absorbable_colour_autumn_green.tscn" id="14_8usqw"]
 [ext_resource type="PackedScene" uid="uid://culjsn2xps7cm" path="res://Scenes/absorbable_colour_clear.tscn" id="16_tm0fi"]
+[ext_resource type="Texture2D" uid="uid://bd3hai0llnuyq" path="res://Assets/Environment/Wall.png" id="17_grufy"]
+[ext_resource type="Texture2D" uid="uid://dt8hb6wr6h4l2" path="res://Assets/Floor.png" id="18_2dtiq"]
 [ext_resource type="PackedScene" uid="uid://duh7wknhj5uc4" path="res://Scenes/level_exit_door.tscn" id="18_t7xt4"]
 
 [sub_resource type="Theme" id="Theme_5odgg"]
@@ -315,7 +317,9 @@ position = Vector2(-568, 396)
 scale = Vector2(6, 20)
 
 [node name="Sprite2D" type="Sprite2D" parent="Bounds/LeftWall" unique_id=533191513]
-texture = ExtResource("3_3pcwb")
+position = Vector2(-0.33333778, -20.95)
+scale = Vector2(0.06347656, 0.11497977)
+texture = ExtResource("17_grufy")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Bounds/LeftWall" unique_id=1074665853]
 shape = SubResource("RectangleShape2D_r3mym")
@@ -325,7 +329,9 @@ position = Vector2(2880.0002, 1249)
 scale = Vector2(60, 10)
 
 [node name="Sprite2D" type="Sprite2D" parent="Bounds/Floor" unique_id=915870049]
-texture = ExtResource("3_3pcwb")
+position = Vector2(0.08332157, 0.5499954)
+scale = Vector2(0.062581375, 0.17449392)
+texture = ExtResource("18_2dtiq")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Bounds/Floor" unique_id=1377600318]
 shape = SubResource("RectangleShape2D_r3mym")
@@ -335,7 +341,9 @@ position = Vector2(2560, -289)
 scale = Vector2(45, 4)
 
 [node name="Sprite2D" type="Sprite2D" parent="Bounds/Ceiling" unique_id=431356315]
-texture = ExtResource("3_3pcwb")
+position = Vector2(-0.45555305, 1.8749943)
+scale = Vector2(0.06218533, 0.17442644)
+texture = ExtResource("18_2dtiq")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Bounds/Ceiling" unique_id=1255616068]
 shape = SubResource("RectangleShape2D_r3mym")
@@ -345,8 +353,9 @@ position = Vector2(1558, 163)
 scale = Vector2(0.5, 1.75)
 
 [node name="Sprite2D" type="Sprite2D" parent="Bounds/HallwayWall" unique_id=359074412]
-scale = Vector2(0.5, 1.75)
-texture = ExtResource("3_3pcwb")
+position = Vector2(-0.99993515, -0.571414)
+scale = Vector2(0.030273378, 0.30075192)
+texture = ExtResource("17_grufy")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Bounds/HallwayWall" unique_id=128163495]
 scale = Vector2(0.5, 1.75)
@@ -357,10 +366,12 @@ position = Vector2(4077, 188.00002)
 scale = Vector2(0.5, 1.75)
 
 [node name="Sprite2D" type="Sprite2D" parent="Bounds/HallwayWall2" unique_id=1054512818]
-scale = Vector2(0.5, 1.75)
-texture = ExtResource("3_3pcwb")
+position = Vector2(-0.9999771, -13.14285)
+scale = Vector2(0.032226644, 0.30537882)
+texture = ExtResource("17_grufy")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Bounds/HallwayWall2" unique_id=1450615891]
+position = Vector2(0, -14.285722)
 scale = Vector2(0.5, 1.75)
 shape = SubResource("RectangleShape2D_r3mym")
 
@@ -369,7 +380,9 @@ position = Vector2(5789, 554.0001)
 scale = Vector2(6, 20)
 
 [node name="Sprite2D" type="Sprite2D" parent="Bounds/RightWall" unique_id=297126794]
-texture = ExtResource("3_3pcwb")
+position = Vector2(-0.33332634, -0.8500042)
+scale = Vector2(0.06217449, 0.1711201)
+texture = ExtResource("17_grufy")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Bounds/RightWall" unique_id=251259528]
 shape = SubResource("RectangleShape2D_r3mym")
