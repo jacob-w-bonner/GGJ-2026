@@ -12,6 +12,9 @@ class_name AbsorbableColor
 func GetColor() -> Color:
 	return sprite_2d.self_modulate
 
+func SetColor(colour: Color):
+	sprite_2d.self_modulate = colour
+
 #TODO: rework this algorithm to factor in saturation
 #returns true if the argumentColour is close to this AbsorbableColor's colouro
 func TrueIfArgumentColourIsWithinTolerance(argumentColour:Color) -> bool:

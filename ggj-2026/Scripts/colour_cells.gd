@@ -11,7 +11,15 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
-	pass
+
+	# Checking if the player wants to average the colours
+	if Input.is_action_pressed("equalize"):
+		average_colour_cells()
+
+	# Releasing the absorbed colour behind the cell
+	if Input.is_action_pressed("splat"):
+		for cell in _colour_cells:
+			cell.splat()
 
 # This function creates colour cells
 func create_colour_cells() -> void:
@@ -32,6 +40,42 @@ func create_colour_cells() -> void:
 
 			# Adding to list
 			_colour_cells.append(new_cell)
+
+# Averaging the colours of all the cells
+func average_colour_cells() -> void:
+
+	# Array of all the colours
+	var cols: Array[Color] = []
+
+	# Getting the colour of each cell
+	for cell in _colour_cells:
+		cols.append(cell.get_colour())
+
+	# Getting the color average
+	var col_avg = blend_colours(cols)
+
+	# Setting each of the cell colours
+	for cell in _colour_cells:
+		cell.set_colour(col_avg)
+
+# Called to blend colours in an array
+func blend_colours(colours: Array[Color]):
+	var r = 0
+	var g = 0
+	var b = 0
+
+	for colour in colours:
+		r+= colour.r
+		g+= colour.g
+		b+= colour.b
+		
+	var divider = colours.size()
+		
+	r = (float)(r / divider) 
+	g = (float)(g / divider) 
+	b = (float)(b / divider) 
+	
+	return Color(r,g,b)
 
 #Returns the ratio of how many cells count as hidden
 func GetHiddenRatio() -> float:
