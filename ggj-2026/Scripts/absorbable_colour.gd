@@ -45,7 +45,31 @@ func TrueIfArgumentColourIsWithinToleranceOfDesired(argumentColour:Color) -> boo
 	var hueDifference_normal = ourHue - argumentHue
 	var hueDifference_downShifted = (argumentHue - 1) - ourHue
 	var realHueDifference:float = min(min(abs(hueDifference_upShifted), abs(hueDifference_normal)), abs(hueDifference_downShifted))
-	return (realHueDifference <= Globals.HUEDIFFERENCETOLERANCE)
+
+	var result = (realHueDifference <= Globals.HUEDIFFERENCETOLERANCE)
+	if result:
+		if self.name == "checkers":
+			Globals.CHECKERS = true
+		if self.name == "gradient":
+			Globals.GRADIENT = true
+		if self.name == "neck":
+			Globals.STICK_MAN_NECK = true
+		if self.name == "body":
+			Globals.STICK_MAN_TORSO = true
+		if self.name == "addsone":
+			Globals.ADDS_ONE = true
+		if self.name == "addstwo":
+			Globals.ADDS_TWO = true
+		if self.name == "eye":
+			Globals.EYE = true
+		if self.name == "sun":
+			Globals.SUN = true
+		if self.name == "mix":
+			Globals.MIX = true
+		if self.name == "tetris":
+			Globals.TETRIS = true
+	
+	return result
 
 func SplatOn(argumentColour:Color) -> void:
 	if (desiresToChangeColor == false):
