@@ -3,7 +3,6 @@ extends Node2D
 @onready var state = GuardMovement.State.PATROLLING
 @onready var path: PathFollow2D = get_parent()
 @onready var freedom: Node2D = get_parent().get_parent().get_parent()
-@onready var animate = $AnimatedSprite2D
 
 @export var speed = 200
 @export var player: Node2D
@@ -29,8 +28,8 @@ func _process(delta: float) -> void:
 				reattach_to_path(path)
 		GuardMovement.State.PATROLLING:
 			# y comparison to make sure we're on the same vertical level
-			if !player.hidden && abs(player.global_position.x - self.global_position.x) <= 20:# && abs(player.global_position.y - self.global_position.y) <= 20:
-				state = GuardMovement.State.WRINGING_OUT
+			if (!player.hidden && abs(player.global_position.x - self.global_position.x) <= 20 && abs(player.global_position.y - self.global_position.y) <= 5):
+					state = GuardMovement.State.WRINGING_OUT
 	
 
 #temporary state control until player is detectable 
