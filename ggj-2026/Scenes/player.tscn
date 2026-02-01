@@ -1,11 +1,85 @@
-[gd_scene format=3 uid="uid://dyd3vsxsvvhcv"]
+[gd_scene format=3 uid="uid://bbos4y4dwl6dq"]
 
 [ext_resource type="PackedScene" uid="uid://bjywweo23o85j" path="res://Scenes/player_controller.tscn" id="1_v0iea"]
-[ext_resource type="PackedScene" uid="uid://bbos4y4dwl6dq" path="res://Scenes/player_cells.tscn" id="2_cvnsp"]
+[ext_resource type="PackedScene" uid="uid://72ie3fw6vp0j" path="res://Scenes/player_cells.tscn" id="2_cvnsp"]
+[ext_resource type="Texture2D" uid="uid://blcse54ys6dub" path="res://Assets/Sponge/WalkRightLeg.png" id="3_8erm5"]
+[ext_resource type="Texture2D" uid="uid://xqw3akvgohjy" path="res://Assets/PlayerBorder.png" id="3_f1ek2"]
+[ext_resource type="Texture2D" uid="uid://efc4806mir5y" path="res://Assets/Sponge/WalkNeutral.png" id="4_f1ek2"]
+[ext_resource type="Texture2D" uid="uid://cluo618ctwpg6" path="res://Assets/Sponge/WalkRightLeg(1).png" id="5_tx1dd"]
+[ext_resource type="Texture2D" uid="uid://dk3q6ufind3gq" path="res://Assets/Sponge/Sponge body.png" id="6_gymyn"]
+[ext_resource type="Texture2D" uid="uid://bb5vmis4xdnii" path="res://Assets/Sponge/Angry.png" id="7_pu2lt"]
+[ext_resource type="Texture2D" uid="uid://dtcxpnuqmn8h4" path="res://Assets/Sponge/Happy.png" id="8_ukyrk"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7dp3o"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"standing",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_8erm5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_f1ek2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_tx1dd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_f1ek2")
+}],
+"loop": true,
+"name": &"walking",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_h4iuc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_pu2lt")
+}],
+"loop": true,
+"name": &"angry",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_ukyrk")
+}],
+"loop": true,
+"name": &"neutral",
+"speed": 5.0
+}]
 
 [node name="Player" type="Node2D" unique_id=809752752]
 z_index = 100
+scale = Vector2(0.063, 0.063)
 
 [node name="player_controller" parent="." unique_id=193364027 instance=ExtResource("1_v0iea")]
 
 [node name="PlayerCells" parent="player_controller" unique_id=1694602107 instance=ExtResource("2_cvnsp")]
+position = Vector2(0, -7)
+
+[node name="ThickBorder" type="Sprite2D" parent="player_controller" unique_id=1097160433]
+position = Vector2(0, -2)
+scale = Vector2(0.06, 0.06)
+texture = ExtResource("3_f1ek2")
+
+[node name="ColorBody" type="Sprite2D" parent="player_controller" unique_id=1173611272]
+self_modulate = Color(1, 1, 1, 0)
+scale = Vector2(0.063, 0.063)
+texture = ExtResource("6_gymyn")
+
+[node name="Body" type="AnimatedSprite2D" parent="player_controller" unique_id=974679991]
+scale = Vector2(0.063, 0.063)
+sprite_frames = SubResource("SpriteFrames_7dp3o")
+animation = &"walking"
+
+[node name="Face" type="AnimatedSprite2D" parent="player_controller" unique_id=426584766]
+position = Vector2(2.3841858e-07, -9.536743e-07)
+scale = Vector2(0.063, 0.063)
+sprite_frames = SubResource("SpriteFrames_h4iuc")
+animation = &"neutral"

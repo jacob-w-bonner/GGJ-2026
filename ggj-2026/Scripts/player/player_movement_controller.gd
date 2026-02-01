@@ -16,14 +16,25 @@ extends RigidBody2D
 @onready var left_ray_cast: RayCast2D = $"Left-RayCast2D"
 @onready var collision_shape: CollisionShape2D = $CollisionShape2D
 
+
+# sprites and animators 
+@onready var faceSprite = $Face
+@onready var bodyAnimator = $Body 
+@onready var colorBody = $ColorBody 
+
 var inputVector:Vector2
 var grounded = false
 var timeSinceLastTouchedGround = 0;
 
-
+func _ready() -> void:
+	bodyAnimator.play("standing")
+	faceSprite.play("neutral")
+	
+	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	##this block gets the WASD player input and converts it into a Vector2 
+	handleAnimation()
 	inputVector = Vector2.ZERO
 	if Input.is_action_pressed("move_right"):
 		inputVector.x += 1
@@ -39,6 +50,16 @@ func _process(delta: float) -> void:
 	self.set_collision_mask_value(2, dropDown)
 
 
+func handleAnimation():
+	if Input.is_action_pressed("move_left") || Input.is_action_pressed("move_right") || Input.is_action_pressed("move_up") || Input.is_action_pressed("move_down"):
+		bodyAnimator.play("walking")
+	else: 
+		bodyAnimator.play("standing")
+	if Input.is_action_pressed("move_left"):
+		faceSprite.flip_h = 1
+	if Input.is_action_pressed("move_right"):
+		faceSprite.flip_h = 0
+	
 func _integrate_forces(state: PhysicsDirectBodyState2D):
 	
 	##GroundCheck############################

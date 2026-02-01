@@ -10,11 +10,11 @@ func _ready() -> void:
 	self.create_colour_cells()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(_delta: float) -> void:
+func _process(delta: float) -> void:
 
 	# Checking if the player wants to average the colours
 	if Input.is_action_pressed("equalize"):
-		average_colour_cells()
+		average_colour_cells(delta)
 
 	# Releasing the absorbed colour behind the cell
 	if Input.is_action_just_pressed("splat"):
@@ -49,7 +49,7 @@ func create_colour_cells() -> void:
 			_colour_cells.append(new_cell)
 
 # Averaging the colours of all the cells
-func average_colour_cells() -> void:
+func average_colour_cells(delta: float) -> void:
 
 	# Array of all the colours
 	var cols: Array[Color] = []
@@ -63,7 +63,7 @@ func average_colour_cells() -> void:
 
 	# Setting each of the cell colours
 	for cell in _colour_cells:
-		cell.set_colour(col_avg)
+		cell.towards_colour(col_avg, delta)
 
 # Called to blend colours in an array
 func blend_colours(colours: Array[Color]):
