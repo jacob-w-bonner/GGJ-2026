@@ -70,14 +70,19 @@ func _on_im_a_puzzle():
 	puzzles+=1
 	if (puzzles == 1):
 		key1.visible = true
+		key1.play("unsolved")
 	elif (puzzles == 2):
 		key2.visible = true
+		key2.play("unsolved")
 	elif (puzzles == 3):
 		key3.visible = true
+		key3.play("unsolved")
 	elif (puzzles == 4):
 		key4.visible = true
+		key4.play("unsolved")
 	elif (puzzles == 5):
 		key5.visible = true
+		key5.play("unsolved")
 
 func _on_completed_puzzle():
 	completedPuzzles+=1
