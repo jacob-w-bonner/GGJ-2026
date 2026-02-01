@@ -64,6 +64,7 @@ func _process(delta: float) -> void:
 
 # Absorbing a colour
 func absorb_colour(delta: float) -> void:
+
 	if not has_overlapping_areas():
 		return
 	

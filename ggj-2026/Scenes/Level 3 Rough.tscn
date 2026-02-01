@@ -1,10 +1,21 @@
 [gd_scene format=3 uid="uid://dc3mm7bu26bsr"]
 
-[ext_resource type="PackedScene" uid="uid://bbos4y4dwl6dq" path="res://Scenes/player.tscn" id="1_0gqrk"]
 [ext_resource type="Script" uid="uid://da8mcsv5ayli0" path="res://Scenes/player_camera.gd" id="2_0gqrk"]
 [ext_resource type="Texture2D" uid="uid://bycdlvhpt3vg" path="res://icon.svg" id="3_3pcwb"]
 [ext_resource type="PackedScene" uid="uid://dlb1vl8xplpsi" path="res://Scenes/Stool.tscn" id="4_58yg4"]
+[ext_resource type="PackedScene" path="res://Scenes/absorbable_colour_Blue5.tscn" id="4_b22bo"]
+[ext_resource type="PackedScene" path="res://Scenes/absorbable_colour_red.tscn" id="4_mfg4v"]
 [ext_resource type="PackedScene" uid="uid://hkcm0qaks4et" path="res://Scenes/drop_down_platform.tscn" id="5_0gqrk"]
+[ext_resource type="PackedScene" uid="uid://7iiumdnxppak" path="res://Scenes/absorbable_colour_yellow.tscn" id="5_b22bo"]
+[ext_resource type="PackedScene" uid="uid://br05s530dlbr2" path="res://Scenes/absorbable_colour_purple.tscn" id="6_3f2vy"]
+[ext_resource type="PackedScene" uid="uid://v1kx4tycqxwg" path="res://Scenes/absorbable_colour_orange.tscn" id="6_i1fq5"]
+[ext_resource type="PackedScene" uid="uid://bsgqi5naogaf6" path="res://Scenes/absorbable_colour.tscn" id="8_3f2vy"]
+[ext_resource type="PackedScene" uid="uid://chbg6sv6cp0j8" path="res://Scenes/absorbable_colour_cyan.tscn" id="9_vdwwb"]
+[ext_resource type="Texture2D" uid="uid://b3fngj1whhfkc" path="res://Assets/autumnday.png" id="10_ykunq"]
+[ext_resource type="PackedScene" uid="uid://uhbmvlw264nb" path="res://Scenes/absorbable_colour_autumn_blue.tscn" id="11_dt7ti"]
+[ext_resource type="PackedScene" uid="uid://bn6q3i5a2xivy" path="res://Scenes/absorbable_colour_autumn_red.tscn" id="12_k7q2e"]
+[ext_resource type="PackedScene" uid="uid://jkc11wt4qo7v" path="res://Scenes/absorbable_colour_autumn_cyan.tscn" id="13_anpic"]
+[ext_resource type="PackedScene" uid="uid://cg0qprn7hdlqw" path="res://Scenes/absorbable_colour_autumn_green.tscn" id="14_8usqw"]
 
 [sub_resource type="Theme" id="Theme_5odgg"]
 default_font_size = 36
@@ -14,26 +25,223 @@ size = Vector2(128, 128)
 
 [node name="Level 3" type="Node2D" unique_id=1129709678]
 
-[node name="Player" parent="." unique_id=809752752 instance=ExtResource("1_0gqrk")]
-position = Vector2(32, 574)
-
 [node name="PlayerCamera" type="Camera2D" parent="." unique_id=655621015 node_paths=PackedStringArray("player")]
 position = Vector2(573, 318)
 script = ExtResource("2_0gqrk")
-player = NodePath("../Player")
+player = NodePath("")
 
 [node name="Paintings" type="Node2D" parent="." unique_id=86936898]
 z_index = -1
 
-[node name="Tetris" type="Sprite2D" parent="Paintings" unique_id=1442314297]
+[node name="Tetris" type="Node2D" parent="Paintings" unique_id=2047016745]
+
+[node name="Tetris" type="Sprite2D" parent="Paintings/Tetris" unique_id=1442314297]
 position = Vector2(2201, 293)
 scale = Vector2(4, 5)
 texture = ExtResource("3_3pcwb")
 
-[node name="TradPainting" type="Sprite2D" parent="Paintings" unique_id=699471382]
-position = Vector2(3482, 300)
-scale = Vector2(4, 5)
-texture = ExtResource("3_3pcwb")
+[node name="AbsorbableColour" parent="Paintings/Tetris" unique_id=1021615895 instance=ExtResource("5_b22bo")]
+position = Vector2(1978, 581)
+scale = Vector2(0.5, 0.5)
+
+[node name="AbsorbableColour2" parent="Paintings/Tetris" unique_id=1927133136 instance=ExtResource("5_b22bo")]
+position = Vector2(2042, 581)
+scale = Vector2(0.5, 0.5)
+
+[node name="AbsorbableColour3" parent="Paintings/Tetris" unique_id=1302718188 instance=ExtResource("5_b22bo")]
+position = Vector2(1978, 517)
+scale = Vector2(0.5, 0.5)
+
+[node name="AbsorbableColour4" parent="Paintings/Tetris" unique_id=609261262 instance=ExtResource("5_b22bo")]
+position = Vector2(2042, 517)
+scale = Vector2(0.5, 0.5)
+
+[node name="AbsorbableColour5" parent="Paintings/Tetris" unique_id=565821446 instance=ExtResource("5_b22bo")]
+position = Vector2(1978, 451)
+scale = Vector2(0.5, 0.5)
+
+[node name="AbsorbableColour6" parent="Paintings/Tetris" unique_id=378140017 instance=ExtResource("5_b22bo")]
+position = Vector2(2042, 451)
+scale = Vector2(0.5, 0.5)
+
+[node name="AbsorbableColour7" parent="Paintings/Tetris" unique_id=754261310 instance=ExtResource("5_b22bo")]
+position = Vector2(2042, 387)
+scale = Vector2(0.5, 0.5)
+
+[node name="AbsorbableColour8" parent="Paintings/Tetris" unique_id=769637633 instance=ExtResource("5_b22bo")]
+position = Vector2(1978, 387)
+scale = Vector2(0.5, 0.5)
+
+[node name="AbsorbableColourOrange" parent="Paintings/Tetris" unique_id=1436527282 instance=ExtResource("6_i1fq5")]
+position = Vector2(2107, 581)
+scale = Vector2(0.5, 0.5)
+
+[node name="AbsorbableColourOrange2" parent="Paintings/Tetris" unique_id=524562972 instance=ExtResource("6_i1fq5")]
+position = Vector2(2107, 517)
+scale = Vector2(0.5, 0.5)
+
+[node name="AbsorbableColourOrange3" parent="Paintings/Tetris" unique_id=94888174 instance=ExtResource("6_i1fq5")]
+position = Vector2(2171, 581)
+scale = Vector2(0.5, 0.5)
+
+[node name="AbsorbableColourOrange4" parent="Paintings/Tetris" unique_id=1611592762 instance=ExtResource("6_i1fq5")]
+position = Vector2(2107, 453)
+scale = Vector2(0.5, 0.5)
+
+[node name="AbsorbableColour9" parent="Paintings/Tetris" unique_id=1914526045 instance=ExtResource("6_3f2vy")]
+position = Vector2(2172, 516)
+scale = Vector2(0.5, 0.5)
+
+[node name="AbsorbableColour10" parent="Paintings/Tetris" unique_id=1423501015 instance=ExtResource("6_3f2vy")]
+position = Vector2(2236, 516)
+scale = Vector2(0.5, 0.5)
+
+[node name="AbsorbableColour11" parent="Paintings/Tetris" unique_id=2055494518 instance=ExtResource("6_3f2vy")]
+position = Vector2(2300, 516)
+scale = Vector2(0.5, 0.5)
+
+[node name="AbsorbableColour12" parent="Paintings/Tetris" unique_id=1657074292 instance=ExtResource("6_3f2vy")]
+position = Vector2(2172, 450)
+scale = Vector2(0.5, 0.5)
+
+[node name="AbsorbableColour13" parent="Paintings/Tetris" unique_id=558136146 instance=ExtResource("6_3f2vy")]
+position = Vector2(2172, 386)
+scale = Vector2(0.5, 0.5)
+
+[node name="AbsorbableColour14" parent="Paintings/Tetris" unique_id=1082787885 instance=ExtResource("6_3f2vy")]
+position = Vector2(2108, 386)
+scale = Vector2(0.5, 0.5)
+
+[node name="AbsorbableColour15" parent="Paintings/Tetris" unique_id=1912502347 instance=ExtResource("6_3f2vy")]
+position = Vector2(2236, 386)
+scale = Vector2(0.5, 0.5)
+
+[node name="AbsorbableColourRed" parent="Paintings/Tetris" unique_id=774467697 instance=ExtResource("4_mfg4v")]
+position = Vector2(2237, 451)
+scale = Vector2(0.5, 0.5)
+
+[node name="AbsorbableColourRed2" parent="Paintings/Tetris" unique_id=382168166 instance=ExtResource("4_mfg4v")]
+position = Vector2(2301, 451)
+scale = Vector2(0.5, 0.5)
+
+[node name="AbsorbableColourRed3" parent="Paintings/Tetris" unique_id=1347583974 instance=ExtResource("4_mfg4v")]
+position = Vector2(2301, 387)
+scale = Vector2(0.5, 0.5)
+
+[node name="AbsorbableColourRed4" parent="Paintings/Tetris" unique_id=86911152 instance=ExtResource("4_mfg4v")]
+position = Vector2(2365, 387)
+scale = Vector2(0.5, 0.5)
+
+[node name="AbsorbableColour16" parent="Paintings/Tetris" unique_id=2125421896 instance=ExtResource("8_3f2vy")]
+position = Vector2(2366, 453)
+scale = Vector2(0.5, 0.5)
+
+[node name="AbsorbableColour17" parent="Paintings/Tetris" unique_id=1033288941 instance=ExtResource("8_3f2vy")]
+position = Vector2(2366, 517)
+scale = Vector2(0.5, 0.5)
+
+[node name="AbsorbableColour18" parent="Paintings/Tetris" unique_id=1043890241 instance=ExtResource("8_3f2vy")]
+position = Vector2(2366, 581)
+scale = Vector2(0.5, 0.5)
+
+[node name="AbsorbableColour19" parent="Paintings/Tetris" unique_id=1450379448 instance=ExtResource("8_3f2vy")]
+position = Vector2(2302, 581)
+scale = Vector2(0.5, 0.5)
+
+[node name="AbsorbableColour20" parent="Paintings/Tetris" unique_id=252262522 instance=ExtResource("9_vdwwb")]
+position = Vector2(2431, 387)
+scale = Vector2(0.5, 0.5)
+
+[node name="AbsorbableColour21" parent="Paintings/Tetris" unique_id=861823460 instance=ExtResource("9_vdwwb")]
+position = Vector2(2431, 451)
+scale = Vector2(0.5, 0.5)
+
+[node name="AbsorbableColour22" parent="Paintings/Tetris" unique_id=257636054 instance=ExtResource("9_vdwwb")]
+position = Vector2(2431, 515)
+scale = Vector2(0.5, 0.5)
+
+[node name="AbsorbableColour23" parent="Paintings/Tetris" unique_id=2063649734 instance=ExtResource("9_vdwwb")]
+position = Vector2(2431, 579)
+scale = Vector2(0.5, 0.5)
+
+[node name="AutumnDay" type="Node2D" parent="Paintings" unique_id=2070928041]
+
+[node name="TradPainting" type="Sprite2D" parent="Paintings/AutumnDay" unique_id=699471382]
+position = Vector2(3473, 339)
+scale = Vector2(0.2641117, 0.27993694)
+texture = ExtResource("10_ykunq")
+
+[node name="AbsorbableColour" parent="Paintings/AutumnDay" unique_id=1190849822 instance=ExtResource("11_dt7ti")]
+position = Vector2(3536, 128)
+scale = Vector2(1.8, 0.8)
+
+[node name="AbsorbableColour2" parent="Paintings/AutumnDay" unique_id=217741921 instance=ExtResource("11_dt7ti")]
+position = Vector2(3357, 206)
+scale = Vector2(1, 0.4)
+
+[node name="AbsorbableColour3" parent="Paintings/AutumnDay" unique_id=1136088885 instance=ExtResource("11_dt7ti")]
+position = Vector2(3401.0002, 160)
+scale = Vector2(0.3, 0.3)
+
+[node name="AbsorbableColour4" parent="Paintings/AutumnDay" unique_id=178013859 instance=ExtResource("11_dt7ti")]
+position = Vector2(3431, 196)
+scale = Vector2(0.1, 0.2)
+
+[node name="AbsorbableColour5" parent="Paintings/AutumnDay" unique_id=2140298419 instance=ExtResource("12_k7q2e")]
+position = Vector2(3494, 229)
+scale = Vector2(0.6, 0.4)
+
+[node name="AbsorbableColour6" parent="Paintings/AutumnDay" unique_id=1046603708 instance=ExtResource("12_k7q2e")]
+position = Vector2(3548, 263)
+scale = Vector2(0.8, 0.4)
+
+[node name="AbsorbableColour7" parent="Paintings/AutumnDay" unique_id=136900129 instance=ExtResource("12_k7q2e")]
+position = Vector2(3587.0002, 344)
+scale = Vector2(0.6, 0.4)
+
+[node name="AbsorbableColour8" parent="Paintings/AutumnDay" unique_id=1066170621 instance=ExtResource("12_k7q2e")]
+position = Vector2(3603.0002, 403)
+scale = Vector2(0.7, 0.4)
+
+[node name="AbsorbableColour9" parent="Paintings/AutumnDay" unique_id=146900433 instance=ExtResource("12_k7q2e")]
+position = Vector2(3588, 304)
+scale = Vector2(0.5, 0.2)
+
+[node name="AbsorbableColour10" parent="Paintings/AutumnDay" unique_id=298732384 instance=ExtResource("12_k7q2e")]
+position = Vector2(3567.0002, 516)
+scale = Vector2(1.3, 1.3)
+
+[node name="AbsorbableColour11" parent="Paintings/AutumnDay" unique_id=1498482249 instance=ExtResource("12_k7q2e")]
+position = Vector2(3449, 534)
+scale = Vector2(0.5, 1)
+
+[node name="AbsorbableColour12" parent="Paintings/AutumnDay" unique_id=1405597177 instance=ExtResource("12_k7q2e")]
+position = Vector2(3396.0002, 500)
+scale = Vector2(0.3, 0.3)
+
+[node name="AbsorbableColour13" parent="Paintings/AutumnDay" unique_id=1315449555 instance=ExtResource("12_k7q2e")]
+position = Vector2(3461.0002, 449)
+scale = Vector2(0.2, 0.3)
+
+[node name="AbsorbableColour14" parent="Paintings/AutumnDay" unique_id=1327915940 instance=ExtResource("13_anpic")]
+position = Vector2(3475, 375)
+scale = Vector2(0.5, 0.5)
+
+[node name="AbsorbableColour15" parent="Paintings/AutumnDay" unique_id=1389002935 instance=ExtResource("13_anpic")]
+position = Vector2(3407, 344)
+scale = Vector2(0.5, 0.2)
+
+[node name="AbsorbableColour16" parent="Paintings/AutumnDay" unique_id=158531068 instance=ExtResource("14_8usqw")]
+position = Vector2(3346, 409)
+scale = Vector2(0.8, 0.7)
+
+[node name="AbsorbableColour17" parent="Paintings/AutumnDay" unique_id=2053448287 instance=ExtResource("14_8usqw")]
+position = Vector2(3330, 530)
+scale = Vector2(0.6, 1.1)
+
+[node name="AbsorbableColour18" parent="Paintings/AutumnDay" unique_id=1020168616 instance=ExtResource("14_8usqw")]
+position = Vector2(3325.0002, 297.00003)
+scale = Vector2(0.4, 0.9)
 
 [node name="MixToMatch" type="Node2D" parent="Paintings" unique_id=229470259]
 position = Vector2(155, 5)
@@ -52,6 +260,26 @@ theme = SubResource("Theme_5odgg")
 text = "Mix
    To
     Match"
+
+[node name="AbsorbableColourBlue5" parent="Paintings/MixToMatch" unique_id=1154190625 instance=ExtResource("4_b22bo")]
+position = Vector2(608, 543)
+scale = Vector2(0.75, 0.5)
+
+[node name="AbsorbableColourRed" parent="Paintings/MixToMatch" unique_id=691129992 instance=ExtResource("4_mfg4v")]
+position = Vector2(592, 479)
+scale = Vector2(0.5, 0.5)
+
+[node name="AbsorbableColour" parent="Paintings/MixToMatch" unique_id=1414944140 instance=ExtResource("5_b22bo")]
+position = Vector2(720, 479)
+scale = Vector2(0.5, 0.5)
+
+[node name="AbsorbableColourOrange" parent="Paintings/MixToMatch" unique_id=1201389652 instance=ExtResource("6_i1fq5")]
+position = Vector2(656, 479)
+scale = Vector2(0.5, 0.5)
+
+[node name="AbsorbableColourRed2" parent="Paintings/MixToMatch" unique_id=1693959219 instance=ExtResource("4_mfg4v")]
+position = Vector2(704, 543)
+scale = Vector2(0.75, 0.5)
 
 [node name="Bounds" type="Node2D" parent="." unique_id=2108724136]
 z_index = -2
