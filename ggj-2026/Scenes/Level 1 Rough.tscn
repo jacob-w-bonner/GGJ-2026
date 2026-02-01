@@ -11,6 +11,9 @@
 [ext_resource type="Texture2D" uid="uid://h7qsl2nskq04" path="res://Assets/Bucket.png" id="8_7a54r"]
 [ext_resource type="PackedScene" uid="uid://duh7wknhj5uc4" path="res://Scenes/level_exit_door.tscn" id="8_hirra"]
 
+[sub_resource type="Theme" id="Theme_bobo7"]
+default_font_size = 32
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r3mym"]
 size = Vector2(128, 128.1)
 
@@ -74,6 +77,15 @@ position = Vector2(35, 159)
 scale = Vector2(0.5, 0.5)
 desiresToChangeColor = true
 desiredColor = Color(1, 0, 0, 1)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Paintings/GreenRedCheckered" unique_id=1556652583]
+self_modulate = Color(0.7218587, 0.7218587, 0.7218587, 1)
+offset_top = -92.0
+offset_right = 207.0
+offset_bottom = -1.0
+theme = SubResource("Theme_bobo7")
+text = "Checkerd
+Future"
 
 [node name="Bounds" type="Node2D" parent="." unique_id=2108724136]
 z_index = -2
@@ -191,6 +203,12 @@ texture = ExtResource("7_bobo7")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Bounds/Ceiling3" unique_id=1677530011]
 shape = SubResource("RectangleShape2D_r3mym")
+
+[node name="BackWall" type="Sprite2D" parent="Bounds" unique_id=1513718320]
+z_index = -20
+position = Vector2(3211.0002, 139.50012)
+scale = Vector2(4.0898438, 4.986505)
+texture = ExtResource("7_bobo7")
 
 [node name="Placeables" type="Node2D" parent="." unique_id=2075081505]
 z_index = 1
