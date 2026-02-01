@@ -59,7 +59,6 @@ func IsHidden() -> bool:
 	if _last_absorbable_colour_entered == null:
 		return false
 	
-	#TODO: rework once color is nolonger stored in a ColorRect
-	var hidden:bool = _last_absorbable_colour_entered.TrueIfArgumentColourIsWithinTolerance(Color.DEEP_PINK)
+	var hidden:bool = _last_absorbable_colour_entered.TrueIfArgumentColourIsWithinTolerance(_colour.color)
 	
 	return hidden
