@@ -1,57 +1,263 @@
 [gd_scene format=3 uid="uid://dk2boiuytgpo7"]
 
-[ext_resource type="PackedScene" uid="uid://di36n4rohkn8m" path="res://Scenes/player_controller.tscn" id="1_7qgix"]
+[ext_resource type="PackedScene" uid="uid://bbos4y4dwl6dq" path="res://Scenes/player.tscn" id="1_7qgix"]
 [ext_resource type="Script" uid="uid://da8mcsv5ayli0" path="res://Scenes/player_camera.gd" id="2_3qduy"]
 [ext_resource type="Texture2D" uid="uid://bycdlvhpt3vg" path="res://icon.svg" id="3_08xsl"]
+[ext_resource type="PackedScene" uid="uid://bt7qfkrj2se5c" path="res://Scenes/absorbable_colour_Blue1.tscn" id="4_3qduy"]
 [ext_resource type="PackedScene" uid="uid://dlb1vl8xplpsi" path="res://Scenes/Stool.tscn" id="4_xelyp"]
+[ext_resource type="PackedScene" uid="uid://dw8h6vykcfwj2" path="res://Scenes/absorbable_colour_Blue2.tscn" id="5_n3ytq"]
+[ext_resource type="PackedScene" uid="uid://bbd07nly0r4ix" path="res://Scenes/absorbable_colour_Blue3.tscn" id="6_ut81y"]
+[ext_resource type="PackedScene" path="res://Scenes/absorbable_colour_black.tscn" id="8_iad6u"]
+[ext_resource type="PackedScene" uid="uid://t0pyjrb4skuh" path="res://Scenes/absorbable_colour_Blue5.tscn" id="8_ut81y"]
 
 [sub_resource type="Theme" id="Theme_7qgix"]
 default_font_size = 48
+
+[sub_resource type="Theme" id="Theme_ut81y"]
+default_font_size = 84
+
+[sub_resource type="Theme" id="Theme_iad6u"]
+default_font_size = 72
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r3mym"]
 size = Vector2(128, 128)
 
 [node name="Level 2" type="Node2D" unique_id=1129709678]
 
-[node name="player" parent="." unique_id=193364027 instance=ExtResource("1_7qgix")]
-position = Vector2(68, 576)
-gravity = 2000
-groundDragForce = 8000
-jumpStrength = 500
+[node name="Player" parent="." unique_id=809752752 instance=ExtResource("1_7qgix")]
+position = Vector2(69, 574)
 
 [node name="PlayerCamera" type="Camera2D" parent="." unique_id=655621015 node_paths=PackedStringArray("player")]
 position = Vector2(573, 318)
 script = ExtResource("2_3qduy")
-player = NodePath("../player")
+player = NodePath("../Player")
 
 [node name="Paintings" type="Node2D" parent="." unique_id=86936898]
 z_index = -1
 
-[node name="SitckMan" type="Sprite2D" parent="Paintings" unique_id=1442314297]
-position = Vector2(2026.0002, 413)
-scale = Vector2(1.5, 3)
-texture = ExtResource("3_08xsl")
-
-[node name="AddsUp" type="Sprite2D" parent="Paintings" unique_id=699471382]
-position = Vector2(3427.0002, 477)
-scale = Vector2(3.5, 1.5)
-texture = ExtResource("3_08xsl")
-
 [node name="BlueGradiant" type="Node2D" parent="Paintings" unique_id=229470259]
-position = Vector2(155, 5)
-
-[node name="BlueGradiant" type="Sprite2D" parent="Paintings/BlueGradiant" unique_id=1946327416]
-position = Vector2(668, 570)
-scale = Vector2(2.5, 0.5)
-texture = ExtResource("3_08xsl")
+position = Vector2(666, 500)
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Paintings/BlueGradiant" unique_id=2056380473]
-offset_left = 511.0
-offset_top = 468.0
-offset_right = 829.0
-offset_bottom = 540.0
+offset_left = 145.0
+offset_top = -50.0
+offset_right = 463.0
+offset_bottom = 22.0
 theme = SubResource("Theme_7qgix")
-text = "Loading.........."
+text = "Loading........."
+metadata/_edit_use_anchors_ = true
+
+[node name="AbsorbableColourBlue1" parent="Paintings/BlueGradiant" unique_id=1021615895 instance=ExtResource("4_3qduy")]
+position = Vector2(177.99994, 75)
+scale = Vector2(0.5, 0.5)
+
+[node name="AbsorbableColourBlue2" parent="Paintings/BlueGradiant" unique_id=338700722 instance=ExtResource("5_n3ytq")]
+position = Vector2(242, 75)
+scale = Vector2(0.5, 0.5)
+
+[node name="AbsorbableColourBlue3" parent="Paintings/BlueGradiant" unique_id=708135349 instance=ExtResource("6_ut81y")]
+position = Vector2(306, 75)
+scale = Vector2(0.5, 0.5)
+
+[node name="AbsorbableColourBlue5" parent="Paintings/BlueGradiant" unique_id=2043965409 instance=ExtResource("8_ut81y")]
+position = Vector2(434, 75)
+scale = Vector2(0.5, 0.5)
+
+[node name="StickMan" type="Node2D" parent="Paintings" unique_id=1146930384]
+position = Vector2(1931, 320)
+
+[node name="Head" parent="Paintings/StickMan" unique_id=582332378 instance=ExtResource("8_iad6u")]
+position = Vector2(94, 68)
+scale = Vector2(0.5, 0.5)
+
+[node name="LeftArm" parent="Paintings/StickMan" unique_id=700533552 instance=ExtResource("8_iad6u")]
+position = Vector2(68, 150)
+rotation = -0.5235988
+scale = Vector2(0.1, 0.5)
+
+[node name="RightArm" parent="Paintings/StickMan" unique_id=486201368 instance=ExtResource("8_iad6u")]
+position = Vector2(120, 150)
+rotation = 0.5235988
+scale = Vector2(0.1, 0.5)
+
+[node name="RightLeg" parent="Paintings/StickMan" unique_id=1624873719 instance=ExtResource("8_iad6u")]
+position = Vector2(118, 259)
+rotation = -0.5235988
+scale = Vector2(0.1, 0.5)
+
+[node name="LeftLeg" parent="Paintings/StickMan" unique_id=63327870 instance=ExtResource("8_iad6u")]
+position = Vector2(68, 258)
+rotation = 0.5235988
+scale = Vector2(0.1, 0.5)
+
+[node name="AddsUp" type="Node2D" parent="Paintings" unique_id=599572794]
+position = Vector2(3222, 403)
+
+[node name="Box" type="Node2D" parent="Paintings/AddsUp" unique_id=2139093180]
+position = Vector2(3, 136)
+
+[node name="LeftLine" parent="Paintings/AddsUp/Box" unique_id=484198009 instance=ExtResource("8_iad6u")]
+position = Vector2(-35, 0)
+scale = Vector2(0.05, 0.5)
+
+[node name="RightLine" parent="Paintings/AddsUp/Box" unique_id=1768726627 instance=ExtResource("8_iad6u")]
+position = Vector2(35, 0)
+scale = Vector2(0.05, 0.5)
+
+[node name="TopLine" parent="Paintings/AddsUp/Box" unique_id=424746532 instance=ExtResource("8_iad6u")]
+position = Vector2(0, -35)
+rotation = 1.5707964
+scale = Vector2(0.05, 0.5)
+
+[node name="BottomLine" parent="Paintings/AddsUp/Box" unique_id=971669484 instance=ExtResource("8_iad6u")]
+position = Vector2(0, 35)
+rotation = 1.5707964
+scale = Vector2(0.05, 0.5)
+
+[node name="Box2" type="Node2D" parent="Paintings/AddsUp" unique_id=905287952]
+position = Vector2(81, 136)
+
+[node name="LeftLine" parent="Paintings/AddsUp/Box2" unique_id=172561501 instance=ExtResource("8_iad6u")]
+position = Vector2(-35, 0)
+scale = Vector2(0.05, 0.5)
+
+[node name="RightLine" parent="Paintings/AddsUp/Box2" unique_id=49513319 instance=ExtResource("8_iad6u")]
+position = Vector2(35, 0)
+scale = Vector2(0.05, 0.5)
+
+[node name="TopLine" parent="Paintings/AddsUp/Box2" unique_id=488693199 instance=ExtResource("8_iad6u")]
+position = Vector2(0, -35)
+rotation = 1.5707964
+scale = Vector2(0.05, 0.5)
+
+[node name="BottomLine" parent="Paintings/AddsUp/Box2" unique_id=763387333 instance=ExtResource("8_iad6u")]
+position = Vector2(0, 35)
+rotation = 1.5707964
+scale = Vector2(0.05, 0.5)
+
+[node name="Box3" type="Node2D" parent="Paintings/AddsUp" unique_id=523435106]
+position = Vector2(159, 136)
+
+[node name="LeftLine" parent="Paintings/AddsUp/Box3" unique_id=652022442 instance=ExtResource("8_iad6u")]
+position = Vector2(-35, 0)
+scale = Vector2(0.05, 0.5)
+
+[node name="RightLine" parent="Paintings/AddsUp/Box3" unique_id=1161205300 instance=ExtResource("8_iad6u")]
+position = Vector2(35, 0)
+scale = Vector2(0.05, 0.5)
+
+[node name="TopLine" parent="Paintings/AddsUp/Box3" unique_id=627644950 instance=ExtResource("8_iad6u")]
+position = Vector2(0, -35)
+rotation = 1.5707964
+scale = Vector2(0.05, 0.5)
+
+[node name="BottomLine" parent="Paintings/AddsUp/Box3" unique_id=967559035 instance=ExtResource("8_iad6u")]
+position = Vector2(0, 35)
+rotation = 1.5707964
+scale = Vector2(0.05, 0.5)
+
+[node name="Box4" type="Node2D" parent="Paintings/AddsUp" unique_id=1371481137]
+position = Vector2(237, 136)
+
+[node name="LeftLine" parent="Paintings/AddsUp/Box4" unique_id=1635033169 instance=ExtResource("8_iad6u")]
+position = Vector2(-35, 0)
+scale = Vector2(0.05, 0.5)
+
+[node name="RightLine" parent="Paintings/AddsUp/Box4" unique_id=1797324396 instance=ExtResource("8_iad6u")]
+position = Vector2(35, 0)
+scale = Vector2(0.05, 0.5)
+
+[node name="TopLine" parent="Paintings/AddsUp/Box4" unique_id=1769117799 instance=ExtResource("8_iad6u")]
+position = Vector2(0, -35)
+rotation = 1.5707964
+scale = Vector2(0.05, 0.5)
+
+[node name="BottomLine" parent="Paintings/AddsUp/Box4" unique_id=1271549348 instance=ExtResource("8_iad6u")]
+position = Vector2(0, 35)
+rotation = 1.5707964
+scale = Vector2(0.05, 0.5)
+
+[node name="Box5" type="Node2D" parent="Paintings/AddsUp" unique_id=1864829282]
+position = Vector2(315, 136)
+
+[node name="LeftLine" parent="Paintings/AddsUp/Box5" unique_id=1550297283 instance=ExtResource("8_iad6u")]
+position = Vector2(-35, 0)
+scale = Vector2(0.05, 0.5)
+
+[node name="RightLine" parent="Paintings/AddsUp/Box5" unique_id=263843108 instance=ExtResource("8_iad6u")]
+position = Vector2(35, 0)
+scale = Vector2(0.05, 0.5)
+
+[node name="TopLine" parent="Paintings/AddsUp/Box5" unique_id=1009143094 instance=ExtResource("8_iad6u")]
+position = Vector2(0, -35)
+rotation = 1.5707964
+scale = Vector2(0.05, 0.5)
+
+[node name="BottomLine" parent="Paintings/AddsUp/Box5" unique_id=1937845690 instance=ExtResource("8_iad6u")]
+position = Vector2(0, 35)
+rotation = 1.5707964
+scale = Vector2(0.05, 0.5)
+
+[node name="Box6" type="Node2D" parent="Paintings/AddsUp" unique_id=1018088957]
+position = Vector2(393, 136)
+
+[node name="LeftLine" parent="Paintings/AddsUp/Box6" unique_id=1674068244 instance=ExtResource("8_iad6u")]
+position = Vector2(-35, 0)
+scale = Vector2(0.05, 0.5)
+
+[node name="RightLine" parent="Paintings/AddsUp/Box6" unique_id=2091536885 instance=ExtResource("8_iad6u")]
+position = Vector2(35, 0)
+scale = Vector2(0.05, 0.5)
+
+[node name="TopLine" parent="Paintings/AddsUp/Box6" unique_id=1160663848 instance=ExtResource("8_iad6u")]
+position = Vector2(0, -35)
+rotation = 1.5707964
+scale = Vector2(0.05, 0.5)
+
+[node name="BottomLine" parent="Paintings/AddsUp/Box6" unique_id=1177260880 instance=ExtResource("8_iad6u")]
+position = Vector2(0, 35)
+rotation = 1.5707964
+scale = Vector2(0.05, 0.5)
+
+[node name="Box7" type="Node2D" parent="Paintings/AddsUp" unique_id=386036966]
+position = Vector2(471, 136)
+
+[node name="LeftLine" parent="Paintings/AddsUp/Box7" unique_id=1108672229 instance=ExtResource("8_iad6u")]
+position = Vector2(-35, 0)
+scale = Vector2(0.05, 0.5)
+
+[node name="RightLine" parent="Paintings/AddsUp/Box7" unique_id=1944505241 instance=ExtResource("8_iad6u")]
+position = Vector2(35, 0)
+scale = Vector2(0.05, 0.5)
+
+[node name="TopLine" parent="Paintings/AddsUp/Box7" unique_id=544397269 instance=ExtResource("8_iad6u")]
+position = Vector2(0, -35)
+rotation = 1.5707964
+scale = Vector2(0.05, 0.5)
+
+[node name="BottomLine" parent="Paintings/AddsUp/Box7" unique_id=1466161084 instance=ExtResource("8_iad6u")]
+position = Vector2(0, 35)
+rotation = 1.5707964
+scale = Vector2(0.05, 0.5)
+
+[node name="PaintingTitle" type="RichTextLabel" parent="Paintings/AddsUp" unique_id=1195021809]
+self_modulate = Color(0.4509804, 0.4509804, 0.4509804, 1)
+offset_left = -24.0
+offset_top = -9.0
+offset_right = 676.0
+offset_bottom = 111.0
+theme = SubResource("Theme_ut81y")
+text = "A d d  s U p⬆️"
+metadata/_edit_use_anchors_ = true
+
+[node name="Math" type="RichTextLabel" parent="Paintings/AddsUp" unique_id=136009677]
+self_modulate = Color(0.4509804, 0.4509804, 0.4509804, 1)
+offset_left = -10.0
+offset_top = 81.0
+offset_right = 590.0
+offset_bottom = 181.0
+theme = SubResource("Theme_iad6u")
+text = "       — 5  =      6"
 metadata/_edit_use_anchors_ = true
 
 [node name="Bounds" type="Node2D" parent="." unique_id=2108724136]
@@ -125,7 +331,7 @@ shape = SubResource("RectangleShape2D_r3mym")
 z_index = 1
 
 [node name="Stool" parent="Placeables" unique_id=1732500005 instance=ExtResource("4_xelyp")]
-position = Vector2(2026, 584)
+position = Vector2(1936, 590)
 
 [node name="Stool2" parent="Placeables" unique_id=426801064 instance=ExtResource("4_xelyp")]
 position = Vector2(3234, 592)
@@ -142,10 +348,46 @@ position = Vector2(3523, 592)
 [node name="Stool6" parent="Placeables" unique_id=590452409 instance=ExtResource("4_xelyp")]
 position = Vector2(3618, 592)
 
+[node name="Stool7" parent="Placeables" unique_id=1105349833 instance=ExtResource("4_xelyp")]
+position = Vector2(2111, 592)
+
+[node name="Stool8" parent="Placeables" unique_id=1222755856 instance=ExtResource("4_xelyp")]
+position = Vector2(2025, 568)
+
+[node name="Stool9" parent="Placeables" unique_id=1229287285 instance=ExtResource("4_xelyp")]
+position = Vector2(3714, 592)
+
 [node name="Background" type="Node2D" parent="." unique_id=1395399606]
 z_index = -3
 
-[node name="Gain" type="Sprite2D" parent="Background" unique_id=1073948558]
-position = Vector2(2666, 356)
-scale = Vector2(4, 4)
-texture = ExtResource("3_08xsl")
+[node name="Gain" type="Node2D" parent="Background" unique_id=697232538]
+position = Vector2(2419, 141)
+
+[node name="VerticleLine" parent="Background/Gain" unique_id=697632136 instance=ExtResource("8_iad6u")]
+position = Vector2(107, 269)
+scale = Vector2(0.1, 0.5)
+
+[node name="VerticleLine2" parent="Background/Gain" unique_id=1570632515 instance=ExtResource("8_iad6u")]
+position = Vector2(356, 261)
+scale = Vector2(0.1, 0.5)
+
+[node name="VerticleLine3" parent="Background/Gain" unique_id=1318706259 instance=ExtResource("8_iad6u")]
+position = Vector2(420, 299)
+scale = Vector2(0.1, 0.5)
+
+[node name="VerticleLine4" parent="Background/Gain" unique_id=1627131699 instance=ExtResource("8_iad6u")]
+position = Vector2(107, 431)
+scale = Vector2(0.1, 0.5)
+
+[node name="VerticleLine5" parent="Background/Gain" unique_id=1300583452 instance=ExtResource("8_iad6u")]
+position = Vector2(193, 432)
+scale = Vector2(0.1, 0.5)
+
+[node name="VerticleLine6" parent="Background/Gain" unique_id=1857336679 instance=ExtResource("8_iad6u")]
+position = Vector2(350, 431)
+scale = Vector2(0.1, 0.5)
+
+[node name="HorizontalLine" parent="Background/Gain" unique_id=697778185 instance=ExtResource("8_iad6u")]
+position = Vector2(408, 442)
+rotation = 1.5707964
+scale = Vector2(0.1, 0.5)

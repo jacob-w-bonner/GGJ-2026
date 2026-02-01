@@ -11,9 +11,10 @@ config_version=5
 [application]
 
 config/name="GGJ-2026"
-run/main_scene="uid://fvqhrd1vvxfm"
+run/main_scene="uid://cjb3sm2btdv6v"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
+"<<<<<<<Updatedupstream[autoload]Globals"="*uid://4ed5dimg8fqg"
 
 [autoload]
 

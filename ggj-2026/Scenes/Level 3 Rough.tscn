@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dc3mm7bu26bsr"]
 
-[ext_resource type="PackedScene" uid="uid://di36n4rohkn8m" path="res://Scenes/player_controller.tscn" id="1_5odgg"]
+[ext_resource type="PackedScene" uid="uid://bbos4y4dwl6dq" path="res://Scenes/player.tscn" id="1_0gqrk"]
 [ext_resource type="Script" uid="uid://da8mcsv5ayli0" path="res://Scenes/player_camera.gd" id="2_0gqrk"]
 [ext_resource type="Texture2D" uid="uid://bycdlvhpt3vg" path="res://icon.svg" id="3_3pcwb"]
 [ext_resource type="PackedScene" uid="uid://dlb1vl8xplpsi" path="res://Scenes/Stool.tscn" id="4_58yg4"]
@@ -14,16 +14,13 @@ size = Vector2(128, 128)
 
 [node name="Level 3" type="Node2D" unique_id=1129709678]
 
-[node name="player" parent="." unique_id=193364027 instance=ExtResource("1_5odgg")]
-position = Vector2(68, 576)
-gravity = 2000
-groundDragForce = 8000
-jumpStrength = 500
+[node name="Player" parent="." unique_id=809752752 instance=ExtResource("1_0gqrk")]
+position = Vector2(32, 574)
 
 [node name="PlayerCamera" type="Camera2D" parent="." unique_id=655621015 node_paths=PackedStringArray("player")]
 position = Vector2(573, 318)
 script = ExtResource("2_0gqrk")
-player = NodePath("../player")
+player = NodePath("../Player")
 
 [node name="Paintings" type="Node2D" parent="." unique_id=86936898]
 z_index = -1
