@@ -8,6 +8,9 @@ class_name AbsorbableColor
 @export var desiredNumberOfSplats:int = 64
 var numberOfSplatsReceived:int
 
+signal completed_puzzle
+var im_complete = false
+
 
 #testing the TrueIfArgumentColourIsWithinTolerance() function
 #func _ready() -> void:
@@ -37,6 +40,9 @@ func TrueIfArgumentColourIsWithinTolerance(argumentColour:Color) -> bool:
 	return (realHueDifference <= Globals.HUEDIFFERENCETOLERANCE)
 	
 func TrueIfArgumentColourIsWithinToleranceOfDesired(argumentColour:Color) -> bool:
+	if (im_complete):
+		return true 
+	
 	var ourHue:float = desiredColor.h
 	var argumentHue:float = argumentColour.h
 	
@@ -45,6 +51,33 @@ func TrueIfArgumentColourIsWithinToleranceOfDesired(argumentColour:Color) -> boo
 	var hueDifference_normal = ourHue - argumentHue
 	var hueDifference_downShifted = (argumentHue - 1) - ourHue
 	var realHueDifference:float = min(min(abs(hueDifference_upShifted), abs(hueDifference_normal)), abs(hueDifference_downShifted))
+	
+	var result = (realHueDifference <= Globals.HUEDIFFERENCETOLERANCE)
+
+	if result:
+		if self.name == "checkers":
+			Globals.CHECKERS = true
+		if self.name == "gradient":
+			Globals.GRADIENT = true
+		if self.name == "neck":
+			Globals.STICK_MAN_NECK = true
+		if self.name == "body":
+			Globals.STICK_MAN_TORSO = true
+		if self.name == "addsone":
+			Globals.ADDS_ONE = true
+		if self.name == "addstwo":
+			Globals.ADDS_TWO = true
+		if self.name == "eye":
+			Globals.EYE = true
+		if self.name == "sun":
+			Globals.SUN = true
+		if self.name == "mix":
+			Globals.MIX = true
+		if self.name == "tetris":
+			Globals.TETRIS = true
+
+	if (result == true): 
+		completed_puzzle.emit()
 	
 	return (realHueDifference <= Globals.HUEDIFFERENCETOLERANCE)
 
