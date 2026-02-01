@@ -37,6 +37,7 @@ player = NodePath("../Player")
 z_index = -1
 
 [node name="Tetris" type="Node2D" parent="Paintings" unique_id=2047016745]
+position = Vector2(0, -23)
 
 [node name="Tetris" type="Sprite2D" parent="Paintings/Tetris" unique_id=1442314297]
 position = Vector2(2201, 293)
@@ -247,7 +248,7 @@ position = Vector2(3325.0002, 297.00003)
 scale = Vector2(0.4, 0.9)
 
 [node name="MixToMatch" type="Node2D" parent="Paintings" unique_id=229470259]
-position = Vector2(155, 5)
+position = Vector2(155, 15)
 
 [node name="MixToMatch" type="Sprite2D" parent="Paintings/MixToMatch" unique_id=1946327416]
 position = Vector2(656, 511)
@@ -353,9 +354,6 @@ shape = SubResource("RectangleShape2D_r3mym")
 
 [node name="Placeables" type="Node2D" parent="." unique_id=2075081505]
 z_index = 1
-
-[node name="Stool" parent="Placeables" unique_id=1732500005 instance=ExtResource("4_58yg4")]
-position = Vector2(807, 592)
 
 [node name="Stool2" parent="Placeables" unique_id=426801064 instance=ExtResource("4_58yg4")]
 position = Vector2(2440, 590)
