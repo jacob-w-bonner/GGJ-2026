@@ -6,3 +6,6 @@ const PLAYER_Y: 	float 	= 100.0
 
 # Default colour
 var DEFAULT_COL: 	Color 	= Color(1.0, 1.0, 1.0, 1.0)
+
+
+var HUEDIFFERENCETOLERANCE:float = 0.3333

@@ -15,9 +15,6 @@ func GetColor() -> Color:
 
 #returns true if the argumentColour is close to this AbsorbableColor's colouro
 func TrueIfArgumentColourIsWithinTolerance(argumentColour:Color) -> bool:
-	#Controls how far off the argumentColour's hue can be for this function to return true
-	var hueDifferenceTolerance = 0.3333#
-	
 	var ourHue:float = sprite_2d.self_modulate.h
 	var argumentHue:float = argumentColour.h
 	
@@ -27,4 +24,4 @@ func TrueIfArgumentColourIsWithinTolerance(argumentColour:Color) -> bool:
 	var hueDifference_downShifted = (argumentHue - 1) - ourHue
 	var realHueDifference:float = min(min(abs(hueDifference_upShifted), abs(hueDifference_normal)), abs(hueDifference_downShifted))
 	
-	return (realHueDifference <= hueDifferenceTolerance)
+	return (realHueDifference <= Globals.HUEDIFFERENCETOLERANCE)
