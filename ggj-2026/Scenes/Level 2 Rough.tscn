@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dk2boiuytgpo7"]
 
-[ext_resource type="PackedScene" uid="uid://bbos4y4dwl6dq" path="res://Scenes/player.tscn" id="1_7qgix"]
+[ext_resource type="PackedScene" uid="uid://bbos4y4dwl6dq" path="res://Scenes/player_cells.tscn" id="1_7qgix"]
 [ext_resource type="Script" uid="uid://da8mcsv5ayli0" path="res://Scenes/player_camera.gd" id="2_3qduy"]
 [ext_resource type="Texture2D" uid="uid://bycdlvhpt3vg" path="res://icon.svg" id="3_08xsl"]
 [ext_resource type="PackedScene" uid="uid://bt7qfkrj2se5c" path="res://Scenes/absorbable_colour_Blue1.tscn" id="4_3qduy"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://col47l7aoiclr" path="res://Scenes/absorbable_colour_black.tscn" id="8_iad6u"]
 [ext_resource type="PackedScene" uid="uid://culjsn2xps7cm" path="res://Scenes/absorbable_colour_clear.tscn" id="8_srilc"]
 [ext_resource type="PackedScene" uid="uid://t0pyjrb4skuh" path="res://Scenes/absorbable_colour_Blue5.tscn" id="8_ut81y"]
+[ext_resource type="PackedScene" path="res://Scenes/level_exit_door.tscn" id="10_iad6u"]
 
 [sub_resource type="Theme" id="Theme_7qgix"]
 default_font_size = 48
@@ -424,3 +425,6 @@ theme = SubResource("Theme_srilc")
 text = "Gain____
 ------------"
 metadata/_edit_use_anchors_ = true
+
+[node name="LevelExitDoor" parent="." unique_id=860006878 instance=ExtResource("10_iad6u")]
+position = Vector2(5221, 545)
