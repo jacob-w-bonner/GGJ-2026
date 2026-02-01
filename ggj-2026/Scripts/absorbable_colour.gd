@@ -3,6 +3,9 @@ class_name AbsorbableColor
 
 @onready var sprite_2d: Sprite2D = $Sprite2D
 
+var desiresToChangeColor:bool = false
+var desiredColor:Color = Color.DEEP_PINK
+
 #testing the TrueIfArgumentColourIsWithinTolerance() function
 #func _ready() -> void:
 	#var c1:Color = Color.from_hsv(0.66,1,1,1)
