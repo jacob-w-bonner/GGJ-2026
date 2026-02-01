@@ -29,14 +29,13 @@ func _ready() -> void:
 
 	# Making a collision shape for the area
 	var rect		 = RectangleShape2D.new()
-	rect.size		 = Vector2(0.5, 0.5)
+	rect.size		 = Vector2(0.9, 0.9)
 
 	# Adding it as a child of the Area2D
 	_collision.shape = rect
 
 	# Connecting necessary signals
 	self.connect("area_entered", _on_area_entered)
-	self.connect("area_exited", _on_area_entered)
 
 func _process(delta: float) -> void:
 
@@ -45,6 +44,7 @@ func _process(delta: float) -> void:
 
 		# Changing colours
 		_colour.color = _absorb
+		#print(_colour.color)
 
 # Getter for the colour
 func get_colour() -> Color:
@@ -58,14 +58,18 @@ func set_colour(new_col: Color) -> void:
 func splat() -> void:
 
 	# Creating a new absorbable
-	var new_splat = splat_scene.instantiate()
+	var new_splat 	  = splat_scene.instantiate()
 	get_tree().root.get_child(0).add_child(new_splat)
 
-	# Setting the colour of the new splat
-	new_splat.SetColor(_colour.get_color())
+	# Setting the properties of the new splat
+	var col			  = _colour.get_color()
+	new_splat.SetColor(col)
+	new_splat.set_scale(Vector2(1.0 / Globals.PLAYER_X, 1.0 / Globals.PLAYER_Y))
+	new_splat.set_global_position(self.global_position)
+	new_splat.z_index = 50
 
 	# Resetting the cell colour
-	_colour.color = Globals.DEFAULT_COL
+	_colour.color 	  = Globals.DEFAULT_COL
 
 # Detecting entering another area
 func _on_area_entered(area: Area2D):
@@ -73,10 +77,6 @@ func _on_area_entered(area: Area2D):
 	_last_absorbable_colour_entered = area as AbsorbableColor
 	#TODO: add check for if _last_absorbable_colour_entered is not cast as a "AbsorbableColor" object
 	_absorb 						= _last_absorbable_colour_entered.GetColor()
-
-# Detecting leaving another area
-func _on_area_exited(area: Area2D):
-	print("exited")
 
 func IsHidden() -> bool:
 	if _last_absorbable_colour_entered == null:

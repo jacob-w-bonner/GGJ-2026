@@ -17,13 +17,26 @@ func _process(_delta: float) -> void:
 		average_colour_cells()
 
 	# Releasing the absorbed colour behind the cell
-	if Input.is_action_pressed("splat"):
+	if Input.is_action_just_pressed("splat"):
+
+		# Checking if the cells should splat
+		var should_splat = false
 		for cell in _colour_cells:
-			cell.splat()
+			if cell.get_colour() != Globals.DEFAULT_COL:
+				should_splat = true
+				break
+
+		# Splatting if there is at least some paint
+		if should_splat:
+			for cell in _colour_cells:
+				cell.splat()
 
 # This function creates colour cells
 func create_colour_cells() -> void:
-	
+
+	# Calculating a starting position
+	var start_pos = Vector2(-Globals.PLAYER_X / 2.0, -Globals.PLAYER_Y / 2.0)
+
 	# Creating a series of ColorRects that are the colour cells of the sponge
 	for y in range(int(Globals.PLAYER_Y)):
 		for x in range(int(Globals.PLAYER_X)):
@@ -36,7 +49,8 @@ func create_colour_cells() -> void:
 			new_cell.set_name("Cell_%dx_%dy" % [x, y])
 
 			# Setting the scale and position
-			new_cell.position = Vector2(x, y)
+			new_cell.scale	  = Globals.PLAYER_SCALE
+			new_cell.position = (start_pos + Vector2(x, y)) * Globals.PLAYER_SCALE
 
 			# Adding to list
 			_colour_cells.append(new_cell)
