@@ -24,6 +24,7 @@ position = Vector2(188, 120)
 
 [node name="PlayerCamera" type="Camera2D" parent="." unique_id=655621015 node_paths=PackedStringArray("player")]
 position = Vector2(573, 318)
+zoom = Vector2(1.5, 1.5)
 script = ExtResource("5_aksks")
 player = NodePath("../Player")
 
@@ -31,7 +32,7 @@ player = NodePath("../Player")
 z_index = -1
 
 [node name="GreenRedCheckered" type="Node2D" parent="Paintings" unique_id=346940233]
-position = Vector2(3158, 386)
+position = Vector2(3158, 372)
 
 [node name="AbsorbableColourRed" parent="Paintings/GreenRedCheckered" unique_id=1021615895 instance=ExtResource("4_htomu")]
 position = Vector2(35, 32)
@@ -39,10 +40,6 @@ scale = Vector2(0.5, 0.5)
 
 [node name="AbsorbableColourRed2" parent="Paintings/GreenRedCheckered" unique_id=1533313261 instance=ExtResource("4_htomu")]
 position = Vector2(163, 32)
-scale = Vector2(0.5, 0.5)
-
-[node name="AbsorbableColourRed3" parent="Paintings/GreenRedCheckered" unique_id=283637348 instance=ExtResource("4_htomu")]
-position = Vector2(99, 95)
 scale = Vector2(0.5, 0.5)
 
 [node name="AbsorbableColourRed4" parent="Paintings/GreenRedCheckered" unique_id=1275642818 instance=ExtResource("4_htomu")]
@@ -55,6 +52,10 @@ scale = Vector2(0.5, 0.5)
 
 [node name="AbsorbableColourGreen2" parent="Paintings/GreenRedCheckered" unique_id=1903112513 instance=ExtResource("5_4he20")]
 position = Vector2(99, 159)
+scale = Vector2(0.5, 0.5)
+
+[node name="AbsorbableColourRed3" parent="Paintings/GreenRedCheckered" unique_id=283637348 instance=ExtResource("4_htomu")]
+position = Vector2(99, 95)
 scale = Vector2(0.5, 0.5)
 
 [node name="AbsorbableColourGreen3" parent="Paintings/GreenRedCheckered" unique_id=1405624237 instance=ExtResource("5_4he20")]
@@ -212,7 +213,7 @@ position = Vector2(3197, 594)
 z_index = -3
 
 [node name="GreenRect" type="Node2D" parent="Background" unique_id=1794049485]
-position = Vector2(1529, 546)
+position = Vector2(1521, 529)
 
 [node name="AbsorbableColourGreen" parent="Background/GreenRect" unique_id=281062759 instance=ExtResource("5_4he20")]
 position = Vector2(48, 28)

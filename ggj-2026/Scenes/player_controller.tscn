@@ -9,7 +9,7 @@
 friction = 0.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cvnsp"]
-size = Vector2(61, 63)
+size = Vector2(62, 82)
 
 [node name="player_controller" type="RigidBody2D" unique_id=193364027]
 disable_mode = 2
@@ -24,25 +24,24 @@ groundMovementForce = 800
 groundDragForce = 8000
 sidewaysAirMovementForce = 800
 downwardAirMovementForce = 1500
-jumpStrength = 500
 coyotetime = 0.33
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1656781718]
-position = Vector2(0.5, 0.5)
+position = Vector2(0, 1)
 shape = SubResource("RectangleShape2D_cvnsp")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=776660786]
-scale = Vector2(0.5, 0.5)
+scale = Vector2(0.031, 0.031)
 texture = ExtResource("1_v0iea")
 
 [node name="Right-RayCast2D" type="RayCast2D" parent="." unique_id=1905430893]
-position = Vector2(32, -29)
-target_position = Vector2(0, 63)
+position = Vector2(32, -39)
+target_position = Vector2(0, 81)
 collision_mask = 3
 
 [node name="Left-RayCast2D" type="RayCast2D" parent="." unique_id=1103071425]
-position = Vector2(-32, -29)
-target_position = Vector2(0, 63)
+position = Vector2(-32, -39)
+target_position = Vector2(0, 81)
 collision_mask = 3
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1432901843 node_paths=PackedStringArray("playerNode")]
