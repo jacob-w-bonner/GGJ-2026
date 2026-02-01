@@ -6,6 +6,7 @@ extends PathFollow2D
 @onready var target : float = 0.99 
 @onready var guard = $Guard
 @onready var waiting = false
+@onready var animate = $Guard/AnimatedSprite2D
 
 
 
@@ -16,10 +17,14 @@ func _process(delta: float) -> void:
 	match guard.state: 
 		GuardMovement.State.PATROLLING:
 			if (!waiting):
+				animate.play("walking")
 				loop_movement(delta)
+			else:
+				animate.play("waiting")
 		# cancel waiting state if another state is active 
 		_:
 			waiting = false
+			animate.play("walking")
 		
 func loop_movement(delta):
 	var prev_target = target

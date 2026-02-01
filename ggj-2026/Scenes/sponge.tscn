@@ -6,7 +6,9 @@
 [ext_resource type="Texture2D" uid="uid://bawa75876k2bl" path="res://Assets/SpongeWalking/Background2.png" id="4_1f48o"]
 [ext_resource type="Texture2D" uid="uid://47i2ktudsd26" path="res://Assets/SpongeWalking/happy.png" id="5_eyc4v"]
 [ext_resource type="Texture2D" uid="uid://b0t5hj8jcwidl" path="res://Assets/SpongeWalking/angry.png" id="6_1f48o"]
+[ext_resource type="Texture2D" uid="uid://bmrwxcky1wxm2" path="res://Assets/Stool.png" id="8_eyc4v"]
 [ext_resource type="Script" uid="uid://d1dg181np025b" path="res://Scripts/blend_colours.gd" id="9_4rn4g"]
+[ext_resource type="Texture2D" uid="uid://bi1gs4wsem518" path="res://Assets/Stool_Small.png" id="9_132iq"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_a57jc"]
 
@@ -84,3 +86,13 @@ position = Vector2(182, 8)
 scale = Vector2(-1.233061, 0.9128557)
 sprite_frames = SubResource("SpriteFrames_4rn4g")
 animation = &"happy"
+
+[node name="Stool" type="Sprite2D" parent="." unique_id=1394920079]
+position = Vector2(-497.3655, 123.5)
+scale = Vector2(0.2898906, 0.15995398)
+texture = ExtResource("8_eyc4v")
+
+[node name="StoolSmall" type="Sprite2D" parent="." unique_id=480358928]
+position = Vector2(553, 169.00009)
+scale = Vector2(0.16973534, 0.16973533)
+texture = ExtResource("9_132iq")
