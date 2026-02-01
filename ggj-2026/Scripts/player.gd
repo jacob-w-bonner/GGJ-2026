@@ -1,7 +1,8 @@
 extends Node2D
+class_name PlayerRoot
 
 # Getting the controller node
-@onready var controller = $player_controller
+@export var controller:RigidBody2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -17,5 +18,5 @@ func get_controller():
 	return controller
 
 # Getter for the controller position
-func get_controller_pos():
-	return controller.get_global_position()
+func get_controller_pos() -> Vector2:
+	return controller.global_position

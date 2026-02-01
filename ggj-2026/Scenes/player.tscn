@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://daxvtr2wymnq2" path="res://Scripts/player.gd" id="1_tx1dd"]
 [ext_resource type="PackedScene" uid="uid://bjywweo23o85j" path="res://Scenes/player_controller.tscn" id="1_v0iea"]
-[ext_resource type="PackedScene" uid="uid://72ie3fw6vp0j" path="res://Scenes/player_cells.tscn" id="2_cvnsp"]
+[ext_resource type="PackedScene" uid="uid://bbos4y4dwl6dq" path="res://Scenes/player_cells.tscn" id="2_cvnsp"]
 [ext_resource type="Texture2D" uid="uid://blcse54ys6dub" path="res://Assets/Sponge/WalkRightLeg.png" id="3_8erm5"]
 [ext_resource type="Texture2D" uid="uid://xqw3akvgohjy" path="res://Assets/PlayerBorder.png" id="3_f1ek2"]
 [ext_resource type="Texture2D" uid="uid://efc4806mir5y" path="res://Assets/Sponge/WalkNeutral.png" id="4_f1ek2"]
@@ -55,10 +55,12 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Player" type="Node2D" unique_id=809752752]
+[node name="Player" type="Node2D" unique_id=522882859 node_paths=PackedStringArray("controller")]
 z_index = 100
 scale = Vector2(0.063, 0.063)
 script = ExtResource("1_tx1dd")
+controller = NodePath("player_controller")
+metadata/_custom_type_script = "uid://daxvtr2wymnq2"
 
 [node name="player_controller" parent="." unique_id=193364027 instance=ExtResource("1_v0iea")]
 

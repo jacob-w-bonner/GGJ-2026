@@ -1,19 +1,25 @@
 extends Area2D
 
 @export var test:float = 0
-@export var player:Node2D 
+@export var player_root:PlayerRoot 
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	
+	
+	
 	pass # Replace with function body.
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	#print("Pos:" + player_root.get_controller_pos())
+	
 	#print(get_tree().current_scene.name)
-	if(player != null):
-		var distanceToPlayer:float = self.position.distance_to(player.position)
+	if(player_root != null):
+		var distanceToPlayer:float = player_root.get_controller_pos().distance_to(self.position)
+		print("distanceToPlayer:" + str(distanceToPlayer))
 		if(distanceToPlayer < 80):
 			go_to_next_level()
 

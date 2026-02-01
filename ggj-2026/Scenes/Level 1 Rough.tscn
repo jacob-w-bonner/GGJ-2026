@@ -1,13 +1,14 @@
 [gd_scene format=3 uid="uid://cjb3sm2btdv6v"]
 
+[ext_resource type="PackedScene" uid="uid://bbos4y4dwl6dq" path="res://Scenes/player.tscn" id="1_7a54r"]
 [ext_resource type="Texture2D" uid="uid://bycdlvhpt3vg" path="res://icon.svg" id="3_htomu"]
 [ext_resource type="PackedScene" uid="uid://dlb1vl8xplpsi" path="res://Scenes/Stool.tscn" id="4_4he20"]
-[ext_resource type="PackedScene" uid="uid://bbos4y4dwl6dq" path="res://Scenes/player_cells.tscn" id="4_dcevk"]
 [ext_resource type="PackedScene" uid="uid://dbohlvldq1gmi" path="res://Scenes/absorbable_colour_red.tscn" id="4_htomu"]
 [ext_resource type="PackedScene" uid="uid://dqwdji1dib54q" path="res://Scenes/absorbable_colour_green.tscn" id="5_4he20"]
 [ext_resource type="Script" uid="uid://da8mcsv5ayli0" path="res://Scenes/player_camera.gd" id="5_aksks"]
 [ext_resource type="PackedScene" uid="uid://ca3erfbuk0kh3" path="res://Scenes/absorbable_colour_white.tscn" id="5_hirra"]
-[ext_resource type="PackedScene" path="res://Scenes/level_exit_door.tscn" id="8_hirra"]
+[ext_resource type="Texture2D" uid="uid://h7qsl2nskq04" path="res://Assets/Bucket.png" id="8_7a54r"]
+[ext_resource type="PackedScene" uid="uid://duh7wknhj5uc4" path="res://Scenes/level_exit_door.tscn" id="8_hirra"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r3mym"]
 size = Vector2(128, 128)
@@ -20,8 +21,7 @@ size = Vector2(112, 13)
 
 [node name="Level 1" type="Node2D" unique_id=1129709678]
 
-[node name="Player" parent="." unique_id=809752752 instance=ExtResource("4_dcevk")]
-position = Vector2(188, 120)
+[node name="Player" parent="." unique_id=522882859 instance=ExtResource("1_7a54r")]
 
 [node name="PlayerCamera" type="Camera2D" parent="." unique_id=655621015 node_paths=PackedStringArray("player")]
 position = Vector2(573, 318)
@@ -193,7 +193,9 @@ position = Vector2(184, 556)
 scale = Vector2(1, 0.65)
 
 [node name="Sprite2D" type="Sprite2D" parent="Placeables/Bucket" unique_id=2073573285]
-texture = ExtResource("3_htomu")
+rotation = 3.1415927
+scale = Vector2(0.13, 0.13)
+texture = ExtResource("8_7a54r")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Placeables/Bucket" unique_id=214252193]
 position = Vector2(-52, 0)
@@ -264,5 +266,6 @@ scale = Vector2(0.5, 0.5)
 position = Vector2(752, 28)
 scale = Vector2(0.5, 0.5)
 
-[node name="LevelExitDoor" parent="." unique_id=860006878 instance=ExtResource("8_hirra")]
+[node name="LevelExitDoor" parent="." unique_id=860006878 node_paths=PackedStringArray("player_root") instance=ExtResource("8_hirra")]
 position = Vector2(6190, -210)
+player_root = NodePath("../Player")
