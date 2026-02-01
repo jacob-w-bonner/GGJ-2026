@@ -1,4 +1,4 @@
-# GGJ-2026
+# Color Sponge
 GGJ 2026 game
 
 Contributors:
