@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://dlb1vl8xplpsi" path="res://Scenes/Stool.tscn" id="4_xelyp"]
 [ext_resource type="PackedScene" uid="uid://dw8h6vykcfwj2" path="res://Scenes/absorbable_colour_Blue2.tscn" id="5_n3ytq"]
 [ext_resource type="PackedScene" uid="uid://bbd07nly0r4ix" path="res://Scenes/absorbable_colour_Blue3.tscn" id="6_ut81y"]
-[ext_resource type="PackedScene" uid="uid://djdngf3q4wmjg" path="res://Scenes/absorbable_colour_black.tscn" id="8_iad6u"]
+[ext_resource type="PackedScene" uid="uid://04paepqokxy" path="res://Scenes/absorbable_colour_black.tscn" id="8_iad6u"]
 [ext_resource type="PackedScene" uid="uid://culjsn2xps7cm" path="res://Scenes/absorbable_colour_clear.tscn" id="8_srilc"]
 [ext_resource type="PackedScene" uid="uid://t0pyjrb4skuh" path="res://Scenes/absorbable_colour_Blue5.tscn" id="8_ut81y"]
 [ext_resource type="PackedScene" uid="uid://duh7wknhj5uc4" path="res://Scenes/level_exit_door.tscn" id="10_iad6u"]
@@ -364,6 +364,12 @@ texture = ExtResource("10_oiix8")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Bounds/RightWall" unique_id=251259528]
 shape = SubResource("RectangleShape2D_r3mym")
+
+[node name="BackWall" type="Sprite2D" parent="Bounds" unique_id=960819482]
+z_index = -20
+position = Vector2(3211.0002, 139.50012)
+scale = Vector2(4.0898438, 4.986505)
+texture = ExtResource("10_oiix8")
 
 [node name="Placeables" type="Node2D" parent="." unique_id=2075081505]
 z_index = 1
