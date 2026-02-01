@@ -4,20 +4,20 @@
 [ext_resource type="Script" uid="uid://da8mcsv5ayli0" path="res://Scenes/player_camera.gd" id="2_0gqrk"]
 [ext_resource type="Texture2D" uid="uid://bycdlvhpt3vg" path="res://icon.svg" id="3_3pcwb"]
 [ext_resource type="PackedScene" uid="uid://dlb1vl8xplpsi" path="res://Scenes/Stool.tscn" id="4_58yg4"]
-[ext_resource type="PackedScene" uid="uid://t0pyjrb4skuh" path="res://Scenes/absorbable_colour_Blue5.tscn" id="4_b22bo"]
-[ext_resource type="PackedScene" uid="uid://dbohlvldq1gmi" path="res://Scenes/absorbable_colour_red.tscn" id="4_mfg4v"]
+[ext_resource type="PackedScene" path="res://Scenes/absorbable_colour_Blue5.tscn" id="4_b22bo"]
+[ext_resource type="PackedScene" path="res://Scenes/absorbable_colour_red.tscn" id="4_mfg4v"]
 [ext_resource type="PackedScene" uid="uid://hkcm0qaks4et" path="res://Scenes/drop_down_platform.tscn" id="5_0gqrk"]
-[ext_resource type="PackedScene" uid="uid://b35jvsyh15duu" path="res://Scenes/absorbable_colour_yellow.tscn" id="5_b22bo"]
-[ext_resource type="PackedScene" uid="uid://c2uc6lcuwffab" path="res://Scenes/absorbable_colour_purple.tscn" id="6_3f2vy"]
-[ext_resource type="PackedScene" uid="uid://4jvyagxruf2r" path="res://Scenes/absorbable_colour_orange.tscn" id="6_i1fq5"]
+[ext_resource type="PackedScene" path="res://Scenes/absorbable_colour_yellow.tscn" id="5_b22bo"]
+[ext_resource type="PackedScene" path="res://Scenes/absorbable_colour_purple.tscn" id="6_3f2vy"]
+[ext_resource type="PackedScene" uid="uid://v1kx4tycqxwg" path="res://Scenes/absorbable_colour_orange.tscn" id="6_i1fq5"]
 [ext_resource type="PackedScene" uid="uid://bsgqi5naogaf6" path="res://Scenes/absorbable_colour.tscn" id="8_3f2vy"]
-[ext_resource type="PackedScene" uid="uid://bgo2k8mpayb81" path="res://Scenes/absorbable_colour_cyan.tscn" id="9_vdwwb"]
+[ext_resource type="PackedScene" path="res://Scenes/absorbable_colour_cyan.tscn" id="9_vdwwb"]
 [ext_resource type="Texture2D" uid="uid://b3fngj1whhfkc" path="res://Assets/autumnday.png" id="10_ykunq"]
-[ext_resource type="PackedScene" uid="uid://ctfye2ocqjegm" path="res://Scenes/absorbable_colour_autumn_blue.tscn" id="11_dt7ti"]
-[ext_resource type="PackedScene" uid="uid://ee3226mli0nv" path="res://Scenes/absorbable_colour_autumn_red.tscn" id="12_k7q2e"]
-[ext_resource type="PackedScene" uid="uid://ls2hwlllykuk" path="res://Scenes/absorbable_colour_autumn_cyan.tscn" id="13_anpic"]
-[ext_resource type="PackedScene" uid="uid://ds1t4btdud884" path="res://Scenes/absorbable_colour_autumn_green.tscn" id="14_8usqw"]
-[ext_resource type="PackedScene" uid="uid://culjsn2xps7cm" path="res://Scenes/absorbable_colour_clear.tscn" id="16_tm0fi"]
+[ext_resource type="PackedScene" path="res://Scenes/absorbable_colour_autumn_blue.tscn" id="11_dt7ti"]
+[ext_resource type="PackedScene" path="res://Scenes/absorbable_colour_autumn_red.tscn" id="12_k7q2e"]
+[ext_resource type="PackedScene" path="res://Scenes/absorbable_colour_autumn_cyan.tscn" id="13_anpic"]
+[ext_resource type="PackedScene" path="res://Scenes/absorbable_colour_autumn_green.tscn" id="14_8usqw"]
+[ext_resource type="PackedScene" path="res://Scenes/absorbable_colour_clear.tscn" id="16_tm0fi"]
 [ext_resource type="Texture2D" uid="uid://bd3hai0llnuyq" path="res://Assets/Environment/Wall.png" id="17_grufy"]
 [ext_resource type="Texture2D" uid="uid://dt8hb6wr6h4l2" path="res://Assets/Floor.png" id="18_2dtiq"]
 [ext_resource type="PackedScene" uid="uid://duh7wknhj5uc4" path="res://Scenes/level_exit_door.tscn" id="18_t7xt4"]
@@ -168,7 +168,7 @@ scale = Vector2(0.5, 0.5)
 position = Vector2(2431, 579)
 scale = Vector2(0.5, 0.5)
 
-[node name="AbsorbableColourClear" parent="Paintings/Tetris" unique_id=43001491 instance=ExtResource("16_tm0fi")]
+[node name="tetris" parent="Paintings/Tetris" unique_id=43001491 instance=ExtResource("16_tm0fi")]
 position = Vector2(2236, 581)
 scale = Vector2(0.5, 0.5)
 desiresToChangeColor = true
@@ -253,13 +253,13 @@ scale = Vector2(0.6, 1.1)
 position = Vector2(3325.0002, 297.00003)
 scale = Vector2(0.4, 0.9)
 
-[node name="AbsorbableColourClear" parent="Paintings/AutumnDay" unique_id=1599726914 instance=ExtResource("16_tm0fi")]
+[node name="eye" parent="Paintings/AutumnDay" unique_id=1599726914 instance=ExtResource("16_tm0fi")]
 position = Vector2(3415, 291)
 scale = Vector2(0.4, 0.4)
 desiresToChangeColor = true
 desiredColor = Color(0.48235294, 0.24313726, 0.03137255, 1)
 
-[node name="AbsorbableColourClear2" parent="Paintings/AutumnDay" unique_id=1151993887 instance=ExtResource("16_tm0fi")]
+[node name="sun" parent="Paintings/AutumnDay" unique_id=1151993887 instance=ExtResource("16_tm0fi")]
 position = Vector2(3340, 118.00001)
 scale = Vector2(0.7, 0.7)
 desiresToChangeColor = true
@@ -304,7 +304,7 @@ scale = Vector2(0.5, 0.5)
 position = Vector2(704, 543)
 scale = Vector2(0.75, 0.5)
 
-[node name="AbsorbableColour2" parent="Paintings/MixToMatch" unique_id=508391768 instance=ExtResource("16_tm0fi")]
+[node name="mix" parent="Paintings/MixToMatch" unique_id=508391768 instance=ExtResource("16_tm0fi")]
 position = Vector2(656, 543)
 scale = Vector2(0.5, 0.5)
 desiresToChangeColor = true

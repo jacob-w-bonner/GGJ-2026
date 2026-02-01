@@ -2,13 +2,13 @@
 
 [ext_resource type="PackedScene" uid="uid://bbos4y4dwl6dq" path="res://Scenes/player.tscn" id="1_7qgix"]
 [ext_resource type="Script" uid="uid://da8mcsv5ayli0" path="res://Scenes/player_camera.gd" id="2_3qduy"]
-[ext_resource type="PackedScene" path="res://Scenes/absorbable_colour_Blue1.tscn" id="4_3qduy"]
+[ext_resource type="PackedScene" uid="uid://bt7qfkrj2se5c" path="res://Scenes/absorbable_colour_Blue1.tscn" id="4_3qduy"]
 [ext_resource type="PackedScene" uid="uid://dlb1vl8xplpsi" path="res://Scenes/Stool.tscn" id="4_xelyp"]
 [ext_resource type="PackedScene" uid="uid://dw8h6vykcfwj2" path="res://Scenes/absorbable_colour_Blue2.tscn" id="5_n3ytq"]
-[ext_resource type="PackedScene" uid="uid://bbd07nly0r4ix" path="res://Scenes/absorbable_colour_Blue3.tscn" id="6_ut81y"]
-[ext_resource type="PackedScene" uid="uid://04paepqokxy" path="res://Scenes/absorbable_colour_black.tscn" id="8_iad6u"]
-[ext_resource type="PackedScene" uid="uid://culjsn2xps7cm" path="res://Scenes/absorbable_colour_clear.tscn" id="8_srilc"]
-[ext_resource type="PackedScene" uid="uid://t0pyjrb4skuh" path="res://Scenes/absorbable_colour_Blue5.tscn" id="8_ut81y"]
+[ext_resource type="PackedScene" path="res://Scenes/absorbable_colour_Blue3.tscn" id="6_ut81y"]
+[ext_resource type="PackedScene" uid="uid://col47l7aoiclr" path="res://Scenes/absorbable_colour_black.tscn" id="8_iad6u"]
+[ext_resource type="PackedScene" path="res://Scenes/absorbable_colour_clear.tscn" id="8_srilc"]
+[ext_resource type="PackedScene" path="res://Scenes/absorbable_colour_Blue5.tscn" id="8_ut81y"]
 [ext_resource type="PackedScene" uid="uid://duh7wknhj5uc4" path="res://Scenes/level_exit_door.tscn" id="10_iad6u"]
 [ext_resource type="Texture2D" uid="uid://bd3hai0llnuyq" path="res://Assets/Environment/Wall.png" id="10_oiix8"]
 [ext_resource type="Texture2D" uid="uid://dt8hb6wr6h4l2" path="res://Assets/Floor.png" id="10_twopq"]
@@ -70,7 +70,7 @@ scale = Vector2(0.5, 0.5)
 position = Vector2(434, 75)
 scale = Vector2(0.5, 0.5)
 
-[node name="AbsorbableColour" parent="Paintings/BlueGradiant" unique_id=531389145 instance=ExtResource("8_srilc")]
+[node name="gradient" parent="Paintings/BlueGradiant" unique_id=531389145 instance=ExtResource("8_srilc")]
 position = Vector2(370, 75)
 scale = Vector2(0.5, 0.5)
 desiresToChangeColor = true
@@ -113,14 +113,14 @@ theme = SubResource("Theme_7qgix")
 text = "Cant Hang The Man"
 metadata/_edit_use_anchors_ = true
 
-[node name="AbsorbableColour" parent="Paintings/StickMan" unique_id=1922155904 instance=ExtResource("8_srilc")]
+[node name="neck" parent="Paintings/StickMan" unique_id=1922155904 instance=ExtResource("8_srilc")]
 position = Vector2(94, 134)
 scale = Vector2(0.1, 0.5)
 desiresToChangeColor = true
 desiredColor = Color(0, 0, 0, 1)
 desiredNumberOfSplats = 32
 
-[node name="AbsorbableColour2" parent="Paintings/StickMan" unique_id=138177452 instance=ExtResource("8_srilc")]
+[node name="body" parent="Paintings/StickMan" unique_id=138177452 instance=ExtResource("8_srilc")]
 position = Vector2(94, 200)
 scale = Vector2(0.1, 0.5)
 desiresToChangeColor = true
@@ -276,14 +276,14 @@ theme = SubResource("Theme_iad6u")
 text = "       — 5  =  6"
 metadata/_edit_use_anchors_ = true
 
-[node name="AbsorbableColour" parent="Paintings/AddsUp" unique_id=1756057558 instance=ExtResource("8_srilc")]
+[node name="addsone" parent="Paintings/AddsUp" unique_id=1756057558 instance=ExtResource("8_srilc")]
 position = Vector2(81, 135)
 scale = Vector2(0.1, 0.5)
 desiresToChangeColor = true
 desiredColor = Color(0, 0, 0, 1)
 desiredNumberOfSplats = 32
 
-[node name="AbsorbableColour2" parent="Paintings/AddsUp" unique_id=990111805 instance=ExtResource("8_srilc")]
+[node name="addstwo" parent="Paintings/AddsUp" unique_id=990111805 instance=ExtResource("8_srilc")]
 position = Vector2(4, 134)
 scale = Vector2(0.1, 0.5)
 desiresToChangeColor = true
